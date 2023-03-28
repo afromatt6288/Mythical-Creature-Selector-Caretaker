@@ -1,6 +1,7 @@
 # Mythical-Creature-Selector-Caretaker
 
 ## Overview
+TBD
 
 
 ## Setup / Running the Project (on Windows)
@@ -28,9 +29,22 @@ Type: pipenvshell to enter the virtual environment
 Congrats, you are now configured and ready to run this program!
 
 ## Instructions to Use
+### Start the program
+From the root folder of this project, in the command line of your terminal...
+Type: chmod +x lib/main.py (to unlock permisions)
+Type: lib/main.py
+
+And it begins!
+If at any time you get stuck, you can always press <ctrl-c> to exit the program
+
+### Functions:
+TBD
 
 
-### Project Pitch/Ideas 
+
+
+
+## Initial Project Pitch/Ideas
 
 Mythical Creature Selector
 
@@ -41,7 +55,7 @@ Tables:
 Questions (question_id, content)
 Answers (answer_id, question_id, content, creature_id, creature_id, creature_id)
 Creatures (creature_id, name, origin, description, care_instructions, ascii_art)
-Users (user_id, username, email)
+Users (user_id, username, password)
 UserCreatures (user_id, creature_id, creature_name, happiness, health, last_interaction)
 CreatureInteractions (interaction_id, name, effect_on_happiness, effect_on_health)
 
@@ -70,7 +84,7 @@ A CLI-based application built with Python and SQL project that allows users to a
 Tables:
 
 Creatures (creature_id, name, origin, description, care_instructions, ascii_art)
-Users (user_id, username, email)
+Users (user_id, username, password)
 UserCreatures (user_id, creature_id, creature_name, happiness, health, last_interaction)
 CreatureInteractions (interaction_id, name, effect_on_happiness, effect_on_health)
 
@@ -97,7 +111,7 @@ A CLI-based application built with Python and SQL project that allows users to f
 Tables:
 
 Creatures (creature_id, name, origin, description, care_instructions, ascii_art)
-Users (user_id, username, email)
+Users (user_id, username, password)
 Questions (question_id, content)
 Answers (answer_id, question_id, content, creature_id)
 UserAnswers (user_id, answer_id)
