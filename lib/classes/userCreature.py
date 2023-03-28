@@ -10,21 +10,23 @@ class UserCreature(Base):
     id = Column(Integer(), primary_key=True)
     user_id = Column(Integer(), ForeignKey('users.id'))
     creature_id = Column(Integer(), ForeignKey('creatures.id'))
-    creature_type = Column(String())
+    creature_species = Column(String())
     creature_name = Column(String())
     happiness = Column(Integer())
     health = Column(Integer())
+    adoption_day = Column(DateTime(), default=datetime.now())
     last_interaction = Column(DateTime(), default=datetime.now())
 
     def __repr__(self):
         return f"UserCreature ID: {self.id}" \
             + f"User ID: {self.user_id}" \
             + f"Creature ID: {self.creature_id}" \
-            + f"Creature Type: {self.creature_type}" \
-            + f"UserCreature Name: {self.creature_name}" \
-            + f"UserCreature Happiness: {self.happiness}" \
-            + f"UserCreature Health: {self.health}" \
-            + f"UserCreature Last Interaction: {self.last_interaction}"
+            + f"Species: {self.creature_species}" \
+            + f"CName: {self.creature_name}" \
+            + f"Happiness: {self.happiness}" \
+            + f"Health: {self.health}" \
+            + f"Adoption Day: {self.adoption_day}" \
+            + f"Last Interaction: {self.last_interaction}"
 
 
 

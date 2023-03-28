@@ -8,8 +8,9 @@ from classes.answer import Answer
 from classes.creature import Creature
 from classes.creatureInteraction import CreatureInteraction
 from classes.question import Question
-from classes.userCreature import UserCreature
 from classes.user import User
+from classes.userAnswer import UserAnswer
+from classes.userCreature import UserCreature
 from classes.base import Base
 
 if __name__ == '__main__':

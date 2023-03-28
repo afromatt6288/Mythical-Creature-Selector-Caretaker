@@ -21,6 +21,10 @@ class Answer(Base):
             + f"Answer Creature 2: {self.creature_id2}" \
             + f"Answer Creature 3: {self.creature_id3}"
 
+
+
+
+
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
@@ -35,7 +39,7 @@ class Answer(Base):
         return session.query(Answer).filter(Answer.id == id).first()
 
     def find_by_question_id(session, question_id):
-        return session.query(Answer).filter(Answer.question_.id == question_id).all()
+        return session.query(Answer).filter(Answer.question_id == question_id).all()
 
     def update_content(session, answer, content):
         answer.content = content
