@@ -6,7 +6,6 @@ from .base import Base
 
 class User(Base):
     currentUser = None
-    print(f"user line 9 {currentUser}")
 
     __tablename__ ="users"
 
@@ -59,7 +58,6 @@ class User(Base):
             if User.find_by_username(session, returningUsername):
                 filtered_user=session.query(User).filter(User.username==returningUsername).first()
                 print(f"Welcome back {filtered_user.username}")
-                print(f"user line 61 {filtered_user}")
                 password = input("Enter your Password: ")
                 if filtered_user.password == password:
                     User.currentUser = filtered_user
@@ -68,7 +66,6 @@ class User(Base):
                     print("Password is incorrect.")
             else:
                 print("Caretaker name is not in our system. Please sign up!")
-        print(f"user, line 63 {User.currentUser}")
         return User.currentUser
 
 
