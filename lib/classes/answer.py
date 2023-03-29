@@ -14,12 +14,20 @@ class Answer(Base):
     creature_id3 = Column(Integer(), ForeignKey('creatures.id'))
     
     def __repr__(self):
-        return f"Answer ID: {self.id}" \
-            + f"Answer Content: {self.content}" \
-            + f"Question ID: {self.content}" \
-            + f"Answer Creature 1: {self.creature_id1}" \
-            + f"Answer Creature 2: {self.creature_id2}" \
-            + f"Answer Creature 3: {self.creature_id3}"
+        return f"Answer ID: {self.id} / " \
+            + f"Answer Content: {self.content} / " \
+            + f"Question ID: {self.content} / " \
+            + f"Answer Creature 1: {self.creature_id1} / " \
+            + f"Answer Creature 2: {self.creature_id2} / " \
+            + f"Answer Creature 3: {self.creature_id3} / "
+
+    def find_by_answer_id(session, id):
+        return session.query(Answer).filter(Answer.id == id).first()
+
+
+
+
+
 
 
 
@@ -35,8 +43,6 @@ class Answer(Base):
     def get_all(session):
         return session.query(Answer).all()
 
-    def find_by_id(session, id):
-        return session.query(Answer).filter(Answer.id == id).first()
 
     def find_by_question_id(session, question_id):
         return session.query(Answer).filter(Answer.question_id == question_id).all()

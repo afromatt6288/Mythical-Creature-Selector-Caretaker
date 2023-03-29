@@ -18,9 +18,6 @@ class User(Base):
             + f"User Name: {self.username} / " \
             + f"User Password: {self.password}" 
 
-    def create_table(base, engine):
-        base.metadata.create_all(engine)
-    
     def add_to_users_db(self,session):
         session.add(self)
         session.commit()
@@ -76,6 +73,8 @@ class User(Base):
 
 
 
+    def create_table(base, engine):
+        base.metadata.create_all(engine)
 
     def get_all(session):
         return session.query(User).all()

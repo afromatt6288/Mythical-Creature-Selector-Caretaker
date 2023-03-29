@@ -18,14 +18,14 @@ class UserCreature(Base):
     last_interaction = Column(DateTime(), default=datetime.now())
 
     def __repr__(self):
-        return f"UserCreature ID: {self.id}" \
-            + f"User ID: {self.user_id}" \
-            + f"Creature ID: {self.creature_id}" \
-            + f"Species: {self.creature_species}" \
-            + f"Name: {self.creature_name}" \
-            + f"Happiness: {self.happiness}" \
-            + f"Health: {self.health}" \
-            + f"Adoption Day: {self.adoption_day}" \
+        return f"UserCreature ID: {self.id} / " \
+            + f"User ID: {self.user_id} / " \
+            + f"Creature ID: {self.creature_id} / " \
+            + f"Species: {self.creature_species} / " \
+            + f"Name: {self.creature_name} / " \
+            + f"Happiness: {self.happiness} / " \
+            + f"Health: {self.health} / " \
+            + f"Adoption Day: {self.adoption_day} / " \
             + f"Last Interaction: {self.last_interaction}"
 
 

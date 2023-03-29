@@ -121,11 +121,51 @@ Selection : ''')
 and interests. Don't worry, you can change your mind afterwards. So, answer as you feel. 
 
          1) Proceed with quiz            OR             2) Back to main menu
-            ''')
-            if option == "1" or option == "Proceed" or option =="Proceed with quiz":
-                pass
-            elif option == "2" or option == "Back" or option == "Back to main menu":
+
+                                Selection :  ''')
+            if option == "2" or option == "Back" or option == "Back to main menu":
                 main_menu(currentUser)
+            elif option == "1" or option == "Proceed" or option =="Proceed with quiz":
+                inQuiz=True
+                while inQuiz:
+                    n=1
+                    while n <= 10:
+                        question = Question.find_by_question_id(session, n)
+                        answer1 = Answer.find_by_answer_id(session, 1+(n-1)*4)
+                        answer2 = Answer.find_by_answer_id(session, 2+(n-1)*4)
+                        answer3 = Answer.find_by_answer_id(session, 3+(n-1)*4)
+                        answer4 = Answer.find_by_answer_id(session, 4+(n-1)*4)
+                        option = input(f'''
+                        Question {n} of 10:
+
+                        {n}: {question.content}
+
+                        1) {answer1.content}
+                        2) {answer2.content}
+                        3) {answer3.content}
+                        4) {answer4.content}
+
+                        Answer: ''')
+                        if option == "1":
+                            print("Answer 1")
+                            n += 1
+                        elif option == "2":
+                            print("Answer 2")
+                            n += 1
+                        elif option == "3":
+                            print("Answer 3")
+                            n += 1
+                        elif option == "4":
+                            print("Answer 4")
+                            n += 1
+                        elif option == "exit":
+                            short_quiz(currentUser)
+                    print("end of quiz")
+                    inQuiz=False
+                    
+
+
+                
 
 
 

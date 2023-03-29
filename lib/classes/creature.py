@@ -15,11 +15,11 @@ class Creature(Base):
     ascii_art = Column(String())
     
     def __repr__(self):
-        return f"Creature ID: {self.id}" \
-            + f"Creature Species: {self.species}" \
-            + f"Creature Origin: {self.origin}" \
-            + f"Creature Description: {self.description}" \
-            + f"Care Instructions: {self.care_instructions}" \
+        return f"Creature ID: {self.id} / " \
+            + f"Creature Species: {self.species} / " \
+            + f"Creature Origin: {self.origin} / " \
+            + f"Creature Description: {self.description} / " \
+            + f"Care Instructions: {self.care_instructions} / " \
             + f"ASCII Art: {self.ascii_art}"
 
 

@@ -11,9 +11,11 @@ class Question(Base):
     content = Column(String())
     
     def __repr__(self):
-        return f"Question ID: {self.id}" \
+        return f"Question ID: {self.id} / " \
             + f"Question Content: {self.content}"
 
+    def find_by_question_id(session, id):
+        return session.query(Question).filter(Question.id == id).first()
     
 
 
@@ -31,8 +33,6 @@ class Question(Base):
     def get_all(session):
         return session.query(Question).all()
 
-    def find_by_id(session, id):
-        return session.query(Question).filter(Question.id == id).first()
 
     def update_content(session, answer, content):
         answer.content = content

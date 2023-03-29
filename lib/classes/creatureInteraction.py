@@ -14,10 +14,10 @@ class CreatureInteraction(Base):
     effect_on_obedience = Column(String())
     
     def __repr__(self):
-        return f"Interaction ID: {self.id}" \
-            + f"Interaction Name: {self.name}" \
-            + f"Interaction Happiness: {self.effect_on_happiness}" \
-            + f"Interaction Health: {self.effect_on_health}" \
+        return f"Interaction ID: {self.id} / " \
+            + f"Interaction Name: {self.name} / " \
+            + f"Interaction Happiness: {self.effect_on_happiness} / " \
+            + f"Interaction Health: {self.effect_on_health} / " \
             + f"Interaction Obedience: {self.effect_on_obedience}"
 
 

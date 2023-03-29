@@ -11,9 +11,9 @@ class UserAnswer(Base):
     answer_id = Column(Integer(), ForeignKey('answers.id'))
     
     def __repr__(self):
-        return f"UserAnswer ID: {self.id}" \
-            + f"User ID: {self.user_id}" \
-            + f"Answer ID: {self.answer_id}" 
+        return f"UserAnswer ID: {self.id} / " \
+            + f"User ID: {self.user_id} / " \
+            + f"Answer ID: {self.answer_id} / " 
 
 
 
