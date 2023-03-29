@@ -14,7 +14,7 @@ class User(Base):
     def __repr__(self):
         return f"User ID: {self.id}" \
             + f"User Name: {self.username}" \
-            + f"User Origin: {self.password}" 
+            + f"User Password: {self.password}" 
 
 
 

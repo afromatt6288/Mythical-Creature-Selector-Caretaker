@@ -28,7 +28,7 @@ with Session(engine) as session:
     # creatureInteraction = CreatureInteraction(name="TBD", effect_on_happiness="TBD", effect_on_health="TBD")
     # question = Question(content="TBD")
     # user = User(username="TBD", password="TBD")
-    # # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", adoption_day="TBD", last_interaction="TBD")
+    # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", adoption_day="TBD", last_interaction="TBD")
     # answer = Answer(content="TBD", question_id=1, creature_id1=1, creature_id2=2, creature_id3=3)
 
 
@@ -48,24 +48,24 @@ with Session(engine) as session:
         are depicted as protectors of kingdoms and important treasures. They have been a popular theme in 
         European literature and art for centuries and continue to be an iconic symbol of fantasy and adventure.
         ''', 
-        care_instructions="TBD",
+        care_instructions="Feed A LOT and Often. Likes to be Groomed, but not much for Playing. Would rather Sleep.",
         ascii_art='''
-                 ___====-_  _-====___
-           _--^^^#####//      \\#####^^^--_
-        _-^##########// (    ) \\##########^-_
-       -############//  |\^^/|  \\############-
-     _/############//   (@::@)   \\############\_
-    /#############((     \\//     ))#############-
-   -###############\\    (oo)    //###############-
-  -#################\\  / VV \  //#################-
- -###################\\/      \//###################-
-_#/|##########/\######(   /\   )######/\##########|\#_
-|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
-`  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
-   `   `  `      `   / | |  | | \   '      '  '   '
-                    (  | |  | |  )
-                   __\ | |  | | /__
-                  (vvv(VVV)(VVV)vvv)
+                                                           ____________
+                                     (`-..________....---''  ____..._.-`
+                                      \\`.________.._,.---'`'     ,'
+                                      ; )`.      __..-'`-.      /
+                                     / /     _.-' _,.;;._ `-._,'
+                                    / /   ,-' _.-'  //   ``--._``._
+                                  ,','_.-' ,-' _.- (( =-    -. `-._`-._____
+                                ,;.''__..-'   _..--.\\.---'````--.._``-.`-._`.
+                 _          |\,' .-''        ```-'`---'`-...__,._  ``-.`-.`-.`.
+      _     _.-,'(__)\__)\-'' `     ___  .          `     \      `--._
+    ,',)---' /|)          `     `      ``-.   `     /     /     `     `-.
+    \_____--.  '`  `               __..-.  \     . (   < _...-----..._   `.
+     \_,--..__. \\ .--`.\----'';``,..-.__ \  \      ,`_. `.,-'`--'`---''`.  )
+               `.\`.\  `_.-..' ,'   _,-..'  /..,-''(, ,' ; ( _______`___..'__
+                       ((,(,__(    ((,(,__,'  ``'-- `'`.(\  `.,..______   
+                                                          ``--------..._``--.__
         '''
     )
     creature2 = Creature(
@@ -109,7 +109,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
              `.\  gY.     /      7MMMMMMMMMMP"..emmMMMMM
                 .dMMMb,-..|       `.~~"""```|dMMMMP'MMP'
                .MMMMP^"""/ .7 ,  _  \,---~""`^YMMP'MM;
-             _dMMMP'   ,' / | |\ \\  }          PM^M^b
+             _dMMMP'   ,' / | |\ \\   }          PM^M^b
           _,' _,  \_.._`./  } ; \ \``'      __,'_` _  `._
       ,-~/'./'| 7`,,__,}`   ``   ``        // _/`| 7``-._`}
      |_,}__{  {,/'   ``                    `\{_  {,/'   ``
@@ -135,18 +135,18 @@ _#/|##########/\######(   /\   )######/\##########|\#_
      {~,-~-,-~.-~,-,;;;;\ |   '--;`)/
       \-,~_-~_-,~-,(_(_(;\/   ,;/
        ",-.~_,-~,-~,)_)_)'.  ;;(
-         `~-,_-~,-~(_(_(_(_\  `;\_
-   ,          `"~~--,)_)_)_)\_   \_
+         `~-,_-~,-~(_(_(_(_\  `;\ 
+   ,          `"~~--,)_)_)_)\_   \ 
    |\              (_(_/_(_,   \  ;
    \ '-.       _.--'  /_/_/_)   | |
     '--.\    .'          /_/    | |
         ))  /       \      |   /.'
-       //  /,        | __.'|  ||
-      //   ||        /`    (  ||
-     ||    ||      .'       \ \\
-     ||    ||    .'_         \ \\
-      \\   //   / _ `\        \ \\__
-       \'-'/(   _  `\,;        \ '--:,
+       //  /,        | __.'|  |.|
+      //   ||        /`    (  |.|
+     ||    ||      .'       \ \.\ 
+     ||    ||    .'_         \ \.\ 
+     \.\    //   / _ `\        \ \.\__
+      \.'--'/(   _  `\,;        \ '--:,
         `"`  `"` `-,,;         `"`",,;
         '''
     )
@@ -158,269 +158,757 @@ _#/|##########/\######(   /\   )######/\##########|\#_
         It is often depicted as a bird with bright and colorful feathers that are said to be reborn 
         from the ashes of its own funeral pyre. In Greek mythology, the Phoenix is a symbol of resurrection 
         and rebirth, while in Egyptian mythology it is associated with the sun and the cycle of life and death. 
-        In Chinese and Japanese mythology, the Phoenix is associated with prosperity, good fortune, and feminine 
-        grace. Overall, the Phoenix is a symbol of hope, renewal, and transformation, and its mythical qualities 
-        have made it a popular symbol in art and literature throughout history.
+        In Chinese and Japanese mythology, the Phoenix is associated with prosperity, good fortune, and 
+        feminine grace. Overall, the Phoenix is a symbol of hope, renewal, and transformation, and its mythical 
+        qualities have made it a popular symbol in art and literature throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art='''
-                (                           )
-          ) )( (                           ( ) )( (
-       ( ( ( )  ) )                     ( (   (  ) )(
-      ) )     ,,\\\                     ///,,       ) (
-   (  ((    (\\\\//                     \\////)      )
-    ) )    (-(__//                       \\__)-)     (
-   (((   ((-(__||                         ||__)-))    ) )
-  ) )   ((-(-(_||           ```\__        ||_)-)-))   ((
-  ((   ((-(-(/(/\\        ''; 9.- `      //\)\)-)-))    )
-   )   (-(-(/(/(/\\      '';;;;-\~      //\)\)\)-)-)   (   )
-(  (   ((-(-(/(/(/\======,:;:;:;:,======/\)\)\)-)-))   )
-    )  '(((-(/(/(/(//////:%%%%%%%:\\\\\\)\)\)\)-)))`  ( (
-   ((   '((-(/(/(/('uuuu:WWWWWWWWW:uuuu`)\)\)\)-))`    )
-     ))  '((-(/(/(/('|||:wwwwwwwww:|||')\)\)\)-))`    ((
-  (   ((   '((((/(/('uuu:WWWWWWWWW:uuu`)\)\))))`     ))
-        ))   '':::UUUUUU:wwwwwwwww:UUUUUU:::``     ((   )
-          ((      ''`''`'\wuuuuuuu/``````         ))
-           ))            `JJJJJJJJJ`           ((
-             ((            LLLLLLLLLLL         ))
-               ))         ///|||||||\\\       ((
-                 ))      (/(/(/(^)\)\)\)       ((
-                  ((                           ))
-                    ((                       ((
-                      ( )( ))( ( ( ) )( ) (()
+                    (                           )
+              ) )( (                           ( ) )( (
+           ( ( ( )  ) )                     ( (   (  ) )(
+          ) )     ,,\|\                     ///,,       ) (
+       (  ((    (\|\|//                     \|////)      )
+        ) )    (-(__//                       \|\_)-)     (
+       (((   ((-(__||                         ||__)-))    ) )
+      ) )   ((-(-(_||           ```\__        ||_)-)-))   ((
+      ((   ((-(-((/\|\        ''; 9.- `      //\)\)-)-))    )
+       )   (-(-((/(/\|\      '';;;;-\~      //\)\)\)-)-)   (   )
+    (  (   ((-(-(/(/(/\======,:;:;:;:,======/\)\)\)-)-))   )
+        )  '(((-(/(/(/(//////:%%%%%%%:\|\|\|)\)\)\)-)))`  ( (
+       ((   '((-(/(/(/('uuuu:WWWWWWWWW:uuuu`)\)\)\)-))`    )
+         ))  '((-(/(/(/('|||:wwwwwwwww:|||')\)\)\)-))`    ((
+      (   ((   '((((/(/('uuu:WWWWWWWWW:uuu`)\)\))))`     ))
+            ))   '':::UUUUUU:wwwwwwwww:UUUUUU:::``     ((   )
+              ((      ''`''`'\wuuuuuuu/``````         ))
+               ))            `JJJJJJJJJ`           ((
+                 ((            LLLLLLLLLLL         ))
+                   ))         ///|||||||\|\       ((
+                     ))      (/(/(/(^)\)\)\)       ((
+                      ((                           ))
+                        ((                       ((
+                          ( )( ))( ( ( ) )( ) (()
         '''
     )
     creature5 = Creature(
         species="Pegasus", 
         origin="Greek",  
         description='''
-        TBD
+        A Pegasus is a mythical winged horse from Greek mythology. It is often depicted as a beautiful and 
+        powerful creature with wings and the ability to fly. In mythology, the Pegasus is usually associated 
+        with the Muses and is said to be born from the blood of the Gorgon Medusa, who was slain by the hero 
+        Perseus. The Pegasus represents freedom, grace, and the power of the imagination, and it has been a 
+        popular symbol in art and literature throughout history. It is often portrayed as a companion to heroes 
+        and figures of inspiration, and its mythical qualities have made it a beloved creature in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-TBD
+                          . . . .
+                          ,`,`,`,`,
+    . . . .               `\`\`\`\;
+    `\`\`\`\`,            ~|;!;!;\!
+     ~\;\;\;\|\          (--,!!!~`!       
+    (--,\|\===~\         (--,|||~`!     
+     (--,\|\===~\         `,-,~,=,:.   
+      (--,\|\==~`\        ~-=~-.---|\;/|,
+       (--,\|\((```==.    ~'`~/       a |
+         (-,.\|('('(`|\.  ~'=~|     \_.  \ 
+            (,--(,(,(,'|\. ~'=|       |\_;>
+              (,-( ,(,(,;|\ ~=/        \.
+              (,-/ (.(.(,;|\,/          )
+               (,--/,;,;,;,|\         ./------.
+                 (==,-;-'`;'         /_,----`. \ 
+         ,.--_,__.-'                    `--.  ` \ 
+        (='~-_,--/        ,       ,!,___--. \  \_)
+       (-/~(     |         \   ,_-         | ) /_|
+       (~/((\    )\._,      |-'         _,/ /
+        \\))))  /   ./~.    |           \_\;
+     ,__/////  /   /    )  /
+      '===~'   |  |    (, <.
+               / /       \. \ 
+             _/ /          \_\ 
+            /_!/            >_\ 
         '''
     )
     creature6 = Creature(
         species="Unicorn", 
         origin="Ancient mythology, European folklore", 
         description='''
-        TBD
+        A unicorn is a mythical creature from ancient and European folklore mythology, often depicted as a 
+        horse with a single horn on its forehead. It is said to possess magical healing powers and the ability 
+        to purify water. In mythology, the unicorn represents purity, grace, and innocence, and is often 
+        associated with the divine. The legend of the unicorn has been prevalent in European folklore for 
+        centuries, and it has been depicted in art, literature, and heraldry. The unicorn is a symbol of hope, 
+        purity, and divine intervention, and its mythical qualities have captured the imaginations of people 
+        throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-TBD
+    `\.
+      |\,
+       \|\,^,.,,.
+       ,;7~((\))`;;,,
+       ,(@') ;)`))\;;',
+        )  . ),((  ))\;,
+       /;`,,/7),)) )) )\,,      ,,,... ,
+      (& )`   (,((,((;( ))\,_,,;'`    `|\,
+       `"    ` ), ))),/( (            `)\,
+              '1/';/;  `               ))),
+               (, (     /         )    ((/,
+              / \                /     ((('
+             ( 6--\%  ,>     ,,,(     /'))\.
+              \,\,/ ,/`----~`\   \    >,))))'
+                \/ /          `--7>' /((((('
+                (,9             // /'('((\\\,
+                 \ \,,         (/,/   '\`\\'\ 
+                  `\_)1        (_)k     `\`\\`\ 
+                    `\|         \Z          `\.
+                      `          "            `
         '''
     )
     creature7 = Creature(
         species="Sphinx", 
         origin="Greek, Egyptian", 
         description='''
-        TBD
+        A Sphinx is a mythical creature with the body of a lion and the head of a human, and it appears in both 
+        Greek and Egyptian mythology. It is often portrayed as a guardian, challenging travelers with a riddle, 
+        and killing those who cannot answer correctly. In Egyptian mythology, the Sphinx is associated with the 
+        sun and is often depicted as a symbol of royal power and protection. In Greek mythology, the Sphinx is 
+        said to have terrorized the city of Thebes until it was defeated by the hero Oedipus. The Sphinx 
+        represents mystery, enigma, and the danger of the unknown, and its mythical qualities have made it a 
+        popular subject in art, literature, and popular culture throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-TBD
+                          .sSSSSSSSs
+                          sSS=""^^^"s
+              /\       , /  \_\_\|_/_)
+             /';;     /| \|\/.-. .-./
+            / \;|    /. \,S'  -   - |
+           / -.;|    | '.SS     _|  ;
+          ; '-.;\,   |'-.SS\   __  /S
+          | _  ';|\.  \` SSS\_____/SS
+          |  '- ';|\.  \_SSS[_____]SS
+          \ '--.-';;-. __SSS/\    SSS
+           \  .--' ';;'.=SSS`|\_\_SSS
+            `._ .-'` _';;..=.=.=.\.=\ 
+               ;-._-'  _.;\.=.=.=.|.=|
+     ,     _.-'    `"=._  ;\=.=__/__/
+     )\ .'`   __        ".;|.=.=.=./
+     (_\   .-`  '.   |    \/=.=.=/`
+      /|\         \-,|     |.--'|
+     /  \`,       //  \    | |  |
+    ( (__) )  _.-'--,  \   | |  '--,
+     ;----' -'--,__}}}  \  '--, __}}}
+     \_________}}}       \___}}}
         '''
     )
     creature8 = Creature(
         species="Cerberus", 
         origin="Greek", 
         description='''
-        TBD
+        Cerberus is a legendary creature from Greek mythology, often depicted as a three-headed dog with a 
+        serpent for a tail. In mythology, Cerberus is said to guard the entrance to the Underworld, preventing 
+        the dead from escaping and the living from entering. The creature is known for its fierce and 
+        intimidating appearance, and it is said to have a venomous bite. Cerberus represents the boundary 
+        between life and death, and its mythical qualities have made it a popular subject in art, literature, 
+        and popular culture. It is often associated with the underworld and the afterlife, and its role as a 
+        guardian has made it a symbol of protection and power in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-TBD
+                /\_/\____,
+      ,___/\_/\ \  ~     /
+      \     ~  \ )   XXX
+        XXX     /    /\_/\___,
+           \o-o/-o-o/   ~    /
+            ) /     \    XXX
+           _|    / \ \_/
+        ,-/   _  \_/   \.
+       / (   /____,__|  )
+      (  |_ (    )  \) _|
+     _/ _)   \   \__/   (_
+    (,-(,(,(,/      \,),),)
         '''
     )
     creature9 = Creature(
         species="Kraken", 
         origin="Norse", 
         description='''
-        TBD
+        The Kraken is a legendary sea monster from Norse mythology, often described as a giant octopus or squid 
+        with tentacles long enough to wrap around ships and drag them under the water. In mythology, the Kraken 
+        is said to dwell in the depths of the ocean, and it is associated with storms, whirlpools, and other 
+        dangerous sea phenomena. The creature's immense size and strength make it a fearsome opponent, and its 
+        mythical qualities have made it a popular subject in art, literature, and popular culture. The Kraken 
+        represents the power and mystery of the ocean, and its role as a feared monster has made it a symbol 
+        of danger and uncertainty in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-TBD
+                        ___
+                     .-'   `'.
+                    /         \.
+                    |         ;
+                    |         |           ___.--,
+           _.._     |0) ~ (0) |    _.---'`__.-( (_.
+    __.--'`_.. '.__.\    '--. \_.-' ,.--'`     `""`
+   ( ,.--'`   ',__ /./;   ;, '.__.'`    __
+   _`) )  .---.__.' / |   |\   \__..--""  """--.,_
+  `---' .'.''-._.-'`_./  /\ '.  \ _.-~~~````~~~-._`-.__.'
+        | |  .' _.-' |  |  \  \  '.               `~---`
+         \ \/ .'     \  \   '. '-._)
+          \/ /        \  \    `=.__`~-.
+          / /\         `) )    / / `"".`\.
+    , _.-'.'\ \        / /    ( (     / /
+     `--~`   ) )    .-'.'      '.'.  | (
+            (/`    ( (`          ) )  '-;
+             `      '-;         (-'
         '''
     )
     creature10 = Creature(
         species="Chimera", 
         origin="Greek", 
         description='''
-        TBD
+        A Chimera is a mythical creature from Greek mythology, typically depicted as a monstrous creature with 
+        the head of a lion, the body of a goat, and the tail of a serpent. In mythology, the Chimera is said 
+        to breathe fire and terrorize the countryside, and it is often portrayed as an unstoppable force. The 
+        Chimera represents chaos and destruction, and its mythical qualities have made it a popular subject in 
+        art, literature, and popular culture. Its composite appearance, drawn from several different animals, 
+        makes it a symbol of hybridity and diversity, while its fearsome nature has made it a symbol of danger 
+        and power.
         ''',
+        care_instructions="TBD",
+        ascii_art= '''
+       ,'.` ,,,
+     (( cxOS.'.)       _-- __)
+      _~ ox.O s ) --__/   ^ \ ___------_
+   _//o_  ))xx. ,)       (_ø \          `-_
+  /      ))oS  . ))     /   "             |\__
+  ø_---\ )).. S   )                       |   `---.___
+    ("" \  )I . .)                        |           `--.__
+     ___/ _/ S S)   \         \          /__                `--._
+      ---'( SS\      |      ___\_        \  `-_._.-----___.-'    `-
+         (S..S \     |___--      \_      |   /    /¢~~             )
+           (( S |   /"             \_    |  (.------_             /
+              ((|   |                |   /_  `""     \     ___,--'
+                 |  |                |  /   _-- ______\  |/
+                 |  |               /  /           --.___/
+                _| /              _/ _/
+              //__/             //__/
+              ``                ``
+        '''
+    )
+    creature11 = Creature(
+        species="Centaur", 
+        origin="Greek", 
+        description='''
+        A Centaur is a legendary creature from Greek mythology, often depicted as a being with the upper body 
+        of a human and the lower body of a horse. In mythology, Centaurs are known for their strength and wild 
+        behavior, and are often portrayed as heavy drinkers and rowdy partiers. They are associated with 
+        hunting and warfare, and their skilled use of weapons and archery is a common theme in mythology. The 
+        Centaur represents the intersection between human and animal, and its mythical qualities have made it 
+        a popular subject in art, literature, and popular culture. Its dual nature has also made it a symbol 
+        of inner conflict and the struggle between primal instincts and human reason.
+        ''',
+        care_instructions="TBD",
+        ascii_art= '''
+             =*===
+           $$- - $$$
+           $ <    D$$
+           $ -   $$$
+     ,     $$$$  |
+    ///; ,---' _ |----.
+     \ )(           /  )
+     | \/ \.   '  _.|  \              $
+     |  \ /(   /    /\_ \          $$$$$
+      \ /  (       / /  )         $$$ $$$
+           (  ,   /_/ ,`_,-----.,$$  $$$
+           |   <----|  \---##     \   $$
+           /         \|\           |    $
+          '   '                    |
+          |                 \      /
+          /  \_|    /______,/     /
+         /   / |   /    |   |    /
+        (   /--|  /.     \  (\  (_
+         `----,( ( _\     \ / / ,/
+               | /        /,_/,/
+              _|/        / / (
+             / (        ^-/, |
+            /, |          ^-    
+            ^-
+        '''
+    )
+    creature12 = Creature(
+        species="Satyr/Faun", 
+        origin="Greek, Roman", 
+        description='''
+        A Satyr, also known as a Faun in Roman mythology, is a mythical creature depicted as a being with the 
+        upper body of a man and the lower body of a goat. In mythology, Satyrs are known for their mischievous 
+        and lustful behavior, often depicted as drunken party-goers and followers of the god of wine, Dionysus. 
+        They are associated with nature, wilderness, and fertility, and their mythical qualities have made them 
+        a popular subject in art, literature, and popular culture. The Satyr represents the intersection 
+        between human and animal, and its wild nature has made it a symbol of freedom, spontaneity, and 
+        uninhibited pleasure-seeking.
+        ''', 
         care_instructions="TBD",
         ascii_art= '''
 TBD
         '''
     )
-#     creature11 = Creature(
-#         species="Centaur", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''',
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature12 = Creature(
-#         species="Satyr/Faun", 
-#         origin="Greek, Roman", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature13 = Creature(
-#         species="Mermaid/Merman", 
-#         origin="Global", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature14 = Creature(
-#         species="Nymph", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature15 = Creature(
-#         species="Valkyrie", 
-#         origin="Norse", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature16 = Creature(
-#         species="Basilisk", 
-#         origin="European Folklore", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature17 = Creature(
-#         species="Leprechaun", 
-#         origin="Celtic, Irish", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature18 = Creature(
-#         species="Werewolf", 
-#         origin="European Folklore", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature19 = Creature(
-#         species="Minotaur", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature20 = Creature(
-#         species="Harpy", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature21 = Creature(
-#         species="Gorgon", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature22 = Creature(
-#         species="Cyclops", 
-#         origin="Greek", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature23 = Creature(
-#         species="Gnome", 
-#         origin="European Folklore", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature24 = Creature(
-#         species="Hundun/Chaos-Beast", 
-#         origin="Chinese", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
-#     creature25 = Creature(
-#         species="Qilin/Kirin", 
-#         origin="Chinese, Japanese", 
-#         description='''
-#         TBD
-#         ''', 
-#         care_instructions="TBD",
-#         ascii_art= '''
-# TBD
-#         '''
-#     )
+    creature13 = Creature(
+        species="Mermaid/Merman", 
+        origin="Global", 
+        description='''
+        A Mermaid or Merman is a legendary aquatic creature found in the folklore and mythology of cultures 
+        around the world. It is typically depicted as having the upper body of a human and the lower body of a 
+        fish, with long hair and a beautiful voice. Mermaids and Mermen are often associated with the sea, and 
+        are known for their ability to lure sailors to their doom with their enchanting songs. In mythology, 
+        they are also sometimes depicted as benevolent creatures who assist sailors and protect the ocean's 
+        creatures. The Mermaid/Merman represents the intersection between the human and the natural world, and 
+        their mythical qualities have made them a popular subject in art, literature, and popular culture. 
+        They are often seen as symbols of mystery, beauty, and the unknown depths of the ocean.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+                           .-""-.
+                          (___/\ \ 
+        ,                 (|^ ^ ) )
+       /(                _)_\=_/  (
+ ,..__/ `\          ____(_/_ ` \   )
+  `\    _/        _/---._/(_)_  `\ (
+    '--\ `-.__..-'    /.    (_), |  )
+        `._        ___\_____.'_| |__/
+           `~----"`   `-.........'
+        '''
+    )
+    creature14 = Creature(
+        species="Nymph", 
+        origin="Greek", 
+        description='''
+        A Nymph is a female spirit from Greek mythology, associated with nature and often depicted as a 
+        beautiful, young maiden. They are said to inhabit the forests, mountains, and rivers, and are 
+        associated with specific aspects of nature, such as the woods, springs, or clouds. Nymphs are often 
+        portrayed as free-spirited and playful, with a love for music and dance. In mythology, they are also 
+        known to be lovers of gods and mortals alike, and their beauty and allure have made them a popular 
+        subject in art, literature, and popular culture. The Nymph represents the beauty and wonder of the 
+        natural world, and their presence has inspired awe and reverence in many cultures throughout history.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+     /''                 (*
+     \   %%%%%%%%          )
+     /   _(>)%%%%%%       (
+     \ *' /%%%%%  ,)      *)
+    %/   * %%%(, <(       (
+     \       %% __/        *
+     /&      _\ |___     /_.
+     \      ( .\.'( \   /.\ 
+             \(_.._) \.'/
+              ) \__|'._/
+             / / )-'\.
+         ___/.' //|\ )
+         /._)  /.___.|
+              (_.' \ |
+               \ )  (,\ 
+                \|   \ |
+                |_\   \|
+                | /   (/\ 
+             ___\/_____\_)___
+        '''
+    )
+    creature15 = Creature(
+        species="Valkyrie", 
+        origin="Norse", 
+        description='''
+        A Valkyrie is a female figure from Norse mythology, often depicted as a warrior woman who serves the 
+        gods and chooses who lives and dies in battle. They are said to be beautiful and powerful, with the 
+        ability to fly on winged horses and carry fallen warriors to the afterlife. In mythology, Valkyries 
+        are associated with death, fate, and war, and are often depicted as fierce and determined fighters. 
+        The Valkyrie represents the power and agency of women in Norse mythology, and their role as choosers 
+        of the slain has made them a symbol of honor and courage in many cultures. Their mythical qualities 
+        have also made them a popular subject in art, literature, and popular culture, inspiring awe and 
+        admiration for their strength and bravery.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+ *     |\    .
+       |.\         *
+  +     \.\  
+         \.\      .      +
+ .       {====}
+          (\.\  ,,,,.         *
+  .    *    \(),~`~`~~,
+             \ ('_'|)))`  .
+ +      .     \ \=,((((
+               \ !  )))),     +
+ *     .      ,/_Y_(( \)
+              (  (   )\ \   *
+               \     / ) )
+                )    \/ /
+               /     (_]
+               |       |
+               !__,    |
+               |  \_~~/
+               |  /|  |
+               |  ||  |
+               (_-(|__(-
+                \+/|\/:-
+                 )\|/\;
+                {,/ )\.]
+                    {,/   
+        '''
+    )
+    creature16 = Creature(
+        species="Basilisk", 
+        origin="European Folklore", 
+        description='''
+        A Basilisk is a legendary creature from European folklore, often described as a reptilian monster with 
+        the ability to kill with its gaze or breath. In mythology, the Basilisk is associated with death and 
+        destruction, and is said to be born from an egg laid by a rooster and hatched by a serpent. The 
+        creature's breath and gaze are said to be so deadly that even its reflection or shadow can kill, and 
+        it is often portrayed as an unstoppable force. The Basilisk represents the fear of the unknown and 
+        the power of death, and its mythical qualities have made it a popular subject in art, literature, and 
+        popular culture. Its appearance has also inspired many other creatures in folklore and popular culture, 
+        such as the cockatrice and the dragon.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+TBD
+        '''
+    )
+    creature17 = Creature(
+        species="Leprechaun", 
+        origin="Celtic, Irish", 
+        description='''
+        A Leprechaun is a legendary creature from Celtic and Irish folklore, often depicted as a small, 
+        mischievous fairy with a fondness for mischief and gold. They are said to inhabit the forests and 
+        hills of Ireland, and are often portrayed as shoemakers who can create magical shoes. In mythology, 
+        Leprechauns are known for their ability to grant wishes and their association with good luck, and are 
+        often sought after by those seeking wealth or fortune. They are also known for their quick wit and 
+        cleverness, and are often depicted as outsmarting those who try to capture them. The Leprechaun 
+        represents the magic and mystery of Irish folklore, and their mythical qualities have made them a 
+        popular subject in art, literature, and popular culture.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+                                       .-----.   ()()
+                                      /       \ .'()
+                                      |__...__|/
+                                      |_....._|
+                                    .-'  ___  '-.
+                                    \_.-`. .`-._/
+              __ .--. _              (|\ (_) /|)
+           .-;.-"-.-;`_;-,            ( \_=_/ )
+         .(_( `)-;___),-;_),          _(_   _)_
+        (.( `\.-._)-.(   ). )       /` ||'-'|| `\ 
+      ,(_`'--;.__\  _).;--'`_)  _  /_/ (_>o<_) \_\ 
+     // )`--..__ ``` _( o )'(';,)\_//| || : || ||\ 
+     \;'        `````  `|\   '.|\--' |`"""""""`|//
+     /                   ':.___//     \___,___/\_(
+    |                      '---'|      |__|__|
+    ;                           ;      ;""|"";
+     \                         /       [] | []
+      '.                     .'      .'  / \  '.
+        '-,.__         __.,-'        `--'   `--'
+         (___/`````````\___) 
+        '''
+    )
+    creature18 = Creature(
+        species="Werewolf", 
+        origin="European Folklore", 
+        description='''
+        A Werewolf is a legendary creature from European folklore, often depicted as a human with the ability 
+        to transform into a wolf or a hybrid of human and wolf. In mythology, Werewolves are associated with 
+        the full moon and are said to be cursed or transformed through magic or a bite from another Werewolf. 
+        They are often portrayed as fierce and dangerous creatures, with a hunger for human flesh. The Werewolf 
+        represents the fear of the unknown and the primal nature of humanity, and its mythical qualities have 
+        made it a popular subject in art, literature, and popular culture. Its appearance has also inspired 
+        many other creatures in folklore and popular culture, such as the shapeshifter and the vampire.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+                 /\ 
+                ( ;`~v/~~~ ;._
+             ,/'"/^) ' < o\  '".~'~-~--,
+           ,/",/W  u '`. ~  >,._..,   )'
+          ,/'  w  ,U^v  ;//^)/')/^\;~)'
+       ,/"'/   W` ^v  W |;         )/'
+     ;''  |  v' v`" W } \ \ 
+    "    .'\    v  `v/^W,) '\)\.)\/)
+             `\   ,/,)'   '`')/^"-;'
+                  \ 
+                   '". _
+                        \ 
+        '''
+    )
+    creature19 = Creature(
+        species="Minotaur", 
+        origin="Greek", 
+        description='''
+        A Minotaur is a legendary creature from Greek mythology, often depicted as a monster with the head of 
+        a bull and the body of a man. In mythology, the Minotaur is said to dwell in a labyrinth on the island 
+        of Crete, and is known for its ferocity and power. The creature's origins are said to be linked to the 
+        legend of King Minos, who ordered the construction of the labyrinth to imprison the creature. The 
+        Minotaur represents the danger and unpredictability of the natural world, and its mythical qualities 
+        have made it a popular subject in art, literature, and popular culture. Its appearance has also 
+        inspired many other creatures in mythology and popular culture, such as the centaur and the chimera.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+           -""\.
+        .-"  .`)     (
+       j   .'_+     :[                )      .^--..
+      i    -"       |l                ].    /      i
+     ," .:j         `8o  _,,+.,.--,   d|   `:::;    b
+     i  :'|          "88p;.  (-."_"-.oP        \.   :
+     ; .  (            >,%%%   f),):8"          \:'  i
+    i  :: j          ,;%%%:; ; ; i:%%%.,        i.   `.
+    i  `: ( ____  ,-::::::' ::j  [:```          [8:   )
+    <  ..``'::::8888oooooo.  :(jj(,;,,,         [8::  <
+    `. ``:.      oo.8888888888:;%%%8o.::.+888+o.:`:'  |
+     `.   `        `o`88888888b`%%%%%88< Y888P""'-    ;
+       "`---`.       Y`888888888;;.,"888b."""..::::'-'
+              "-....  b`8888888:::::.`8888._::-"
+                 `:::. `:::::O:::::::.`%%'|
+                  `.      "``::::::''    .'
+                    `.                   <
+                      +:         `:   -';
+                       `:         : .::/
+                        ;+_  :::. :..;;;
+                        ;;;;,;;;;;;;;,;;
+        '''
+    )
+    creature20 = Creature(
+        species="Harpy", 
+        origin="Greek", 
+        description='''
+        A Harpy is a mythical creature from Greek mythology, often depicted as a winged creature with the head 
+        of a woman and the body of a bird. In mythology, Harpies are known for their speed and agility, and 
+        are said to be able to fly at great speeds and carry off their prey. They are often portrayed as fierce 
+        and terrifying, with a love for destruction and chaos. Harpies are associated with the god of the 
+        underworld, Hades, and are sometimes depicted as servants or companions of the Furies. The Harpy 
+        represents the danger and unpredictability of the natural world, and its mythical qualities have made 
+        it a popular subject in art, literature, and popular culture.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+         ,                                      ,
+        |\                                      /|
+     ,   \`._ ,                           ,  _.'/   ,
+     |\  {'. '-`\,      ,-._**_.-,      ,/`-' .'}  /|
+      \`'-'-.  '.`\      \*____*/      /`.'  .-'-'`/
+    ,'-'-._  '.  ) )     /`    `\     ( (  .'  _.-'-',
+    |\`- _ '.   , /     /  /""\  \     \ ,  .'  _ -'/|
+     \`-.   .  ; (      \_|^  ^|_/      ) ;   .  .-'/
+      `'--, . ;  {`-.      \__/      .-'}  ; . ,--'`
+      '--`_. ;  { ^  \    _|  |_    /  ^ }  ; ._`--'
+      `,_.--  ;  { ^  `-'`      `'-`  ^ }  ;  --._,`
+        ,_.-    ; {^    /        \    ^} ;    -._, 
+         ,_.-`), /\{^,/|\_'_/\_'_//\,^}/\ ,(`-._,
+           _.'.-` /.'   \        /   `.\ `-.'._
+          `  _.' `       \      /       ` '._   `
+                        .-'.  .'-.
+                      .'    `` ^  '.
+                     /  ^ ^   ^  ^  \.
+                     | ^    ^   ^   |
+                    /^   ^/    \  ^  \.
+                    \,_^_/    ^ \_,^./
+                     /=/  \^   /  \=\.
+                 __ /=/_   | ^|   _\=\ __
+               <(=,'=(==,) |  | (,==)=',=)>
+                 /_/|_\    /  \    /_|\_\.
+                 `V (=|  .'    '.  |=) V`
+                     V  / _/  \_ \  V
+                       `"` \  / `"`
+                            \(
+        '''
+    )
+    creature21 = Creature(
+        species="Gorgon", 
+        origin="Greek", 
+        description='''
+        A Gorgon is a mythical creature from Greek mythology, often depicted as a being with snakes for hair 
+        and the ability to turn people to stone with their gaze. The most famous Gorgon is Medusa, who was 
+        said to have been cursed with this power by the goddess Athena. Gorgons are associated with death and 
+        terror, and are often portrayed as fierce and monstrous. In mythology, they are said to dwell in remote 
+        places such as caves and islands, and are often associated with the underworld. The Gorgon represents 
+        the fear and danger of the unknown, and its mythical qualities have made it a popular subject in art, 
+        literature, and popular culture.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+                   ,--.
+          ,--.  .--,`) )  .--,
+       .--,`) \( (` /,--./ (`
+      ( ( ,--.  ) )\ /`) ).--,-.
+       ;.__`) )/ /) ) ( (( (`_) )
+      ( (  / /( (.' "-.) )) )__.'-,
+     _,--.( ( /`         `,/ ,--,) )
+    ( (``) \,` ==.    .==  \( (`,-;
+     ;-,( (_) ~6~ \  / ~6~ (_) )_) )
+    ( (_ \_ (      )(      )__/___.'
+    '.__,-,\ \     ''     /\ ,-.
+       ( (_/ /\    __    /\ \_) )
+        '._.'  \  \__/  /  '._.'
+            .--`\      /`--.
+                 '----' 
+        '''
+    )
+    creature22 = Creature(
+        species="Cyclops", 
+        origin="Greek", 
+        description='''
+        A Cyclops is a mythical creature from Greek mythology, often depicted as a being with a single eye in 
+        the center of its forehead. In mythology, Cyclopes are known for their strength and size, and are said 
+        to be skilled metalworkers and builders. They are often portrayed as living in remote places such as 
+        caves and mountains, and are sometimes associated with the god of the forge, Hephaestus. The most 
+        famous Cyclops is Polyphemus, who was blinded by the hero Odysseus in Homer's epic poem, the Odyssey. 
+        The Cyclops represents the power and mystery of the natural world, and its mythical qualities have 
+        made it a popular subject in art, literature, and popular culture.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+               _......._
+           .-'.'.'.'.'.'.`-.
+         .'.'.'.'.'.'.'.'.'.`.
+        /.'.'               '.\.
+        |.'    _.--...--._     |
+        \    `._.-.....-._.'   /
+        |     _..- .-. -.._   |
+     .-.'    `.   ((@))  .'   '.-.
+    ( ^ \      `--.   .-'     / ^ )
+     \  /         .   .       \  /
+     /          .'     '.  .-    \.
+    ( _.\    \ (_`-._.-'_)    /._\)
+     `-' \   ' .--.          / `-'
+         |  / /|_| `-._.'\   |
+         |   |       |_| |   /-.._
+     _..-\   `.--.______.'  |
+          \       .....     |
+           `.  .'      `.  /
+             \           .'
+              `-..___..-`
+        '''
+    )
+    creature23 = Creature(
+        species="Gnome", 
+        origin="European Folklore", 
+        description='''
+        A Gnome is a legendary creature from European folklore, often depicted as a small, bearded man who 
+        lives underground and is skilled in mining and metallurgy. In mythology, Gnomes are associated with 
+        the earth and nature, and are said to possess magical powers and a deep knowledge of the natural world. 
+        They are often portrayed as mischievous and playful, with a love for music and dance. Gnomes are also 
+        known for their association with gardens and are sometimes depicted as caretakers of the natural world. 
+        The Gnome represents the magic and wonder of the natural world, and its mythical qualities have made 
+        it a popular subject in art, literature, and popular culture.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+                                / \ 
+                               /   \ 
+                              /     \ 
+                             /       \ 
+                            /         \ 
+                           /           \ 
+      \  |  / ,           /_           _\ 
+    `-.\ | /,'           /  ```````````  \ `. \ |  / ,'
+   ----     ---         /    _,---''`'--.,|  `.\| /,'
+    --,     `-.         |   |. __   . __,(| ---     ---
+    ,' /_|\_\_          |   | '  `   `. `|/   /    `.
+        \  \  `._       |() |,        `. \  /` ,| \  `.
+         \    -' `-.__  \__/ `,  .  _   )|/' \/ |  \ 
+          `.      -'  `--,/|  '`-'`'_`''-|    \ 
+            `-._           `|     {`-`}  \     \ 
+                `-._        \,     ``'  |` ,---'
+                    `-.       |         \,-'
+                       |\     `\         \.
+                       \ `      \,       \.
+                       /          \     |`
+                      |            \,  / \.
+                      /              `'  |
+                      |                  |
+                      /                  |
+                     /      _ __    ,   ,'___,
+                    /  _   ' /,-`--'/  ' /   /
+                    `-' `--..'-----'----'---'
+        '''
+    )
+    creature24 = Creature(
+        species="Hundun/Chaos-Beast", 
+        origin="Chinese", 
+        description='''
+        Hundun, also known as the Chaos-Beast, is a legendary creature from Chinese mythology, often depicted 
+        as a shapeless, chaotic mass. In mythology, Hundun is said to represent chaos and the primordial state 
+        of the universe, and is often associated with the element of water. The creature's shapelessness and 
+        lack of definition make it a symbol of the unknown and the mysterious, and it is often depicted as a 
+        force to be feared and respected. The Hundun represents the power and potential of the universe, and 
+        its mythical qualities have made it a popular subject in art, literature, and popular culture. Its 
+        appearance has also inspired many other creatures in mythology and popular culture, such as the dragon 
+        and the phoenix.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+⠀⠀⠀⠀⠀⠀⠀⠀⣦⡀⡶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⢣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⣵⠙⠷⡈⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠘⡌⠢⣸⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢋⠑⠤⣈⠓⢌⠲⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡀⠑⡄⠘⢦⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⠗⢄⢈⣑⠠⣯⣉⠪⡑⢖⠦⣀⠀⣠⣀⠀⠀⠀⠘⡗⢤⣈⢳⡀⢣⡙⢕⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡦⡀⡗⠸⡦⠈⠲⡿⢆⠀⠑⢌⢺⡄⠈⠀⠈⠢⣙⠦⡦⡀⢾⠦⣌⠙⢭⣺⣍⠒⢭⡖⢍⡢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⡐⠌⠺⣖⠄⠈⠉⠙⠢⠀⠀⠀⠋⠁⠚⠓⠒⢺⠘⢦⡙⢮⡺⢖⠒⠓⠶⠷⠤⢭⣪⡟⢢⡹⠈⡆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣠⠯⡙⠣⢄⣁⠂⠄⠑⡒⠤⠄⣀⠀⠀⠀⠀⠀⠰⡳⠄⣙⢦⡙⠢⣈⢑⢢⣤⣄⡀⠀⠉⠙⠷⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⠞⠁⢰⣗⠒⠢⢬⡙⠛⢍⠀⠑⣐⡀⠑⢄⠀⠀⠀⠰⡚⠂⢌⠑⢌⠐⡾⣍⠢⡑⣇⡈⠢⡀⠀⠀⠈⠳⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⠃⠀⠀⠀⠳⣉⠐⠂⠬⠏⠐⠣⠀⠬⠔⠂⠈⠀⠀⠀⠸⡉⠢⡀⠑⢴⡳⢧⡀⠑⣜⡮⣄⠀⢱⠀⠀⠀⠀⠙⡄⠀⠀⠀⠀⠀⠀
+⠀⢠⠇⠀⠀⠀⠀⠀⣬⣙⠒⠲⠤⢄⠀⠀⠤⡈⠀⠀⠀⠀⠀⢋⠳⢄⢨⢆⣫⠓⠤⡨⡆⢤⡁⠀⠀⡜⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀
+⠀⢸⠀⠀⠀⠀⠀⠀⠘⣄⠉⠁⠲⣒⠛⠂⢓⣤⠄⠸⡀⠀⠀⠸⡑⢄⢰⠣⢌⡁⠲⣘⣍⠀⠀⢠⠚⠀⠀⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀⠀
+⠀⢸⠀⢰⠁⠀⠀⠀⠀⠀⠑⢄⡘⣥⣉⣁⠀⠠⠭⠄⠑⣄⠀⠀⠈⠂⠘⡓⠤⡈⣯⣂⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀
+⠀⢸⡀⢸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⣆⠀⠀⠹⢟⡁⠌⠑⠀⠀⠀⠀⠈⠒⠓⢎⡒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠃⠀⠀⠀⠀⠀
+⠀⠀⢇⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠀⡸⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⢆⢹⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⣰⠛⣆⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⢻⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠛⠁⠴⠯⡉⣧⠀⠀⠀
+⠀⠀⠀⣠⠏⠀⠀⠀⠀⠀⠀⢠⠎⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡃⠈⢉⡦⠤⠋⠁⠀⠀⠀
+⠀⠀⢠⡇⠀⠀⠀⠀⢀⡤⠖⢣⠀⠢⣄⡀⠀⠀⠀⣀⣣⠀⠀⠀⠀⠀⢀⡇⠀⠀⠀⢀⣀⡔⠂⠀⠀⠀⠴⡁⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡇⠀⠀⠀⢰⡏⠀⠀⠸⡀⠀⢄⠉⢉⣩⠯⡉⢸⠀⠀⠀⠀⢀⠞⣏⠉⠩⣝⢫⡽⠧⣀⠀⠀⠀⠀⠘⢤⠔⢦⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡇⠀⠀⠀⠀⠓⠒⣦⠀⠙⠦⢾⡃⢈⡧⠤⠃⡞⠀⠀⠀⠀⠻⠤⠚⢻⠉⠉⠉⠀⠀⠘⣆⠀⠀⣀⡀⠠⡀⠺⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢧⡀⠀⠠⡄⠀⢺⡉⢙⡆⠀⠀⠉⠉⠀⠀⠀⠘⢦⡀⠀⢀⡀⠀⣀⠈⡆⠀⠀⠀⠀⠀⠘⢦⣄⣀⣼⣀⣟⣀⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠉⠓⠒⠳⠤⠴⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠦⠤⠳⠤⠼⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        '''
+    )
+    creature25 = Creature(
+        species="Qilin/Kirin", 
+        origin="Chinese, Japanese", 
+        description='''
+        A Qilin or Kirin is a legendary creature from Chinese and Japanese mythology, often depicted as a 
+        being with the body of a deer or horse, the scales of a dragon, and the horns of a unicorn. In 
+        mythology, Qilin/Kirin are associated with good fortune, prosperity, and wisdom, and are often 
+        depicted as benevolent creatures who bring good luck to those who encounter them. They are also 
+        associated with the elements of fire and air, and their presence is said to be a sign of the arrival 
+        of a great sage or a significant event. The Qilin/Kirin represents the ideals of benevolence and 
+        virtue, and its mythical qualities have made it a popular subject in art, literature, and popular 
+        culture. Its appearance has also inspired many other creatures in mythology and popular culture, such 
+        as the phoenix and the dragon.
+        ''', 
+        care_instructions="TBD",
+        ascii_art= '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢠⢺⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⢈⣭⠤⢶⡅⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⠒⠂⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢁⢰⣟⠑⠙⠁⡰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⡟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡞⠟⠙⠘⠻⠿⠼⠠⢠⣬⣴⣉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⣿⡿⡏⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠸⣭⣤⣠⠀⠀⢀⢲⣿⣿⣿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣯⣯⣿⡇⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢘⣿⣿⡟⢱⣶⣾⣿⣿⣿⣿⣷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣗⣿⣿⣿⣿⣇⡄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠘⠫⠁⣰⣿⣿⣿⣟⣿⣿⣿⣿⡀⠀⠀⠀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡟⣷⣿⣿⣿⣿⣿⣤⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣻⢿⣷⢴⣶⣏⡫⡃⠮⡕⡎⢺⣆⣄⠀⠀⠀⠀⠀⠀⠀⠀⠳⣿⣿⣿⣟⣿⣿⣿⣆⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣾⡿⣟⠸⠚⠖⡝⢩⠃⢮⡖⢝⡺⣝⡨⣽⠰⢽⣫⠗⡄⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣻⣿⣷⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡿⡾⢐⡍⡶⡁⢮⠈⣀⣑⡪⢌⠸⠸⠐⠩⣅⡧⡏⠫⣯⡆⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⠂⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡠⠚⠁⡨⠨⠩⠅⢩⡢⢂⡴⠀⠂⡢⡔⠉⠉⢉⣦⠬⣓⠏⣣⠀⢿⡏⣆⠀⠀⠀⠀⠀⠀⠀⣼⡿⣿⣿⣿⢋⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀⡼⠀⠀⣠⠴⠛⠂⠐⠒⠃⠈⠀⠸⠀⠀⠌⠀⠢⡓⠥⠂⡃⠘⣿⣏⡃⢄⣀⠀⢀⣠⣼⣿⣿⣿⣿⣵⠋⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡝⠀⢠⣮⣀⠀⠀⠀⠀⠀⠀⠀⢀⠂⢠⡖⠀⠀⠀⢘⡀⢠⡇⠀⠞⣿⣿⣷⣶⣶⣶⣿⣿⣷⣿⣿⡿⡖⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠠⠚⣠⡴⡈⢻⣿⣶⣶⡶⠀⠀⠀⠀⠜⣰⣿⠃⠀⠀⠀⠀⡄⢸⡗⠀⠀⠈⠛⠟⠿⣿⡿⣿⡿⣟⡛⠋⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡐⠡⣾⢿⠅⠱⣀⢹⣿⣏⠀⠀⠀⣀⠊⢰⣿⡇⠀⠀⠀⠀⠀⠇⠘⣿⣧⣄⡠⡀⠀⠀⠀⠉⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡠⠊⣀⣼⣿⠀⠀⠀⠈⠙⠻⠿⠆⠀⣜⣥⣴⣿⣿⠇⠀⠀⠀⠀⠀⠆⣼⣿⡿⠿⠿⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣾⣶⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠰⣾⠿⠟⠹⢿⣿⢅⠀⠀⠀⠀⠀⢱⣿⡿⠉⠉⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠛⠛⠉⠈⠈⠋⠛⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀⠀⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        '''
+    )
 
 
 ## Creature Interaction
@@ -449,46 +937,46 @@ TBD
     question8 = Question(content="What kind of role do you prefer in a group?")
     question9 = Question(content="What do you prefer to do in your free time?")
     question10 = Question(content="Which of these elements do you feel most connected to?")    
-    # question11 = Question(content="TBD")
-    # question12 = Question(content="TBD")
-    # question13 = Question(content="TBD")
-    # question14 = Question(content="TBD")
-    # question15 = Question(content="TBD")
-    # question16 = Question(content="TBD")
-    # question17 = Question(content="TBD")
-    # question18 = Question(content="TBD")
-    # question19 = Question(content="TBD")
-    # question20 = Question(content="TBD")
-    # question21 = Question(content="TBD")
-    # question22 = Question(content="TBD")
-    # question23 = Question(content="TBD")
-    # question24 = Question(content="TBD")
-    # question25 = Question(content="TBD")
-    # question26 = Question(content="TBD")
-    # question27 = Question(content="TBD")
-    # question28 = Question(content="TBD")
-    # question29 = Question(content="TBD")
-    # question30 = Question(content="TBD")
-    # question31 = Question(content="TBD")
-    # question32 = Question(content="TBD")
-    # question33 = Question(content="TBD")
-    # question34 = Question(content="TBD")
-    # question35 = Question(content="TBD")
-    # question36 = Question(content="TBD")
-    # question37 = Question(content="TBD")
-    # question38 = Question(content="TBD")
-    # question39 = Question(content="TBD")
-    # question40 = Question(content="TBD")
-    # question41 = Question(content="TBD")
-    # question42 = Question(content="TBD")
-    # question43 = Question(content="TBD")
-    # question44 = Question(content="TBD")
-    # question45 = Question(content="TBD")
-    # question46 = Question(content="TBD")
-    # question47 = Question(content="TBD")
-    # question48 = Question(content="TBD")
-    # question49 = Question(content="TBD")
-    # question50 = Question(content="TBD")
+    question11 = Question(content="What type of learner are you?")
+    question12 = Question(content="What type of home would you prefer to live in?")
+    question13 = Question(content="What type of weather do you enjoy the most?")
+    question14 = Question(content="If you had a magical ability, what would it be?")
+    question15 = Question(content="What kind of leader would you be?")
+    question16 = Question(content="What type of clothing style do you prefer?")
+    question17 = Question(content="Which of these roles do you prefer in a story?")
+    question18 = Question(content="What do you value most in a partner?")
+    question19 = Question(content="Choose a favorite mythical object.")
+    question20 = Question(content="Which type of music resonates with you the most?")
+    question21 = Question(content="What is your favorite type of story?")
+    question22 = Question(content="How do you prefer to communicate?")
+    question23 = Question(content="What type of traveler are you?")
+    question24 = Question(content="How do you like to spend your weekends?")
+    question25 = Question(content="How do you approach problem-solving?")
+    question26 = Question(content="What type of movie genre do you prefer?")
+    question27 = Question(content="What is your preferred mode of transportation?")
+    question28 = Question(content="Which color combination do you find most appealing?")
+    question29 = Question(content="Which role do you take in a group project?")
+    question30 = Question(content="What is your favorite type of art?")
+    question31 = Question(content="How do you express your emotions?")
+    question32 = Question(content="What is your favorite type of food?")
+    question33 = Question(content="What type of gift would you prefer to receive?")
+    question34 = Question(content="How do you approach difficult situations?")
+    question35 = Question(content="What type of environment do you feel most at home in?")
+    question36 = Question(content="How do you approach friendship?")
+    question37 = Question(content="What is your favorite type of celebration?")
+    question38 = Question(content="What type of landscape do you find most appealing?")
+    question39 = Question(content="How do you handle stress?")
+    question40 = Question(content="What type of career would you find most fulfilling?")
+    question41 = Question(content="How do you approach love and relationships?")
+    question42 = Question(content="What is your preferred style of communication?")
+    question43 = Question(content="What type of pet would you prefer?")
+    question44 = Question(content="How do you approach personal growth and self-improvement?")
+    question45 = Question(content="How do you prefer to spend your free time?")
+    question46 = Question(content="What kind of leader do you think you are?")
+    question47 = Question(content="How do you handle confrontation?")
+    question48 = Question(content="Which of these traits do you value most in a friend?")
+    question49 = Question(content="How would you describe your sense of humor?")
+    question50 = Question(content="What is your favorite season?")
     
 
 
@@ -605,203 +1093,203 @@ TBD
     answer38 = Answer(content="Water", question_id=10, creature_id1=9, creature_id2=2, creature_id3=8)
     answer39 = Answer(content="Earth", question_id=10, creature_id1=3, creature_id2=6, creature_id3=7)
     answer40 = Answer(content="Air", question_id=10, creature_id1=5, creature_id2=4, creature_id3=2)
-    # answer41 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer42 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer43 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer44 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer45 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer46 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer47 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer48 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer49 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer50 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer51 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer52 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer53 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer54 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer55 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer56 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer57 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer58 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer59 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer60 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer61 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer62 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer63 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer64 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer65 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer66 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer67 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer68 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer69 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer70 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer71 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer72 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer73 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer74 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer75 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer76 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer77 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer78 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer79 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer80 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer81 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer82 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer83 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer84 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer85 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer86 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer87 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer88 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer89 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer90 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer91 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer92 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer93 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer94 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer95 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer96 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer97 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer98 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer99 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer100 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer101 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer102 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer103 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer104 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer105 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer106 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer107 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer108 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer109 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer110 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer111 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer112 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer113 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer114 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer115 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer116 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer117 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer118 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer119 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer120 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer121 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer122 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer123 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer124 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer125 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer126 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer127 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer128 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer129 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer130 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer131 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer132 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer133 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer134 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer135 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer136 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer137 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer138 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer139 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer140 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer141 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer142 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer143 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer144 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer145 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer146 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer147 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer148 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer149 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer150 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer151 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer152 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer153 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer154 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer155 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer156 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer157 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer158 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer159 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer160 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer161 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer162 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer163 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer164 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer165 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer166 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer167 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer168 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer169 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer170 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer171 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer172 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer173 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer174 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer175 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer176 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer177 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer178 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer179 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer180 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer181 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer182 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer183 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer184 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer185 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer186 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer187 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer188 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer189 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer190 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer191 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer192 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer193 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer194 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer195 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer196 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer197 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer198 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer199 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
-    # answer200 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer41 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer42 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer43 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer44 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer45 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer46 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer47 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer48 = Answer(content="TBD", question_id=12, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer49 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer50 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer51 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer52 = Answer(content="TBD", question_id=13, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer53 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer54 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer55 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer56 = Answer(content="TBD", question_id=14, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer57 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer58 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer59 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer60 = Answer(content="TBD", question_id=15, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer61 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer62 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer63 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer64 = Answer(content="TBD", question_id=16, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer65 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer66 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer67 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer68 = Answer(content="TBD", question_id=17, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer69 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer70 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer71 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer72 = Answer(content="TBD", question_id=18, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer73 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer74 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer75 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer76 = Answer(content="TBD", question_id=19, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer77 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer78 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer79 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer80 = Answer(content="TBD", question_id=20, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer81 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer82 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer83 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer84 = Answer(content="TBD", question_id=21, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer85 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer86 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer87 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer88 = Answer(content="TBD", question_id=22, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer89 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer90 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer91 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer92 = Answer(content="TBD", question_id=23, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer93 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer94 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer95 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer96 = Answer(content="TBD", question_id=24, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer97 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer98 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer99 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer100 = Answer(content="TBD", question_id=25, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer101 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer102 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer103 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer104 = Answer(content="TBD", question_id=26, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer105 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer106 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer107 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer108 = Answer(content="TBD", question_id=27, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer109 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer110 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer111 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer112 = Answer(content="TBD", question_id=28, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer113 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer114 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer115 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer116 = Answer(content="TBD", question_id=29, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer117 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer118 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer119 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer120 = Answer(content="TBD", question_id=30, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer121 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer122 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer123 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer124 = Answer(content="TBD", question_id=31, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer125 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer126 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer127 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer128 = Answer(content="TBD", question_id=32, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer129 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer130 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer131 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer132 = Answer(content="TBD", question_id=33, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer133 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer134 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer135 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer136 = Answer(content="TBD", question_id=34, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer137 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer138 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer139 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer140 = Answer(content="TBD", question_id=35, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer141 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer142 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer143 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer144 = Answer(content="TBD", question_id=36, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer145 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer146 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer147 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer148 = Answer(content="TBD", question_id=37, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer149 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer150 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer151 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer152 = Answer(content="TBD", question_id=38, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer153 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer154 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer155 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer156 = Answer(content="TBD", question_id=39, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer157 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer158 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer159 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer160 = Answer(content="TBD", question_id=40, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer161 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer162 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer163 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer164 = Answer(content="TBD", question_id=41, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer165 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer166 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer167 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer168 = Answer(content="TBD", question_id=42, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer169 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer170 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer171 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer172 = Answer(content="TBD", question_id=43, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer173 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer174 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer175 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer176 = Answer(content="TBD", question_id=44, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer177 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer178 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer179 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer180 = Answer(content="TBD", question_id=45, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer181 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer182 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer183 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer184 = Answer(content="TBD", question_id=46, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer185 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer186 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer187 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer188 = Answer(content="TBD", question_id=47, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer189 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer190 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer191 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer192 = Answer(content="TBD", question_id=48, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer193 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer194 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer195 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer196 = Answer(content="TBD", question_id=49, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer197 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer198 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer199 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
+    answer200 = Answer(content="TBD", question_id=50, creature_id1=1, creature_id2=2, creature_id3=3)
 
 
     everything = [
         creature1, creature2, creature3, creature4, creature5, 
         creature6, creature7, creature8, creature9, creature10, 
-        # creature11, creature12, creature13, creature14, creature15, 
-        # creature16, creature17, creature18, creature19, creature20, 
-        # creature21, creature22, creature23, creature24, creature25, 
+        creature11, creature12, creature13, creature14, creature15, 
+        creature16, creature17, creature18, creature19, creature20, 
+        creature21, creature22, creature23, creature24, creature25, 
         creatureInteraction1, creatureInteraction2, creatureInteraction3, creatureInteraction4,
         creatureInteraction5, creatureInteraction6, creatureInteraction7, creatureInteraction8,
         question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, 
-        # question11, question12, question13, question14, question15, question16, question17, question18, question19, question20, 
-        # question21, question22, question23, question24, question25, question26, question27, question28, question29, question30, 
-        # question31, question32, question33, question34, question35, question36, question37, question38, question39, question40, 
-        # question41, question42, question43, question44, question45, question46, question47, question48, question49, question50, 
+        question11, question12, question13, question14, question15, question16, question17, question18, question19, question20, 
+        question21, question22, question23, question24, question25, question26, question27, question28, question29, question30, 
+        question31, question32, question33, question34, question35, question36, question37, question38, question39, question40, 
+        question41, question42, question43, question44, question45, question46, question47, question48, question49, question50, 
         user1, user2, user3, user4, user5, 
         userCreature1, userCreature2, userCreature3, 
         answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10, 
         answer11, answer12, answer13, answer14, answer15, answer16, answer17, answer18, answer19, answer20, 
-        answer21, answer22, answer32, answer24, answer25, answer26, answer27, answer28, answer29, answer30, 
+        answer21, answer22, answer23, answer24, answer25, answer26, answer27, answer28, answer29, answer30, 
         answer31, answer32, answer33, answer34, answer35, answer36, answer37, answer38, answer39, answer40, 
-        # answer41, answer42, answer43, answer44, answer45, answer46, answer47, answer48, answer49, answer50, 
-        # answer51, answer52, answer53, answer54, answer55, answer56, answer57, answer58, answer59, answer60, 
-        # answer61, answer62, answer63, answer64, answer65, answer66, answer67, answer68, answer69, answer70, 
-        # answer71, answer72, answer73, answer74, answer75, answer76, answer77, answer78, answer79, answer80, 
-        # answer81, answer82, answer83, answer84, answer85, answer86, answer87, answer88, answer89, answer90, 
-        # answer91, answer92, answer93, answer94, answer95, answer96, answer97, answer98, answer99, answer100, 
-        # answer101, answer102, answer103, answer104, answer105, answer106, answer107, answer108, answer109, answer110, 
-        # answer111, answer112, answer113, answer114, answer115, answer116, answer117, answer118, answer119, answer120, 
-        # answer121, answer122, answer123, answer124, answer125, answer126, answer127, answer128, answer129, answer130, 
-        # answer131, answer132, answer133, answer134, answer135, answer136, answer137, answer138, answer139, answer140, 
-        # answer141, answer142, answer143, answer144, answer145, answer146, answer147, answer148, answer149, answer150, 
-        # answer151, answer152, answer153, answer154, answer155, answer156, answer157, answer158, answer159, answer160, 
-        # answer161, answer162, answer163, answer164, answer165, answer166, answer167, answer168, answer169, answer170, 
-        # answer171, answer172, answer173, answer174, answer175, answer176, answer177, answer178, answer179, answer180, 
-        # answer181, answer182, answer183, answer184, answer185, answer186, answer187, answer188, answer189, answer190, 
-        # answer191, answer192, answer193, answer194, answer195, answer196, answer197, answer198, answer199, answer200, 
+        answer41, answer42, answer43, answer44, answer45, answer46, answer47, answer48, answer49, answer50, 
+        answer51, answer52, answer53, answer54, answer55, answer56, answer57, answer58, answer59, answer60, 
+        answer61, answer62, answer63, answer64, answer65, answer66, answer67, answer68, answer69, answer70, 
+        answer71, answer72, answer73, answer74, answer75, answer76, answer77, answer78, answer79, answer80, 
+        answer81, answer82, answer83, answer84, answer85, answer86, answer87, answer88, answer89, answer90, 
+        answer91, answer92, answer93, answer94, answer95, answer96, answer97, answer98, answer99, answer100, 
+        answer101, answer102, answer103, answer104, answer105, answer106, answer107, answer108, answer109, answer110, 
+        answer111, answer112, answer113, answer114, answer115, answer116, answer117, answer118, answer119, answer120, 
+        answer121, answer122, answer123, answer124, answer125, answer126, answer127, answer128, answer129, answer130, 
+        answer131, answer132, answer133, answer134, answer135, answer136, answer137, answer138, answer139, answer140, 
+        answer141, answer142, answer143, answer144, answer145, answer146, answer147, answer148, answer149, answer150, 
+        answer151, answer152, answer153, answer154, answer155, answer156, answer157, answer158, answer159, answer160, 
+        answer161, answer162, answer163, answer164, answer165, answer166, answer167, answer168, answer169, answer170, 
+        answer171, answer172, answer173, answer174, answer175, answer176, answer177, answer178, answer179, answer180, 
+        answer181, answer182, answer183, answer184, answer185, answer186, answer187, answer188, answer189, answer190, 
+        answer191, answer192, answer193, answer194, answer195, answer196, answer197, answer198, answer199, answer200, 
         ]
 
     session.add_all(everything)

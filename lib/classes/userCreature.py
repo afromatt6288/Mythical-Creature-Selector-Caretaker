@@ -22,7 +22,7 @@ class UserCreature(Base):
             + f"User ID: {self.user_id}" \
             + f"Creature ID: {self.creature_id}" \
             + f"Species: {self.creature_species}" \
-            + f"CName: {self.creature_name}" \
+            + f"Name: {self.creature_name}" \
             + f"Happiness: {self.happiness}" \
             + f"Health: {self.health}" \
             + f"Adoption Day: {self.adoption_day}" \
