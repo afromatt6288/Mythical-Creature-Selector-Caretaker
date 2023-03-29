@@ -28,7 +28,23 @@ class UserCreature(Base):
             + f"Adoption Day: {self.adoption_day} / " \
             + f"Last Interaction: {self.last_interaction}"
 
+    def view_userCreature_list(session, currentUser):
+        userCreaturesVisit = True
+        userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
+        while userCreaturesVisit:
+            n=1
+            while n <= len(userCreatures):
+                print(userCreatures[n-1])
+                    # print(f"{n}) {creature.creature_name}")
+                n += 1
+            #         option = input(f'''
+            #         Which creature would you like to visit with today?
+            #         {n}) {creature.creature_name}
 
+            # ''')
+
+            print(len(userCreatures))
+        print("end")
 
 
 

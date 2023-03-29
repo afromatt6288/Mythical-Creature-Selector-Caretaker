@@ -99,16 +99,15 @@ Selection : ''')
             elif option == "Better" or option == "Better Suited Creature" or option == "2":
                 print("Better Suited Creature (short quiz - 10 creatures available)")
                 short_quiz(currentUser)
-                # mainMenu=False
             elif option == "Best" or option == "Best Suited Creature" or option == "3":
                 print("Best Suited Creature (extended quiz - 25 creatures available)")
             elif option == "Visit" or option == "Visit Current Creatures" or option == "4":
                 print("Visit Current Creatures")
+                UserCreature.view_userCreature_list(session, currentUser)
                 pass
             elif option == "Logout" or option == "5":
                 print("logout")
                 game_start()
-                # mainMenu=False
             else:
                 print("Invalid Entry. Please try again!")
     
@@ -116,9 +115,11 @@ Selection : ''')
         shortQuiz = True
         while shortQuiz:
             option = input(f'''
-                              Welcome to the Quiz! 
-   These 10 questions will help you pick a creature that better suits your temperment 
-and interests. Don't worry, you can change your mind afterwards. So, answer as you feel. 
+                              Welcome to the Short Quiz! 
+These 10 questions will help you pick a creature that better suits your temperment and interests. 
+Once you complete this quiz you will see a ranking of 10 creatures, and how you relate with them. 
+You can then select which creature you wish (ie, you are not stuck with the creature you have the highest compatability with.)
+Also, you can type exit at any time in the quiz to return to this menu... but your progress will not be saved. 
 
          1) Proceed with quiz            OR             2) Back to main menu
 
