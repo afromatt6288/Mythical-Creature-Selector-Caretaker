@@ -29,23 +29,23 @@ class CreatureInteraction(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def save(session, answer):
-        session.add(answer)
+    def add_to_creatureInteractions_db(session, creatureInteraction):
+        session.add(creatureInteraction)
         session.commit()
 
     def get_all(session):
-        return session.query(Answer).all()
+        return session.query(CreatureInteraction).all()
 
     def find_by_name(session, name):
-        return session.query(Answer).filter(Answer.name == name).first()
+        return session.query(CreatureInteraction).filter(CreatureInteraction.name == name).first()
 
     def find_by_id(session, id):
-        return session.query(Answer).filter(Answer.id == id).first()
+        return session.query(CreatureInteraction).filter(CreatureInteraction.id == id).first()
 
     def find_by_name_and_breed(session, name, breed):
-        return session.query(Answer).filter(Answer.name == name and Answer.breed == breed).first()
+        return session.query(CreatureInteraction).filter(CreatureInteraction.name == name and CreatureInteraction.breed == breed).first()
 
-    def update_breed(session, answer, breed):
-        answer.breed = breed
-        session.add(answer)
+    def update_breed(session, creatureInteraction, breed):
+        creatureInteraction.breed = breed
+        session.add(creatureInteraction)
         session.commit()

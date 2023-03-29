@@ -24,7 +24,7 @@ class Question(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def save(session, question):
+    def add_to_questions_db(session, question):
         session.add(question)
         session.commit()
 

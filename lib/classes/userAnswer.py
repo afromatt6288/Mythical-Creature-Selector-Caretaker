@@ -21,7 +21,7 @@ class UserAnswer(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def save(session, userAnswer):
+    def add_to_userAnswers_db(session, userAnswer):
         session.add(userAnswer)
         session.commit()
 

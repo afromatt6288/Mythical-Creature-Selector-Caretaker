@@ -38,23 +38,23 @@ class UserCreature(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def save(session, answer):
-        session.add(answer)
+    def add_to_userCreatures_db(session, userCreature):
+        session.add(userCreature)
         session.commit()
 
     def get_all(session):
-        return session.query(Answer).all()
+        return session.query(UserCreature).all()
 
     def find_by_name(session, name):
-        return session.query(Answer).filter(Answer.name == name).first()
+        return session.query(UserCreature).filter(UserCreature.name == name).first()
 
     def find_by_id(session, id):
-        return session.query(Answer).filter(Answer.id == id).first()
+        return session.query(UserCreature).filter(UserCreature.id == id).first()
 
     def find_by_name_and_breed(session, name, breed):
-        return session.query(Answer).filter(Answer.name == name and Answer.breed == breed).first()
+        return session.query(UserCreature).filter(UserCreature.name == name and UserCreature.breed == breed).first()
 
-    def update_breed(session, answer, breed):
-        answer.breed = breed
-        session.add(answer)
+    def update_breed(session, userCreature, breed):
+        userCreature.breed = breed
+        session.add(userCreature)
         session.commit()
