@@ -41,6 +41,49 @@ If at any time you get stuck, you can always press <ctrl-c> to exit the program
 TBD
 
 
+## Assignment Goals
+As per the Project Pitch Template:
+
+Done... You must make a project using SQL and Python
+    Primarily Python, with SQLAlchemy mixed in
+Done... Include 1 CLI
+    The whole thing is CLI
+Done... Use any ORM to connect SQL to Python (SqlAlchemy, Sqlite3)
+    Used SQLAlchemy
+Done... Include 3 related tables
+    7 tables in total.
+    answers, creatures, creatureInteractions, questions, users, userAnswers, userCreatures.
+Done... Have a Many-to-Many Relationship
+    The userCreatures table acts as a join table to let Users have many Creatures, and Creatures to have many users. 
+Include a ReadMe file that has 
+    Instructions for running your project
+    An overview about what your project is about
+    Instructions for using your project
+
+As per 
+Done... Full CRUD
+    Create:
+        users can be created and added to the users table
+        creatures can be added into the userCreatures db
+    Read:
+        answers are pulled from the answers table for the quiz
+        creatures are pulled from the creatures table for selection
+        creatures are pulled from the creatures table for details in UserCreature
+        questions are pulled from the questions table for the quiz
+        users are pulled for logging in
+        userCreatures are pulled by name for verification
+    Update:
+        happiness, health, and obedience are updated when certain conditions are met.
+        other functions exist in each module to allow for an update of any table.
+    Delete:
+        UserCreatures get deleted when their happiness, health, or obedience is too low. 
+        UserCreatures can be manually deleted by the user. 
+Done... at least 1 Many-to-Many relationship
+    The userCreatures table acts as a join table to let Users have many Creatures, and Creatures to have many users. 
+    
+
+
+
 
 
 

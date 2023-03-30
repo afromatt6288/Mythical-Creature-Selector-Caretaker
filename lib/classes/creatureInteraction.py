@@ -21,10 +21,7 @@ class CreatureInteraction(Base):
             + f"Interaction Obedience: {self.effect_on_obedience}"
 
 
-
-
-
-
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)

@@ -16,7 +16,7 @@ class UserAnswer(Base):
             + f"Answer ID: {self.answer_id} / " 
 
 
-
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)

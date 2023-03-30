@@ -18,10 +18,7 @@ class Question(Base):
         return session.query(Question).filter(Question.id == id).first()
     
 
-
-
-
-    
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
@@ -32,7 +29,6 @@ class Question(Base):
 
     def get_all(session):
         return session.query(Question).all()
-
 
     def update_content(session, answer, content):
         answer.content = content

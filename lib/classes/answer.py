@@ -25,13 +25,7 @@ class Answer(Base):
         return session.query(Answer).filter(Answer.id == id).first()
 
 
-
-
-
-
-
-
-
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
@@ -42,7 +36,6 @@ class Answer(Base):
 
     def get_all(session):
         return session.query(Answer).all()
-
 
     def find_by_question_id(session, question_id):
         return session.query(Answer).filter(Answer.question_id == question_id).all()

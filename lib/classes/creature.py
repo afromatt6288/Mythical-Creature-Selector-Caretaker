@@ -22,12 +22,14 @@ class Creature(Base):
             + f"Care Instructions: {self.care_instructions} / " \
             + f"ASCII Art: {self.ascii_art}"
 
+    def find_by_creature_id(session, id):
+        return session.query(Creature).filter(Creature.id == id).first()
+
+    def get_all_creatures(session):
+        return session.query(Creature).all()
 
 
-
-
-
-
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
@@ -36,14 +38,8 @@ class Creature(Base):
         session.add(creature)
         session.commit()
 
-    def get_all(session):
-        return session.query(Creature).all()
-
     def find_by_name(session, name):
         return session.query(Creature).filter(Creature.name == name).first()
-
-    def find_by_id(session, id):
-        return session.query(Creature).filter(Creature.id == id).first()
 
     def find_by_name_and_breed(session, name, breed):
         return session.query(Creature).filter(Creature.name == name and Creature.breed == breed).first()

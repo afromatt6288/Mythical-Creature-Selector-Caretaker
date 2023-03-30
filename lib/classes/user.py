@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, create_engine, func, desc, ForeignKey, PrimaryKeyConstraint, DateTime
 from sqlalchemy.orm import Session, relationship, validates, backref
@@ -34,11 +35,20 @@ class User(Base):
         print("Welcome New Caretaker")
         while user_signup:
             newUsername = input("What is your name?: ")
-            if User.find_by_username(session, newUsername):
+            if newUsername == "back":
+                print("Back to the Begining!")
+                user_signup = False
+            elif newUsername == "exit":
+                sys.exit(0)
+            elif User.find_by_username(session, newUsername):
                 print("Username already exists. Please Try Again")
             elif type(newUsername) is str and 4 <= len(newUsername):
                 newUserPassword = input("Please enter a new password: ")
-                if type(newUserPassword) is str and 4 <= len(newUserPassword):
+                if newUserPassword == "back":
+                    user_signup = False
+                elif newUserPassword == "exit":
+                    sys.exit(0)
+                elif type(newUserPassword) is str and 4 <= len(newUserPassword):
                     User(username = newUsername, password = newUserPassword).add_to_users_db(session)
                     User.currentUser = User.find_by_username(session, newUsername)
                     user_signup = False
@@ -52,11 +62,21 @@ class User(Base):
         user_login = True
         while user_login:
             returningUsername = input("Enter Caretaker Name: ")
-            if User.find_by_username(session, returningUsername):
+            if returningUsername == "back":
+                print("Back to the Begining!")
+                user_login = False
+            elif returningUsername == "exit":
+                sys.exit(0)
+            elif User.find_by_username(session, returningUsername):
                 filtered_user=session.query(User).filter(User.username==returningUsername).first()
                 print(f"Welcome back {filtered_user.username}")
                 password = input("Enter your Password: ")
-                if filtered_user.password == password:
+                if password == "back":
+                    print("Back to the Begining!")
+                    user_login = False
+                elif password == "exit":
+                    sys.exit(0)
+                elif filtered_user.password == password:
                     User.currentUser = filtered_user
                     user_login = False
                 else:
@@ -66,19 +86,13 @@ class User(Base):
         return User.currentUser
 
 
-
-
-
-
-
-
+## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
     def get_all(session):
         return session.query(User).all()
-
 
     def find_by_id(session, id):
         return session.query(User).filter(User.id == id).first()

@@ -39,244 +39,241 @@ with Session(engine) as session:
         species="Dragon-Western", 
         origin="European", 
         description='''
-        In European mythology, dragons are legendary creatures typically portrayed as large, fire-breathing 
-        reptilian beasts with wings, sharp claws, and scaly skin. They are often depicted as fierce and 
-        dangerous creatures that hoard treasure and demand tribute from nearby villages or towns. 
-        In some stories, they are seen as agents of evil and chaos, wreaking havoc and destruction wherever 
-        they go. However, in other tales, dragons can also be wise and powerful beings that possess magical 
-        abilities and knowledge. In some European mythologies, dragons are also associated with royalty and 
-        are depicted as protectors of kingdoms and important treasures. They have been a popular theme in 
-        European literature and art for centuries and continue to be an iconic symbol of fantasy and adventure.
+In European mythology, dragons are legendary creatures typically portrayed as large, fire-breathing 
+reptilian beasts with wings, sharp claws, and scaly skin. They are often depicted as fierce and 
+dangerous creatures that hoard treasure and demand tribute from nearby villages or towns. 
+In some stories, they are seen as agents of evil and chaos, wreaking havoc and destruction wherever 
+they go. However, in other tales, dragons can also be wise and powerful beings that possess magical 
+abilities and knowledge. In some European mythologies, dragons are also associated with royalty and 
+are depicted as protectors of kingdoms and important treasures. They have been a popular theme in 
+European literature and art for centuries and continue to be an iconic symbol of fantasy and adventure.
         ''', 
         care_instructions="Feed A LOT and Often. Likes to be Groomed, but not much for Playing. Would rather Sleep.",
         ascii_art='''
-                                                           ____________
-                                     (`-..________....---''  ____..._.-`
-                                      \\`.________.._,.---'`'     ,'
-                                      ; )`.      __..-'`-.      /
-                                     / /     _.-' _,.;;._ `-._,'
-                                    / /   ,-' _.-'  //   ``--._``._
-                                  ,','_.-' ,-' _.- (( =-    -. `-._`-._____
-                                ,;.''__..-'   _..--.\\.---'````--.._``-.`-._`.
-                 _          |\,' .-''        ```-'`---'`-...__,._  ``-.`-.`-.`.
-      _     _.-,'(__)\__)\-'' `     ___  .          `     \      `--._
-    ,',)---' /|)          `     `      ``-.   `     /     /     `     `-.
-    \_____--.  '`  `               __..-.  \     . (   < _...-----..._   `.
-     \_,--..__. \\ .--`.\----'';``,..-.__ \  \      ,`_. `.,-'`--'`---''`.  )
-               `.\`.\  `_.-..' ,'   _,-..'  /..,-''(, ,' ; ( _______`___..'__
-                       ((,(,__(    ((,(,__,'  ``'-- `'`.(\  `.,..______   
-                                                          ``--------..._``--.__
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⢔⣊⠭⠛⠊⠉⢣⠙⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠀⢤⡊⠕⠊⠀⠀⠀⠀⠀⠀⠀⠫⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⢤⣄⣄⠀⠤⣄⠀⣠⡃⠔⣁⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢗⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⡡⡰⣟⠿⠒⠀⠉⡏⠇⠀⠀⠀⠒⠩⢄⠒⢄⠀⠀⠀⠀⠀⠀⠀⣀⠍⠚⠲⣆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣤⣴⡟⣡⣯⣤⠈⡣⠀⠀⠸⡸⡀⠀⠀⠀⠀⠀⠈⠢⡑⣄⠀⠀⠀⢠⢫⠁⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢚⢿⣽⣯⣾⠗⢼⡿⡶⣷⡃⠀⠀⢣⢣⠀⠀⠀⠀⠀⠀⠀⠈⢈⠣⡀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⠜⣊⣿⠖⡇⠀⠀⣿⡞⣶⣿⠀⠀⢸⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠬⡒⢼⣣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠐⢳⣨⢫⠶⢂⢤⡀⠀⣼⡯⣬⡿⠀⠀⡸⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢑⣢⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠁⢀⣄⡠⡻⠁⠀⣿⣇⣬⠇⡠⠚⢡⠃⠢⢢⢀⠀⠀⠀⠀⠀⠀⡠⡴⠕⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡠⢁⠠⢪⠂⠀⠀⣿⣙⠕⢊⡠⠒⠁⠀⠀⠀⠑⢕⢄⠀⠀⢠⡮⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡃⢀⡴⠇⠀⠀⠈⠁⠠⠀⠁⠀⠀⠀⠀⠀⠀⠀⠈⢣⢆⢰⠻⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⡆⢁⡌⠀⠀⠀⠀⠀⠀⢠⡂⠀⠀⠀⢀⣀⣀⣀⣀⠀⡟⣦⢃⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⡅⢰⢄⠀⠀⠀⠐⠢⣼⡇⡴⠞⠛⠉⠉⠉⠉⠙⠚⠳⠭⠴⡋⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣀⠄⠈⣣⣠⠃⡄⠀⠐⡄⠑⠋⠀⠀⠀⠀⠀⠀⠀⠐⡄⠀⠀⠈⣉⡭⠷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣜⢀⢤⡈⠀⠈⠐⠁⣠⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡹⢰⡄⠀⡜⠛⢪⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⡾⣾⣘⠧⠄⡠⠀⢸⠋⠀⠁⠒⠦⠢⢀⠀⠀⠀⠀⠀⠠⠃⣸⢃⠀⠸⡭⢦⣄⠀⢀⣴⢺⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⠉⠁⠀⠀⣇⢠⠸⣤⡆⠀⠀⠈⠢⡀⠁⠢⣄⣀⠀⠐⡌⣄⠿⠁⠀⢳⣶⡺⠰⢹⡟⢾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢧⡦⣟⡿⠀⠀⠀⠀⢀⣉⠶⠒⢁⡡⠔⠊⠀⢸⢸⡇⠀⢰⣶⡿⠀⠚⣿⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⡰⠊⡁⢀⡠⠊⠉⠓⢀⠄⠀⠘⡇⣦⠀⢸⣬⡽⠀⠀⠙⢛⣟⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⢰⢣⡇⣀⡰⠁⡠⠊⠀⠀⠀⢿⢨⡄⠘⡭⠷⠀⠀⠀⠠⠾⣏⢳⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠛⠒⡩⠋⢀⢮⡄⠀⠀⠀⠀⠘⡎⣧⠀⠙⣟⠷⠀⠀⣀⢷⡏⢸⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⢠⠥⠶⠃⠀⠀⠀⠀⠀⠸⡇⠱⣀⡈⠛⠿⠥⠿⠛⣰⡟⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢟⠼⢦⡀⠀⠀⠀⠀⠀⠀⠀⠈⠣⣼⣑⣶⠴⣦⣶⡭⠏⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀'''
     )
     creature2 = Creature(
         species="Dragon-Eastern", 
         origin="Chinese, Japanese, Korean", 
         description='''
-        Dragons in Chinese, Japanese, and Korean mythology are revered as powerful, benevolent creatures 
-        associated with water, rain, and good fortune. They are typically depicted as long, serpentine 
-        creatures with four legs, long whiskers, and a mane of hair or fur running down their backs. Unlike 
-        the European dragon, these dragons are often portrayed without wings, and they are said to be able 
-        to fly using their magical abilities. They are seen as symbols of strength, good fortune, and divine 
-        power, and their images can be found on many cultural artifacts and decorations. Dragons in these 
-        mythologies are regarded with great respect and are believed to bring luck and prosperity to those 
-        who revere them.
+Dragons in Chinese, Japanese, and Korean mythology are revered as powerful, benevolent creatures 
+associated with water, rain, and good fortune. They are typically depicted as long, serpentine 
+creatures with four legs, long whiskers, and a mane of hair or fur running down their backs. Unlike 
+the European dragon, these dragons are often portrayed without wings, and they are said to be able 
+to fly using their magical abilities. They are seen as symbols of strength, good fortune, and divine 
+power, and their images can be found on many cultural artifacts and decorations. Dragons in these 
+mythologies are regarded with great respect and are believed to bring luck and prosperity to those 
+who revere them.
         ''', 
         care_instructions="TBD",
         ascii_art='''
-                           _,,,.._       ,_
-                        .gMMMMMMMMMp,_    `/
-                     .dMMP'       ``^YMb..dP
-                    dMMP'
-                    MMM:
-                    YMMb.
-                     YMMMb.
-                      `YMM/|Mb.  ,__
-                   _,,-~`--..-~-'_,/`--,,,____
-               `\,_,/',_.-~_..-~/' ,/---~~~"""`/
-          _,_,,,\q\q/'    \,,-~'_,/`````-,7.
-         `@v@`\\,,,,__   \,,-~~"__/` ",,/MMMMb.
-          `--''_..-~~\   \,-~~""  `\_,/ `^YMMMMMb..
-           ,|``-~~--./_,,_  _,,-~~'/_      `YMMMMMMMb.
-         ,/  `\,_,,/`\    `\,___,,,/M/'      `YMMMMMMMb
-                     ;  _,,/__...|MMM/         YMMMMMMMb
-                      .' /'      dMMM\         !MMMMMMMMb
-                   ,-'.-'""~~~--/M|M' \        !MMMMMMMMM
-                 ,/ .|...._____/MMM\   b       gMMMMMMMMM
-              ,'/'\/          dMMP/'   M.     ,MMMMMMMMMP
-             / `\;/~~~~----...MP'     ,MMb..,dMMMMMMMMM'
-            / ,_  |          _/      dMMMMMMMMMMMMMMMMB
-            \  |\,\,,,,___ _/    _,dMMMMMMMMMMMP".emmmb,
-             `.\  gY.     /      7MMMMMMMMMMP"..emmMMMMM
-                .dMMMb,-..|       `.~~"""```|dMMMMP'MMP'
-               .MMMMP^"""/ .7 ,  _  \,---~""`^YMMP'MM;
-             _dMMMP'   ,' / | |\ \\   }          PM^M^b
-          _,' _,  \_.._`./  } ; \ \``'      __,'_` _  `._
-      ,-~/'./'| 7`,,__,}`   ``   ``        // _/`| 7``-._`}
-     |_,}__{  {,/'   ``                    `\{_  {,/'   ``
-     ``  ```   ``                            ``   ``  
-        '''
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡰⡨⣟⠼⢧⡀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣴⣲⣞⡝⠪⡝⠁⠭⣕⢛⠋⠸⠅⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢟⣞⣁⡈⣈⡑⠤⡄⠀⠨⣙⡍⠀⠀⠈⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠺⢉⠩⠬⠅⣙⠷⠄⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣭⣕⡽⡛⠥⠔⣄⠝⠘⡿⠁⠀⠀⢀⢷⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡅⠐⠁⠀⠀⠀⠀⠉⢺⢿⡒⣄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢎⣻⣪⠄⠫⠿⣠⠤⠂⠁⠀⢀⣠⡗⠏⢠⡴⠖⠋⠑⠛⠛⠿⢕⡢⡀⠀⠀⡅⠐⡄⠀⠀⠀⠀⠀⠸⣆⠁⠱⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢀⡔⠋⠀⠀⠀⣠⣴⡾⠛⣠⣼⠋⠀⠀⠀⢀⣀⠀⠀⠀⠛⢜⡄⠀⢫⡀⠐⡄⠀⠀⠀⠀⠀⠘⡆⢸⠇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠎⠀⠀⠀⣠⣺⠚⠀⠀⣄⡙⠀⠀⠀⢠⠊⠁⠀⠑⠂⠀⠀⠙⣱⠀⠘⢍⠀⢱⠀⠀⠀⠀⠀⠀⣻⠌⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡘⠀⠀⠀⢸⡭⠁⠀⠠⢮⠏⠀⠀⠀⢠⠃⠀⠀⠀⠀⠈⡄⠀⠐⠟⣂⣀⢸⡃⠈⠄⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⠸⠾⣤⣴⡫⠁⠀⠠⡀⣠⠂⠀⠀⠀⠀⠀⡤⢢⠀⠀⠀⠈⠑⢉⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀⠈⠉⠁⠀⠀⠀⠐⢻⢿⣒⠢⡖⢄⠀⠀⡄⠈⢢⢀⡀⠤⡀⠀⢴⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠧⢄⠀⠀⠀⠀⠈⠂⣄⣤⡲⣽⠀⠀⡅⠀⠀⣠⡁⢀⠮⢕⡄⠉⠙⣿⡿⢝⠀⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⢤⠨⢋⣁⠀⠤⠠⠨⣱⠁⠒⠒⠊⠈⠀⠙⠀⡉⠀⡜⢀⣠⡸⢋⡠⠁⠀⠀⠀⠀⠀⠈⣉⣧⠀⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⣴⣮⣽⣧⣶⣶⣼⣷⣤⣤⣤⣤⣤⣤⣤⣄⣠⠤⣤⠔⢁⢀⠾⠻⣿⣷⣾⣿⣶⣤⣤⣤⣤⣼⣯⣗⣭⣶⣼⣦⣤
+  ⠉⠉⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠿⠿⢿⣽⣴⣶⣧⠾⠾⠿⠿⠟⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉ '''
     )
     creature3 = Creature(
         species="Griffin/Gryphon", 
         origin="Greek, European", 
         description='''
-        A Griffin, also known as a Gryphon, is a legendary creature from Greek and European mythology that 
-        has the body of a lion and the head and wings of an eagle. These creatures are often portrayed as 
-        fierce and powerful, with sharp talons and keen eyesight. In mythology, they are known to be 
-        guardians of treasures and powerful protectors, and their images can be found in art and architecture 
-        throughout history. The Griffin represents the combination of the strength and courage of the lion 
-        with the grace and wisdom of the eagle, making it a symbol of power and intelligence in many cultures.
+A Griffin, also known as a Gryphon, is a legendary creature from Greek and European mythology that 
+has the body of a lion and the head and wings of an eagle. These creatures are often portrayed as 
+fierce and powerful, with sharp talons and keen eyesight. In mythology, they are known to be 
+guardians of treasures and powerful protectors, and their images can be found in art and architecture 
+throughout history. The Griffin represents the combination of the strength and courage of the lion 
+with the grace and wisdom of the eagle, making it a symbol of power and intelligence in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art='''
-                          _)\.-.
-         .-.__,___,_.-=-. )\`  a`\_
-     .-.__\__,__,__.-=-. `/  \     `>
-     {~,-~-,-~.-~,-,;;;;\ |   '--;`)/
-      \-,~_-~_-,~-,(_(_(;\/   ,;/
-       ",-.~_,-~,-~,)_)_)'.  ;;(
-         `~-,_-~,-~(_(_(_(_\  `;\ 
-   ,          `"~~--,)_)_)_)\_   \ 
-   |\              (_(_/_(_,   \  ;
-   \ '-.       _.--'  /_/_/_)   | |
-    '--.\    .'          /_/    | |
-        ))  /       \      |   /.'
-       //  /,        | __.'|  |.|
-      //   ||        /`    (  |.|
-     ||    ||      .'       \ \.\ 
-     ||    ||    .'_         \ \.\ 
-     \.\    //   / _ `\        \ \.\__
-      \.'--'/(   _  `\,;        \ '--:,
-        `"`  `"` `-,,;         `"`",,;
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⠶⣶⠒⠓⠊⠉⠉⠉⠉⠉⠉⣩⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠒⠉⠉⠀⠀⢀⣸⣧⠤⢦⡔⠒⠒⠒⠊⠉⠉⠉⠒⠒⠒⠒⠢⠴⠤⣤⡄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡀⠀⠀⠀⡴⠋⠉⠀⠀⢀⣀⠤⠒⠛⠉⠁⠀⠀⢠⠃⠀⢀⣀⣠⣠⠤⠤⠒⠒⠒⠊⢉⣹⡿⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⡴⠚⢹⡇⠀⠀⢰⣡⡄⠀⢠⠞⠋⠁⠀⠀⠀⠀⢀⣠⡶⠟⠖⠛⠉⠉⠀⠀⠀⣀⣀⡤⠖⢛⡩⠛⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⣀⡴⠞⠋⠉⣹⠷⠛⣫⡭⠿⠟⡿⠀⠀⡻⠀⠀⠀⠀⠀⠀⠀⠉⢨⠂⠀⠀⢀⣀⠤⠴⠞⠛⠉⣀⡤⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⡰⠋⠀⠀⠀⠀⠀⠰⠋⠁⢀⣤⡞⠀⠀⠠⡇⠀⠀⠀⠀⠀⢀⣠⣶⡵⠶⠚⠋⠉⠀⣀⣠⡴⣶⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣀⣧⠀⠰⣤⣤⡖⠀⠀⠒⠚⢫⣀⡏⠀⠀⢰⠁⠀⠀⠀⠀⠀⠀⢩⡟⣀⣠⡤⠶⠒⠉⠁⣠⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡜⣁⡜⢧⡄⠉⠉⠁⠀⠀⡄⠀⢸⣹⠇⠀⢀⡏⠀⠀⠀⠀⠀⠐⢒⡏⠉⠉⠀⠀⢀⣀⡤⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣇⢀⣤⠾⢗⠀⠀⠀⠀⠀⡇⠀⡸⣿⠀⠀⣼⠀⠀⠀⠀⠀⠀⣠⡞⣀⣠⠤⣶⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⠛⠀⠀⣎⠀⠀⠀⢠⣷⠃⢠⠇⠈⠳⣾⠃⠀⠀⠀⠀⠚⢻⡏⠉⠁⣠⠞⠻⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡇⠀⠀⠀⠛⠀⢠⡟⠀⠀⡴⠁⠀⠀⠀⠀⠀⣠⣼⣥⠶⠋⠁⠀⠀⠈⢯⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⣧⠀⠀⠀⠀⢀⠏⠀⠀⠈⠁⠀⠀⠀⠐⠒⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⢸⡟⢮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⢻⠀⠀⠀⠀⡾⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠙⢮⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣄⠀⠀⠀⣇⠀⠀⠀⠀⠀⣇⣀⣀⣀⡠⢼⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠙⢿⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠
+⠀⠀⠀⠀⠀⡽⢶⣄⠀⢳⠀⠀⠀⠀⢀⠇⠀⠀⠀⠀⢀⣙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠘⢦⣀⠀⠀⠀⠙⠿⣦⣀⠀⠀⠀⢀⠴⠛⠛⢉⡟
+⠀⠀⠀⠀⢰⠃⠀⠀⠙⣾⡇⠀⠀⠀⢸⠶⠶⠖⠛⠹⣧⡀⠈⠙⠲⢤⣄⣀⡀⠀⠀⠀⠀⠈⢳⠀⠀⠀⠀⠀⠙⠻⠷⠶⠾⣄⣀⣠⠞⠁
+⠀⠀⠀⢀⡎⠀⠀⠀⡼⠃⢱⠀⠀⠀⡧⠀⠀⠀⠀⠀⠀⠙⠢⢤⣤⠀⠀⢩⡏⠉⠳⣄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⣀⡾⠁⠀⢀⠞⠁⠀⡎⠀⠀⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⣰⠁⠀⠀⠈⠣⡀⠀⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢐⣿⣛⡀⣀⠴⠋⣠⣴⠺⠁⠀⣠⠋⠀⠀⠀⠀⠀⠀⠀⠀⢰⡾⠁⠀⣰⠃⠀⠀⠀⠀⠀⢙⣆⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠀⠀⠀⠿⣿⠗⠴⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠻⣿⡤⠞⠀⠀'''
     )
     creature4 = Creature(
         species="Phoenix", 
         origin="Greek, Egyptian, Chinese, Japanese", 
         description='''
-        The Phoenix is a mythical bird that appears in Greek, Egyptian, Chinese, and Japanese mythology. 
-        It is often depicted as a bird with bright and colorful feathers that are said to be reborn 
-        from the ashes of its own funeral pyre. In Greek mythology, the Phoenix is a symbol of resurrection 
-        and rebirth, while in Egyptian mythology it is associated with the sun and the cycle of life and death. 
-        In Chinese and Japanese mythology, the Phoenix is associated with prosperity, good fortune, and 
-        feminine grace. Overall, the Phoenix is a symbol of hope, renewal, and transformation, and its mythical 
-        qualities have made it a popular symbol in art and literature throughout history.
+The Phoenix is a mythical bird that appears in Greek, Egyptian, Chinese, and Japanese mythology. 
+It is often depicted as a bird with bright and colorful feathers that are said to be reborn 
+from the ashes of its own funeral pyre. In Greek mythology, the Phoenix is a symbol of resurrection 
+and rebirth, while in Egyptian mythology it is associated with the sun and the cycle of life and death. 
+In Chinese and Japanese mythology, the Phoenix is associated with prosperity, good fortune, and 
+feminine grace. Overall, the Phoenix is a symbol of hope, renewal, and transformation, and its mythical 
+qualities have made it a popular symbol in art and literature throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art='''
-                    (                           )
-              ) )( (                           ( ) )( (
-           ( ( ( )  ) )                     ( (   (  ) )(
-          ) )     ,,\|\                     ///,,       ) (
-       (  ((    (\|\|//                     \|////)      )
-        ) )    (-(__//                       \|\_)-)     (
-       (((   ((-(__||                         ||__)-))    ) )
-      ) )   ((-(-(_||           ```\__        ||_)-)-))   ((
-      ((   ((-(-((/\|\        ''; 9.- `      //\)\)-)-))    )
-       )   (-(-((/(/\|\      '';;;;-\~      //\)\)\)-)-)   (   )
-    (  (   ((-(-(/(/(/\======,:;:;:;:,======/\)\)\)-)-))   )
-        )  '(((-(/(/(/(//////:%%%%%%%:\|\|\|)\)\)\)-)))`  ( (
-       ((   '((-(/(/(/('uuuu:WWWWWWWWW:uuuu`)\)\)\)-))`    )
-         ))  '((-(/(/(/('|||:wwwwwwwww:|||')\)\)\)-))`    ((
-      (   ((   '((((/(/('uuu:WWWWWWWWW:uuu`)\)\))))`     ))
-            ))   '':::UUUUUU:wwwwwwwww:UUUUUU:::``     ((   )
-              ((      ''`''`'\wuuuuuuu/``````         ))
-               ))            `JJJJJJJJJ`           ((
-                 ((            LLLLLLLLLLL         ))
-                   ))         ///|||||||\|\       ((
-                     ))      (/(/(/(^)\)\)\)       ((
-                      ((                           ))
-                        ((                       ((
-                          ( )( ))( ( ( ) )( ) (()
-        '''
+⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢰⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⢠⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡄⠀⠀⠀
+⠀⠀⠀⣿⠃⢿⠀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠀⡿⠘⣿⠀⠀⠀
+⠀⡄⢸⡏⠀⢸⡀⣼⣇⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⢰⣿⢀⡇⠀⢹⡇⢠⠀
+⢰⣿⠸⡇⠀⠀⢃⣿⣿⠀⠀⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⣾⣿⡜⠀⠀⢸⠇⣿⡆
+⢸⣿⢧⠁⠀⠀⣾⡟⢹⡆⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⢀⡟⢻⣿⠀⠀⠈⡼⣿⡇
+⠀⢿⡈⠁⠀⠀⣿⠃⠈⢷⠀⡀⢸⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⢀⠀⣸⠃⠀⣿⡆⠀⠈⢁⡿⠀
+⣆⠘⡇⠀⣧⠀⣿⠀⡄⠈⠃⣿⢸⠻⣇⠀⠀⠀⠀⠀⠀⠀⠀⢀⢸⠁⠀⡔⠀⠀⠀⠀⠀⠀⠀⢸⠏⡿⣼⠰⠁⢀⠄⣽⠁⣰⠀⢸⠃⣰
+⣿⣆⠹⠀⢿⣧⡘⠆⢹⡄⠀⣿⣎⠀⠹⣦⠀⠀⠀⠀⠀⠀⢀⡏⢸⠀⢠⡇⠀⠀⠀⠀⠀⠀⣠⡟⠀⢠⣿⡇⢀⡿⢠⠋⣼⣿⠀⠏⣰⣿
+⢻⣿⠃⠀⠸⣿⠓⠦⢸⣇⠀⣿⠹⣆⠀⠙⢷⡄⠀⠀⠀⠀⣼⢀⣾⣠⣾⠁⠀⠀⠀⠀⢀⣼⠋⠀⢠⠟⣿⡇⢸⡇⠠⠞⣿⡏⠀⠘⣿⡟
+⠈⢿⡄⠀⠀⠻⣇⠀⢸⣿⣆⣿⠀⠹⣆⠀⠈⢿⣦⠀⠀⠀⢻⡾⣿⡿⠷⣤⡀⠀⠀⣠⡾⠃⠀⣠⠟⠀⣿⢠⣿⡿⠀⢰⡟⠀⠀⢀⡿⠁
+⢠⡀⠳⠀⢳⣄⠙⢆⠸⡇⠹⣾⡆⠀⠈⢷⣄⠀⠹⣇⠀⠀⢨⠀⠘⣦⠀⢸⣧⠀⢰⡟⠀⣠⡾⠋⠀⢀⣿⠟⢸⡇⡰⠋⢀⣾⠀⠞⢀⡄
+⠀⢿⣦⣀⠘⣿⣧⣄⢀⡙⠀⠈⢻⣦⡀⠀⠙⢷⣄⣿⠀⠀⣧⡴⣣⢿⠀⢸⡏⠀⣾⣀⡼⠋⠀⢀⡴⡿⠁⠀⠈⡀⣁⣴⣿⠇⣀⣴⡿⠁
+⠀⠈⢿⡀⠀⠙⣿⡄⠈⣷⣄⠰⣄⠁⠉⠳⣄⡀⠉⢿⣄⠀⢸⡞⢀⡟⢀⡿⠃⢀⡿⠋⠀⣠⠞⠋⠘⣀⠖⣠⣾⠇⢠⣿⠏⠀⢀⡿⠁⠀
+⠀⠀⢀⡙⢄⠀⠈⠻⣄⠙⣿⡳⣌⡛⢶⣤⡈⠻⣄⠀⠻⣇⠀⣡⠎⢠⡾⠁⣰⡟⠁⣠⠞⢁⣠⡴⢞⣡⢞⣿⠟⢠⠟⠉⠀⡠⢋⡀⠀⠀
+⠀⠀⠈⢿⣿⠁⠐⣦⣌⠀⣮⡳⢄⠉⠃⠈⠙⠳⢾⣧⠀⢻⣴⠃⢀⡟⠀⠀⡟⠀⣴⡿⠞⠋⠁⠐⠋⡡⢞⣥⠂⣁⣴⠆⠈⣿⡿⠁⠀⠀
+⠀⠀⠀⠀⠉⠓⠦⠙⢿⣟⠚⢿⣶⠤⣄⠀⠀⠢⣄⠹⣧⣼⠃⠀⣼⠀⠀⠘⠁⣰⠟⣡⠄⠀⠀⣠⠤⣶⣿⠛⢻⣿⠋⠴⠚⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⣄⡉⠓⠄⠀⠀⠀⠈⢷⣾⡏⠀⠀⢿⣤⠖⠀⠀⢀⡾⠃⠀⠀⠀⠠⠚⠋⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣶⣖⠈⠻⢶⣶⣒⣒⢸⣿⠁⠀⠀⠀⠀⠀⠀⢀⣾⠁⣒⣒⣶⡶⠟⠁⢲⣶⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⠦⠄⡀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⠴⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣶⣧⣤⡴⠚⢿⣧⠀⠀⠀⠀⠠⠞⠁⠈⠑⢶⣤⣼⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠈⠻⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠎⡷⠀⠀⠀⠀⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠂⠀⠀⠀⠀⠀⠀⣠⠏⠀⠀⡀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀⠀⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡀⠀⠀⠀⢀⣠⣾⢗⠅⠀⠀⡇⠀⠀⠀⠀⡑⢷⣤⡀⠀⠀⠀⢀⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⠷⠶⠿⠛⣽⣣⠇⠀⢀⢶⠃⠀⢀⠀⠀⢺⣎⢷⡙⠿⠶⠶⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⢡⣯⠃⢠⣏⣏⠀⠀⠈⣆⠀⣸⡿⣇⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⢣⣿⢹⢏⡟⣸⢿⡄⡄⢻⡏⡆⠘⣷⢿⡎⢿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⢸⣿⠈⣿⠃⣿⠘⡤⡇⠘⡇⣷⠀⣿⢸⣷⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⣠⡿⠁⡇⢸⣿⣄⣿⠀⣿⡾⠁⣧⣾⠃⣿⣼⡟⢸⣿⣸⠀⠻⣦⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠹⢷⣶⡶⠿⠋⠀⠀⢿⡼⣿⡸⣿⡇⢿⡇⢰⠿⠁⠀⣿⠟⠀⣿⣷⡟⠀⠀⠙⠻⢷⣶⡶⠟⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠇⠸⣷⡙⢧⠘⠁⠀⠀⠀⠘⠃⠀⣼⡟⠘⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣧⡀⠀⠀⠀⠀⠀⠀⠀⣼⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡇⠀⠀⠀⠀⠀⠀⠀⡿⠀⠀⠀⠀'''
     )
     creature5 = Creature(
         species="Pegasus", 
         origin="Greek",  
         description='''
-        A Pegasus is a mythical winged horse from Greek mythology. It is often depicted as a beautiful and 
-        powerful creature with wings and the ability to fly. In mythology, the Pegasus is usually associated 
-        with the Muses and is said to be born from the blood of the Gorgon Medusa, who was slain by the hero 
-        Perseus. The Pegasus represents freedom, grace, and the power of the imagination, and it has been a 
-        popular symbol in art and literature throughout history. It is often portrayed as a companion to heroes 
-        and figures of inspiration, and its mythical qualities have made it a beloved creature in many cultures.
+A Pegasus is a mythical winged horse from Greek mythology. It is often depicted as a beautiful and 
+powerful creature with wings and the ability to fly. In mythology, the Pegasus is usually associated 
+with the Muses and is said to be born from the blood of the Gorgon Medusa, who was slain by the hero 
+Perseus. The Pegasus represents freedom, grace, and the power of the imagination, and it has been a 
+popular symbol in art and literature throughout history. It is often portrayed as a companion to heroes 
+and figures of inspiration, and its mythical qualities have made it a beloved creature in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-                          . . . .
-                          ,`,`,`,`,
-    . . . .               `\`\`\`\;
-    `\`\`\`\`,            ~|;!;!;\!
-     ~\;\;\;\|\          (--,!!!~`!       
-    (--,\|\===~\         (--,|||~`!     
-     (--,\|\===~\         `,-,~,=,:.   
-      (--,\|\==~`\        ~-=~-.---|\;/|,
-       (--,\|\((```==.    ~'`~/       a |
-         (-,.\|('('(`|\.  ~'=~|     \_.  \ 
-            (,--(,(,(,'|\. ~'=|       |\_;>
-              (,-( ,(,(,;|\ ~=/        \.
-              (,-/ (.(.(,;|\,/          )
-               (,--/,;,;,;,|\         ./------.
-                 (==,-;-'`;'         /_,----`. \ 
-         ,.--_,__.-'                    `--.  ` \ 
-        (='~-_,--/        ,       ,!,___--. \  \_)
-       (-/~(     |         \   ,_-         | ) /_|
-       (~/((\    )\._,      |-'         _,/ /
-        \\))))  /   ./~.    |           \_\;
-     ,__/////  /   /    )  /
-      '===~'   |  |    (, <.
-               / /       \. \ 
-             _/ /          \_\ 
-            /_!/            >_\ 
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠋⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠴⠚⠉⢀⣼⠁⠀⠀⠀⠀⠀⠀⢀⣠⡤⢾⡿⠃⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⠻⠀⠀⠀⢠⣞⣫⡟⣤⣤⡴⠶⠶⠛⠋⠉⣠⡴⠋⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⢀⡾⡿⠋⢀⣴⠶⣛⢨⡭⠉⠁⠀⠀⠀⠀⣀⣠⠴⠞⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠿⠉⠻⣿⣟⠀⠀⠀⡸⠈⢀⣴⢋⡴⠋⠁⠀⠀⠀⠀⠀⠰⠶⠭⠑⣲⡶⠋⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⢞⣛⠛⠃⠰⠈⢿⠙⣆⠀⠟⢀⣾⢃⠞⠀⠀⠀⠀⠀⣀⣀⣀⣠⣤⠶⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢘⣟⡃⠁⣅⣀⣀⠞⠀⣬⡄⢼⣒⠂⢸⠃⠚⠀⠀⠀⠀⠀⠀⠉⠙⠛⡛⣛⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠋⠉⢁⣿⠈⠀⠀⣿⡇⣘⠋⠀⡝⠀⠀⠀⠀⠀⠀⠐⠻⠿⠿⣬⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠜⠁⠀⠀⠀⠟⡇⣿⡅⢀⠇⠀⠀⠀⠀⠀⠖⣄⣀⣐⣶⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠱⠋⠀⠀⠀⠈⢱⢀⣿⠃⡜⠀⠀⠀⠀⠤⣤⣤⣤⡤⠶⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⠀⣀⠀⠀⣴⠟⢁⡤⠶⢦⣄⠀⢀⣷⠸⡏⣼⠃⠀⠀⠀⣤⡀⡈⣽⡷⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣠⠍⣊⡈⠑⠦⣎⣀⡀⡀⠀⠀⠀⠀⠀⢻⣧⠞⣁⡀⢀⢐⣶⣠⡝⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⢯⣎⣀⣙⣷⡄⠉⠉⠉⠀⠀⠀⠀⠀⣀⡛⢡⠾⠋⡆⣼⣿⡅⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢛⣼⣯⢋⣉⣙⣳⣄⠀⢀⣰⣆⠀⠀⠀⠉⠁⠀⠘⠛⠁⠛⠲⠢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠘⣧⡿⠇⠀⠀⠀⠈⠉⠉⠳⣦⡀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢶⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣹⠆⠀⠀⠀⠀⠀⠀⠀⠈⠙⠆⣍⣛⠳⢤⡀⣀⢠⠃⠀⠀⢣⠀⠈⣯⣍⠙⣳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢈⣭⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠱⡲⣿⠀⠀⠀⣠⠊⠀⢠⡏⠘⣧⠈⡍⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⢹⣆⠀⢀⠀⠀⣴⠟⠀⢀⡟⢰⡄⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⠁⢤⠹⠄⠘⠁⠀⠀⢈⣧⢸⡇⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠶⢛⣿⠶⠶⠏⢿⡂⠘⡄⠀⠀⢸⡇⠈⡅⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣋⣿⠟⠋⠀⠀⠀⢀⣾⣵⠞⠁⠀⠀⠀⢷⣦⠁⢾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢎⡴⠋⠀⠀⠀⠀⠀⠈⢱⡆⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣧⠶⠀⠀⠀⠀⠀⠀⠀⠀⠾⣧⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠒⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀  '''
     )
     creature6 = Creature(
         species="Unicorn", 
         origin="Ancient mythology, European folklore", 
         description='''
-        A unicorn is a mythical creature from ancient and European folklore mythology, often depicted as a 
-        horse with a single horn on its forehead. It is said to possess magical healing powers and the ability 
-        to purify water. In mythology, the unicorn represents purity, grace, and innocence, and is often 
-        associated with the divine. The legend of the unicorn has been prevalent in European folklore for 
-        centuries, and it has been depicted in art, literature, and heraldry. The unicorn is a symbol of hope, 
-        purity, and divine intervention, and its mythical qualities have captured the imaginations of people 
-        throughout history.
+A unicorn is a mythical creature from ancient and European folklore mythology, often depicted as a 
+horse with a single horn on its forehead. It is said to possess magical healing powers and the ability 
+to purify water. In mythology, the unicorn represents purity, grace, and innocence, and is often 
+associated with the divine. The legend of the unicorn has been prevalent in European folklore for 
+centuries, and it has been depicted in art, literature, and heraldry. The unicorn is a symbol of hope, 
+purity, and divine intervention, and its mythical qualities have captured the imaginations of people 
+throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-    `\.
-      |\,
-       \|\,^,.,,.
-       ,;7~((\))`;;,,
-       ,(@') ;)`))\;;',
-        )  . ),((  ))\;,
-       /;`,,/7),)) )) )\,,      ,,,... ,
-      (& )`   (,((,((;( ))\,_,,;'`    `|\,
-       `"    ` ), ))),/( (            `)\,
-              '1/';/;  `               ))),
-               (, (     /         )    ((/,
-              / \                /     ((('
-             ( 6--\%  ,>     ,,,(     /'))\.
-              \,\,/ ,/`----~`\   \    >,))))'
-                \/ /          `--7>' /((((('
-                (,9             // /'('((\\\,
-                 \ \,,         (/,/   '\`\\'\ 
-                  `\_)1        (_)k     `\`\\`\ 
-                    `\|         \Z          `\.
-                      `          "            `
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠿⢶⡶⠤⣀⡀⣶⣤⡾⣶⠛⣶⣦⣩⣷⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠒⠭⣙⣿⡗⢿⣶⣌⣿⢇⢤⣽⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡃⢠⣭⠙⢏⡘⣮⠿⣿⣯⣿⣷⡄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢸⠃⠈⠁⠀⢸⠓⠾⣷⡈⡟⣿⣙⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⣔⣒⢂⣀⠒⡒⠤⠀⠀⠀⣀⣀⣀⣀⣀⣀⠀⠀⡼⠀⠀⢀⡞⢉⠰⡾⣿⣿⣿⠺⣙⣷⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⢞⢝⣯⣷⡯⠝⠋⠉⠉⢀⡴⠚⠋⠉⠉⠉⠉⠉⠉⠉⠙⡷⠆⣰⠋⠀⢸⡆⣿⢸⢻⣿⢳⣿⡿⠗⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡜⣕⡵⣻⢗⣭⣮⢿⠃⠀⡴⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠚⠋⠀⢀⣿⢱⡹⣾⢸⡏⠈⢸⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⢾⢎⣾⢞⡕⡿⢫⡳⠃⡞⢹⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠋⢋⣇⠇⠸⠁⠀⢸⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⡳⣫⢯⢏⢎⢞⣡⡻⡱⢡⡇⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡎⠀⠀⠈⠏⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣼⡵⡵⢡⠏⣏⢎⡎⣾⢳⣱⢹⠀⠸⡄⠀⠀⠀⠀⠀⣰⠉⠑⠢⣤⡀⠀⠀⠀⠸⠀⠀⠀⠀⠀⠀⠀⢀⡴⠧⢠⣄⣀⠀⠀⠀⠀
+⠤⡪⢋⢼⡞⣽⠏⡜⢨⢾⡶⡏⢸⠃⡞⠀⡴⠃⠀⠀⠀⣠⠖⠁⠀⠀⠀⠀⠉⠲⢤⣀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⢀⣀⣉⣑⠲⢄
+⠀⠀⢠⠚⣼⠏⠘⢠⢯⠛⠁⠁⠀⢀⡤⠞⠁⢀⣠⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠚⢢⡀⠀⢠⠋⠉⠉⠉⠉⠉⠁⠀⠀⣸⠀⡸
+⠀⠀⠀⡰⠋⠀⢰⠃⠀⠀⠀⠀⠀⡎⠀⢀⢴⡋⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⣰⠃
+⠀⠀⠈⠀⠀⠀⠘⠀⠀⠀⠀⠀⠀⡇⠀⡏⠀⣧⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⢰⡇⠀⠀⠀⠀⠀⠀⠀⣠⠏⡼⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⢰⡇⠀⠘⣆⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⢸⠀⠀⠀⠀⠀⢸⠉⢻⢁⡼⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠹⡆⠀⠘⢆⢹⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⠀⠀⠀⠀⠈⠓⠋⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠶⢿⡀⠀⠸⣭⡼⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠒⠒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣏⣉⡿⠀⠀  '''
     )
     creature7 = Creature(
         species="Sphinx", 
         origin="Greek, Egyptian", 
         description='''
-        A Sphinx is a mythical creature with the body of a lion and the head of a human, and it appears in both 
-        Greek and Egyptian mythology. It is often portrayed as a guardian, challenging travelers with a riddle, 
-        and killing those who cannot answer correctly. In Egyptian mythology, the Sphinx is associated with the 
-        sun and is often depicted as a symbol of royal power and protection. In Greek mythology, the Sphinx is 
-        said to have terrorized the city of Thebes until it was defeated by the hero Oedipus. The Sphinx 
-        represents mystery, enigma, and the danger of the unknown, and its mythical qualities have made it a 
-        popular subject in art, literature, and popular culture throughout history.
+A Sphinx is a mythical creature with the body of a lion and the head of a human, and it appears in both 
+Greek and Egyptian mythology. It is often portrayed as a guardian, challenging travelers with a riddle, 
+and killing those who cannot answer correctly. In Egyptian mythology, the Sphinx is associated with the 
+sun and is often depicted as a symbol of royal power and protection. In Greek mythology, the Sphinx is 
+said to have terrorized the city of Thebes until it was defeated by the hero Oedipus. The Sphinx 
+represents mystery, enigma, and the danger of the unknown, and its mythical qualities have made it a 
+popular subject in art, literature, and popular culture throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -311,20 +308,19 @@ with Session(engine) as session:
   ⠀⠀⠀⠀⠀⠀⠈⠳⣄⡈⠉⠉⢀⣀⠤⠖⣻⠟⠋⠉⣠⠴⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢸⠁⠈⡇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠙⢤⡀⠀⠹⣄⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⣿⠀⣿⠀⠀⠹⡄⢻⡀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠛⠻⡿⠿⣿⢷⢦⡀⠀⠀⠀⢹⠀⢽⡶⢶⣦⡹⡄⠙⢶⣶⣤⡀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠈⠛⠛⠛⠛⠛⠃⠉⠛⠛⠛⠛⠋⠀⠀⠀
-        '''
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠈⠛⠛⠛⠛⠛⠃⠉⠛⠛⠛⠛⠋⠀⠀⠀  '''
     )
     creature8 = Creature(
         species="Cerberus", 
         origin="Greek", 
         description='''
-        Cerberus is a legendary creature from Greek mythology, often depicted as a three-headed dog with a 
-        serpent for a tail. In mythology, Cerberus is said to guard the entrance to the Underworld, preventing 
-        the dead from escaping and the living from entering. The creature is known for its fierce and 
-        intimidating appearance, and it is said to have a venomous bite. Cerberus represents the boundary 
-        between life and death, and its mythical qualities have made it a popular subject in art, literature, 
-        and popular culture. It is often associated with the underworld and the afterlife, and its role as a 
-        guardian has made it a symbol of protection and power in many cultures.
+Cerberus is a legendary creature from Greek mythology, often depicted as a three-headed dog with a 
+serpent for a tail. In mythology, Cerberus is said to guard the entrance to the Underworld, preventing 
+the dead from escaping and the living from entering. The creature is known for its fierce and 
+intimidating appearance, and it is said to have a venomous bite. Cerberus represents the boundary 
+between life and death, and its mythical qualities have made it a popular subject in art, literature, 
+and popular culture. It is often associated with the underworld and the afterlife, and its role as a 
+guardian has made it a symbol of protection and power in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -349,20 +345,19 @@ with Session(engine) as session:
 ⠀⠀⠀⠀⠀⠀⣠⠤⠤⠔⠉⠀⠀⠀⣠⠖⠉⠀⠀⠀⠀⠀⠀⢰⠽⢽⡽⣤⣴⠁⠀⠀⠀⡰⠁⠀⠀⠀⠀⠀⡜⣢⡶⡄⡴⣆⣸⠀⠀⠀
 ⠀⠀⠀⠀⠀⡔⣳⢖⣄⢤⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠚⠁⠀⠀⠀⡴⠁⠀⠀⠀⠀⠀⠀⠋⠉⠛⠉⠑⠋⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠉⠓⠋⠧⠾⠤⠖⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⢋⣿⢛⣶⡰⢱⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠋⠙⠊⠉⠙⠋⠉⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠋⠙⠊⠉⠙⠋⠉⠀⠀⠀    '''
     )
     creature9 = Creature(
         species="Kraken", 
         origin="Norse", 
         description='''
-        The Kraken is a legendary sea monster from Norse mythology, often described as a giant octopus or squid 
-        with tentacles long enough to wrap around ships and drag them under the water. In mythology, the Kraken 
-        is said to dwell in the depths of the ocean, and it is associated with storms, whirlpools, and other 
-        dangerous sea phenomena. The creature's immense size and strength make it a fearsome opponent, and its 
-        mythical qualities have made it a popular subject in art, literature, and popular culture. The Kraken 
-        represents the power and mystery of the ocean, and its role as a feared monster has made it a symbol 
-        of danger and uncertainty in many cultures.
+The Kraken is a legendary sea monster from Norse mythology, often described as a giant octopus or squid 
+with tentacles long enough to wrap around ships and drag them under the water. In mythology, the Kraken 
+is said to dwell in the depths of the ocean, and it is associated with storms, whirlpools, and other 
+dangerous sea phenomena. The creature's immense size and strength make it a fearsome opponent, and its 
+mythical qualities have made it a popular subject in art, literature, and popular culture. The Kraken 
+represents the power and mystery of the ocean, and its role as a feared monster has made it a symbol 
+of danger and uncertainty in many cultures.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -384,294 +379,271 @@ with Session(engine) as session:
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⢸⡇⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡖⠀⠀⠀⢀⡿⣠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣸⠇⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢩⣷⣤⠤⠖⣋⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⠏⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠛⠋⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠛⠋⠀⠀⠀   '''
     )
     creature10 = Creature(
         species="Chimera", 
         origin="Greek", 
         description='''
-        A Chimera is a mythical creature from Greek mythology, typically depicted as a monstrous creature with 
-        the head of a lion, the body of a goat, and the tail of a serpent. In mythology, the Chimera is said 
-        to breathe fire and terrorize the countryside, and it is often portrayed as an unstoppable force. The 
-        Chimera represents chaos and destruction, and its mythical qualities have made it a popular subject in 
-        art, literature, and popular culture. Its composite appearance, drawn from several different animals, 
-        makes it a symbol of hybridity and diversity, while its fearsome nature has made it a symbol of danger 
-        and power.
+A Chimera is a mythical creature from Greek mythology, typically depicted as a monstrous creature with 
+the head of a lion, the body of a goat, and the tail of a serpent. In mythology, the Chimera is said 
+to breathe fire and terrorize the countryside, and it is often portrayed as an unstoppable force. The 
+Chimera represents chaos and destruction, and its mythical qualities have made it a popular subject in 
+art, literature, and popular culture. Its composite appearance, drawn from several different animals, 
+makes it a symbol of hybridity and diversity, while its fearsome nature has made it a symbol of danger 
+and power.
         ''',
         care_instructions="TBD",
         ascii_art= '''
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡴⠞⣯⣽⡴⠶⠛⠛⢛⣛⣛⡛⠶⢶⣿⣿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢞⣭⡶⠟⠋⠁⠀⠀⠀⣀⡀⣿⣳⣦⠈⣳⢄⠀⠉⠻⣮⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⢉⡴⠟⠁⠀⠀⠀⠀⠀⠈⠁⠀⠀⠱⠷⠿⠿⠷⣴⣍⣛⡲⠗⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⡼⠁⡴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢠⡟⢠⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⡟⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠒⠈⠛⠋⠉⢁⠚⢦⡄   ⠀⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣾⢀⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣞⠀⠀⡴⠀⣀⡲⢻⣑⣆⢻⠀⠀   ⠹⠷⡀⠀⠰⢦⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢸⡇⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠻⣗⠁⠰⡡⠆⠻⢏⠻⠟⠚⣇⡇  ⠀⠀⢻⠹⡆⠀⣿⢇⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣾⠂⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠀⠹⡀⠀⠰⠱⢶⣿⣽⣖⠆⠁⠹⠆  ⠀⠀⠇⢹⠀⣿⣿⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣿⡄⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠀⢸⣾⡆⠀⢀⣿⣿⣿⣾⠀⠀⡽⢇⠠  ⠀⣿⡀⣶⠇⡻⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢹⡆⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢌⡄⠀⠀⠘⢿⣴⡄⠙⣿⣤⣼⢿⢀⡘⠀⠸⡹ ⠆⠈⠁⠈⠓⣇⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠈⢿⠀⠙⠳⢦⣤⣀⣀⠀⣠⠶⠞⠋⠉⠁⠀⠀⠹⠆⡆⠀⠀⣳⣀⠈⠺⠿⠟⢊⡟⠀⠀⠀⠑⠐⠄⠺⠷⠆⠹⣆⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠈⢷⣆⣀⠀⠀⠀⢨⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠇⠹⢶⣶⡄⠰⠷⠂⠈⠀⢠⣴⣷⣜⣯⡁⠉⠀⠹⡀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠙⠳⣾⣶⢴⣾⠀⠀⠀⠇⠀⠀⠀⡤⠄⠀⢾⣡⠄⡄⠀⠀⣀⠈⠁⢹⠀⢀⡀⣀⠥⠆⠿⣿⣿⠿⣧⣰⣝⡅⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⡿⠀⠀⠰⠀⠀⠀⠰⣾⠍⠀⠀⠻⠀⢀⠀⢸⠃⠀⠀⠋⠀⠏⣹⠚⠂⠀⠀⠀⠙⣷⣰⣼⡟⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⠀⠸⠁⠀⠀⠸⢧⠀⠀⢹⠈⠘⠈⣦⠄⠀⠀⢸⠀⣰⠻⠋⣧⠀⠀⠀⠀⠀⠹⢿⣷⠂⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣥⠀⠀⠀⣠⠽⢦⠀⣻⠀⠀⠀⢑⡀⠣⢸⠀⠀⣰⡿⢶⡏⢠⠀⡘⣇⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠏⣀⡴⠞⠁⠀⠈⠛⣧⠀⠀⠀⠀⠲⢿⠿⣤⣤⠎⠁⠀⠹⣌⢧⢀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⠀⠀⠖⠀⠀⠀⠀⠀⠀⠙⢦⠀⠀⠀⠀⡿⠇⠉⠛⠀⠀⠀⠀⢸⡎⣿⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠃⢀⣤⡆⠀⠀⠀⠀⠀⠀⠀⠀⢷⡀⠀⠀⢇⠻⣀⠀⠀⠀⢀⣤⠾⠃⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢐⣃⣰⡠⡤⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⠀⢻⡄⠆⢹⠀⠀⢯⡑⠀⢄⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠈⣷⡈⠁⠀⠀⠀⠉⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡌⠀⠀⣁⢨⣳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠃⠰⠉⠚⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡴⠞⣯⣽⡴⠶⠛⠛⢛⣛⣛⡛⠶⢶⣿⣿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢞⣭⡶⠟⠋⠁⠀⠀⠀⣀⡀⣿⣳⣦⠈⣳⢄⠀⠉⠻⣮⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⠞⢉⡴⠟⠁⠀⠀⠀⠀⠀⠈⠁⠀⠀⠱⠷⠿⠿⠷⣴⣍⣛⡲⠗⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⡼⠁⡴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⡟⢠⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⡟⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠒⠈⠛⠋⠉⢁⠚⢦⡄   ⠀⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣾⢀⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣞⠀⠀⡴⠀⣀⡲⢻⣑⣆⢻⠀⠀   ⠹⠷⡀⠀⠰⢦⠀⠀⠀⠀⠀⠀
+⠀⠀⢸⡇⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠻⣗⠁⠰⡡⠆⠻⢏⠻⠟⠚⣇⡇  ⠀⠀⢻⠹⡆⠀⣿⢇⠀⠀⠀⠀⠀
+⠀⠀⣾⠂⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠀⠹⡀⠀⠰⠱⢶⣿⣽⣖⠆⠁⠹⠆  ⠀⠀⠇⢹⠀⣿⣿⠀⠀⠀⠀⠀
+⠀⠀⣿⡄⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠀⢸⣾⡆⠀⢀⣿⣿⣿⣾⠀⠀⡽⢇⠠  ⠀⣿⡀⣶⠇⡻⠀⠀⠀⠀⠀
+⠀⠀⢹⡆⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢌⡄⠀⠀⠘⢿⣴⡄⠙⣿⣤⣼⢿⢀⡘⠀⠸⡹ ⠆⠈⠁⠈⠓⣇⠀⠀⠀⠀⠀
+⠀⠀⠈⢿⠀⠙⠳⢦⣤⣀⣀⠀⣠⠶⠞⠋⠉⠁⠀⠀⠹⠆⡆⠀⠀⣳⣀⠈⠺⠿⠟⢊⡟⠀⠀⠀⠑⠐⠄⠺⠷⠆⠹⣆⠀⠀⠀⠀
+⠀⠀⠀⠈⢷⣆⣀⠀⠀⠀⢨⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠇⠹⢶⣶⡄⠰⠷⠂⠈⠀⢠⣴⣷⣜⣯⡁⠉⠀⠹⡀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⠳⣾⣶⢴⣾⠀⠀⠀⠇⠀⠀⠀⡤⠄⠀⢾⣡⠄⡄⠀⠀⣀⠈⠁⢹⠀⢀⡀⣀⠥⠆⠿⣿⣿⠿⣧⣰⣝⡅⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⡿⠀⠀⠰⠀⠀⠀⠰⣾⠍⠀⠀⠻⠀⢀⠀⢸⠃⠀⠀⠋⠀⠏⣹⠚⠂⠀⠀⠀⠙⣷⣰⣼⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⠀⠸⠁⠀⠀⠸⢧⠀⠀⢹⠈⠘⠈⣦⠄⠀⠀⢸⠀⣰⠻⠋⣧⠀⠀⠀⠀⠀⠹⢿⣷⠂⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣥⠀⠀⠀⣠⠽⢦⠀⣻⠀⠀⠀⢑⡀⠣⢸⠀⠀⣰⡿⢶⡏⢠⠀⡘⣇⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠏⣀⡴⠞⠁⠀⠈⠛⣧⠀⠀⠀⠀⠲⢿⠿⣤⣤⠎⠁⠀⠹⣌⢧⢀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡾⠀⠀⠖⠀⠀⠀⠀⠀⠀⠙⢦⠀⠀⠀⠀⡿⠇⠉⠛⠀⠀⠀⠀⢸⡎⣿⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⠃⢀⣤⡆⠀⠀⠀⠀⠀⠀⠀⠀⢷⡀⠀⠀⢇⠻⣀⠀⠀⠀⢀⣤⠾⠃⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢐⣃⣰⡠⡤⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⠀⢻⡄⠆⢹⠀⠀⢯⡑⠀⢄⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠈⣷⡈⠁⠀⠀⠀⠉⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡌⠀⠀⣁⢨⣳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠃⠰⠉⠚⠋⠀⠀    '''
     )
     creature11 = Creature(
         species="Centaur", 
         origin="Greek", 
         description='''
-        A Centaur is a legendary creature from Greek mythology, often depicted as a being with the upper body 
-        of a human and the lower body of a horse. In mythology, Centaurs are known for their strength and wild 
-        behavior, and are often portrayed as heavy drinkers and rowdy partiers. They are associated with 
-        hunting and warfare, and their skilled use of weapons and archery is a common theme in mythology. The 
-        Centaur represents the intersection between human and animal, and its mythical qualities have made it 
-        a popular subject in art, literature, and popular culture. Its dual nature has also made it a symbol 
-        of inner conflict and the struggle between primal instincts and human reason.
+A Centaur is a legendary creature from Greek mythology, often depicted as a being with the upper body 
+of a human and the lower body of a horse. In mythology, Centaurs are known for their strength and wild 
+behavior, and are often portrayed as heavy drinkers and rowdy partiers. They are associated with 
+hunting and warfare, and their skilled use of weapons and archery is a common theme in mythology. The 
+Centaur represents the intersection between human and animal, and its mythical qualities have made it 
+a popular subject in art, literature, and popular culture. Its dual nature has also made it a symbol 
+of inner conflict and the struggle between primal instincts and human reason.
         ''',
         care_instructions="TBD",
         ascii_art= '''
-             =*===
-           $$- - $$$
-           $ <    D$$
-           $ -   $$$
-     ,     $$$$  |
-    ///; ,---' _ |----.
-     \ )(           /  )
-     | \/ \.   '  _.|  \              $
-     |  \ /(   /    /\_ \          $$$$$
-      \ /  (       / /  )         $$$ $$$
-           (  ,   /_/ ,`_,-----.,$$  $$$
-           |   <----|  \---##     \   $$
-           /         \|\           |    $
-          '   '                    |
-          |                 \      /
-          /  \_|    /______,/     /
-         /   / |   /    |   |    /
-        (   /--|  /.     \  (\  (_
-         `----,( ( _\     \ / / ,/
-               | /        /,_/,/
-              _|/        / / (
-             / (        ^-/, |
-            /, |          ^-    
-            ^-
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠦⣄⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢦⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠤⠒⠒⠲⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡤⢄⠞⣉⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⡀⠀⠀⢐⣆⣤⠤
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣯⡘⠗⠀⠀⣽⠇⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⡤⠴⠋⢹⣿⠀⠀⠈⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣽⣣⠀⢲⡮⢿⣠⣤⣶⣤⣶⣶⣶⣿⣭⣤⣤⠤⠀⢀⣸⠏
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠔⠀⠀⠀⠒⠒⠋⠀⠀⣿⣿⣿⣿⣍⢰⣿⡿⠿⠋⠉⠉⠉⠀⠀⠀⠘⢿⣦
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠁⠀⠀⢀⣠⣴⠀⠀⠀⠀⠛⠻⢷⡝⢻⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣷
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠛⠛⠋⠁⠙⣦⡀⠀⠀⠀⠀⠸⠿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢦⣄⡀⠀⠀⠀⠈⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠦⡀⠀⠀⠈⠻⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⢹⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠀⠀⠙⠻⣶⣰⡇⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠞⠋⠁⠀⠀⠀⠀⠈⠻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠸⠄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠐⡄⠀⠀⠁⡄⢀⣠⣤⣤⣤⣀
+⠀⠀⠀⠀⠀⢀⣤⠶⠚⢣⡾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡔⠁⠀⠀⠀⢹⡄⠀⣰⣿⣿⣿⣿⣿⣿⣿⠇
+⠀⠀⠀⣠⣾⡟⣡⡶⡟⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⢸⣇⣼⣿⣿⠟⣹⣿⠟⠉
+⠀⠀⣰⣿⢻⣽⡟⢸⡇⡏⠀⠀⠀⠀⠀⠀⠱⣄⡀⠀⠀⠀⠀⣼⡏⠀⠀⠀⠀⠀⠀⠀⠙⢿⡉⣠⣾⠟⠁
+⠀⠀⠹⣿⡈⢿⡀⣼⡇⠃⠀⠀⠀⠀⠀⠀⠀⢿⣿⡓⠲⢶⣶⣿⣿⣦⣤⣤⣤⣤⣀⣀⠀⠀⠻⣿⠃
+⠀⠀⠀⠀⠀⣠⣾⠟⠀⡜⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀⠀⠀⠀⠀⠈⠉⠁⠈⠉⢉⣽⣦⣄⡙⡆
+⠑⠒⠶⠚⠛⠋⢁⣠⠞⠁⠀⠀⠀⠀⠀⣀⣤⣾⣿⠟⠀⠀⠀⠀⠀⠀⣀⡀⣠⣴⣶⠿⠛⠋⠉⠁
+⠀⠀⠀⠀⠀⠀⢻⣇⠀⣠⣴⠖⠋⣵⣿⣿⣿⠋⠁⠀⠀⠀⠀⠀⠀⣼⣿⠿⠛⠋
+⠀⠀⠀⠀⠀⠀⠀⠉⠳⢿⣿⠀⠀⠉⠉⠛⢿⣷⡀⠀⠀⠀⠀⠀⠀⣤⣤
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣷⡄⠀⠀⠀⠀⠙⢻⣦⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣄⠀⠀⠀⠀⠀⠻⣿⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⠆⠀⠀⠀⠀⠀⠻⠿⠇   '''
     )
     creature12 = Creature(
         species="Satyr/Faun", 
         origin="Greek, Roman", 
         description='''
-        A Satyr, also known as a Faun in Roman mythology, is a mythical creature depicted as a being with the 
-        upper body of a man and the lower body of a goat. In mythology, Satyrs are known for their mischievous 
-        and lustful behavior, often depicted as drunken party-goers and followers of the god of wine, Dionysus. 
-        They are associated with nature, wilderness, and fertility, and their mythical qualities have made them 
-        a popular subject in art, literature, and popular culture. The Satyr represents the intersection 
-        between human and animal, and its wild nature has made it a symbol of freedom, spontaneity, and 
-        uninhibited pleasure-seeking.
+A Satyr, also known as a Faun in Roman mythology, is a mythical creature depicted as a being with the 
+upper body of a man and the lower body of a goat. In mythology, Satyrs are known for their mischievous 
+and lustful behavior, often depicted as drunken party-goers and followers of the god of wine, Dionysus. 
+They are associated with nature, wilderness, and fertility, and their mythical qualities have made them 
+a popular subject in art, literature, and popular culture. The Satyr represents the intersection 
+between human and animal, and its wild nature has made it a symbol of freedom, spontaneity, and 
+uninhibited pleasure-seeking.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢦⢙⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠮⣀⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠘⡆⠀⠀⠀⡀⠀⠀⠀⠀⠀⡜⠈⡻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⠒⠻⡀⠀⡌⠠⠀⠆⠀⠀⢰⠓⢲⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢶⠦⡀⠀⢸⡠⠐⡳⠔⠓⠛⠘⠓⠒⠤⡗⠤⣼⠁⠀⢀⢴⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⠈⢦⢸⣠⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⣸⠀⡴⢁⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⢳⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡹⠀⣞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡭⠭⢐⣿⠀⣞⠖⣂⠄⠀⠀⡆⠀⠀⠀⠐⣒⣒⣸⡇⠸⡏⠭⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⢷⣈⠥⣇⡜⡷⠦⢤⣅⠀⠀⢃⢰⠀⠀⣠⣤⣤⣈⡟⣳⡯⣑⡾⠗⠤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠠⣀⠀⣀⡤⠖⠋⠁⠀⠉⢷⣾⢿⠏⠀⠀⠀⡞⠙⡦⣼⣠⣤⠾⠙⡄⠀⠀⠙⣽⣵⠮⠁⠀⠀⠀⠈⠙⠢⣄⣀⠠⠀⠀⠀⠀
-⠀⠀⠀⠀⢄⡼⠛⠁⠀⠀⠀⠀⠀⠀⡻⢰⠃⠀⠀⠀⠐⠵⢶⡮⣰⢰⠜⡶⣶⠓⠁⠀⠀⠈⡏⢳⡄⠀⠀⠀⠀⠀⠀⠈⢳⣤⠄⠒⠀⠀
-⠀⠀⠀⢲⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠇⡇⠀⠀⠀⠀⠀⢀⠸⡀⠈⠈⢀⡜⠢⠀⠀⠀⠀⠀⡇⢸⠉⠀⠀⠀⠀⠀⠀⠀⠀⠘⢧⠐⠢⠀
-⠀⣁⣴⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣦⠱⡄⠀⠀⠀⠠⡀⠑⠬⢕⡒⠭⠖⠀⠁⠀⠀⠀⡰⣡⡘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⠤⡀
-⠈⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡈⡲⢤⣀⠀⠈⠐⠂⠐⠂⠀⠀⠀⠀⣀⠤⢊⡴⠙⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⣾⡄⠀
-⠀⠀⢹⡀⠀⠀⢄⠀⠀⠀⠀⠀⠀⢀⡄⠀⠈⠏⠒⠬⠭⢵⣒⡒⠒⠒⠒⣒⡪⠭⠐⠊⠁⠀⠀⠈⢳⣤⣀⣀⣀⣀⣀⠀⠀⠀⢠⡇⠈⠀
-⠀⠀⠀⢣⡀⠀⠀⠉⠒⠶⠶⢖⡞⠁⠀⠀⠀⠀⢀⠀⠀⠀⠀⠙⡆⠀⠀⢇⠀⠀⠠⡀⠀⠀⠀⠀⠈⢳⡈⠉⠉⠉⠀⠀⠀⢀⡞⠁⠀⠀
-⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⢀⡞⠀⠀⠀⠀⠀⠐⠁⠌⡀⢠⣀⡦⠃⢀⠀⠌⢧⡈⠢⡈⠁⠀⠀⠀⠀⠀⢳⡄⠀⠀⣀⣠⠴⠋⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⠖⣻⠷⠦⢄⡞⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⡜⢢⢤⣊⡎⠀⡼⡎⠑⠄⠀⠀⠀⠀⠀⠀⠀⠀⢷⠀⠈⢿⣒⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠘⢌⠃⢀⠴⢺⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡷⣄⢘⠔⠁⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠓⠁⢀⣞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠈⠈⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡴⠋⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠛⣄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⠞⠀⠀⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡟⠀⠈⢣⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⡞⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠀⠀⠀⠀⡃⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣧⡆⠀⠀⠀⠀⠀⠙⠦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠋⠀⠀⠀⠀⠀⡟⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠇⡄⠀⠀⠀⠀⠀⠀⠈⠓⠢⣤⣀⣀⠀⠀⠀⠠⠤⠀⠀⠀⠀⠀⢀⣀⠤⠒⠋⠁⠀⠀⠀⠀⠀⢠⣶⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠘⠝⠴⣀⠀⠀⠀⠀⣀⣠⡤⢈⡿⠉⠉⠛⠛⠛⠛⠛⠛⠛⠛⠉⢏⠀⠠⢀⣀⣀⠀⠀⣀⣠⠶⠋⠁⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠉⠁⡾⣠⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣆⢸⡀⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡜⢰⡇⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢇⠳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⠖⢉⠴⠏⠡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠜⠲⣌⢒⣶⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢠⣾⣇⣀⣀⡠⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣁⣀⣸⣌⠦
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠶⠦⣄⠀⠀⠀⠀⠀⢀⡴⠶⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⠀⠀⠀⣟⡖⠲⠲⠶⣴⠏⠀⠀⣸⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⡀⠀⠈⠓⠲⡄⡞⠁⠀⢀⡰⡃⣿⠀⣀⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⡚⠛⢢⡤⠏⠉⣳⣤⡤⠞⠳⠽⣶⣶⡊⢀⡧⣹⠞⠁⣠⣤⡹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠐⠛⠁⠙⠒⠲⠞⠒⠛⠁⠸⣶⡄⢴⣶⡆⢰⣧⢀⣧⣀⣠⠞⠁⠀⢹⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣫⠃⢈⠉⠁⠈⡞⢻⠁⠈⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⠬⢿⣷⣊⠱⢀⣠⠇⠀⠙⠒⠶⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⠳⣯⡖⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⣠⠖⠋⣛⡿⣶⣛⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡯⠊⠁⢰⣿⣿⢿⡟⡼⡽⣿⣿⡶⠦⡄⠀⡴⡠⠀⠀⠀⠀⠙⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⢰⠛⠛⣻⣿⣿⣼⢹⣡⣿⣿⡁⠀⠘⠾⣅⡀⢸⡆⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣠⠖⠋⠀⡠⢀⡏⣀⡾⠁⢸⡙⢿⣿⣇⡞⢀⣿⠖⠢⣄⠈⠉⠛⠻⢦⣀⠀⠀⠈⣆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢰⠋⠀⠀⢀⡜⠁⣼⡼⠋⠀⠀⠀⠙⣄⠙⠻⣿⠟⠀⠀⠀⠈⢣⡀⠀⠢⣄⠉⠛⠦⠀⢸⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢹⡄⠀⠀⠈⢀⡴⠁⠀⠀⠀⠀⠀⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⡀⠀⠁⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠙⠓⠚⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠉⠓⠦⣤⣤⣤⠾⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⢀⡼⠹⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⢀⡤⠔⠳⣖⠋⠀⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡴⠚⠀⠀⠀⠈⠓⢦⠠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠜⠙⣆⠀⠀⢀⡼⠃⠀⠀⠀⠀⠀⠀⠈⡷⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠃⠀⠀⠈⢧⣀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠅⠀⠀⠀⠀⠀⡻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢴⡋⠀⠀⠀⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡽⠃⠀⠀⠀⠀⠀⠀⠀⠀⢸⡃⠀⠀⠀⠀⠀⠀⠀⠀⣴⡟⠉⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡅⠀⠀⠀⠀⠀⠀⠀⣀⢀⣾⡇⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀⠰⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⡰⢻⠞⢸⠁⠀⠀⠀⠀⠀⠀⢠⣸⠇⠐⡞⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⢀⡴⠤⠖⠻⢥⡀⠀⢸⣠⠀⠀⠀⠀⠀⠀⢼⡏⢀⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣀⡼⡼⠁⢄⡀⠀⠰⣿⠀⠀⢿⠀⠀⠀⢀⣤⡾⠾⢀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠛⠲⡄⠀⠙⠀⡶⠏⠀⠀⢸⣷⡶⢄⢸⠃⠁⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢀⡜⠱⠀⠀⡞⠀⠀⠀⠀⠀⠀⣠⠞⠻⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠋⠀⠀⢀⡞⠀⠀⠀⠀⠀⠀⣰⠃⠀⠀⣤⡄⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠋⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⢰⣧⠖⢻⡾⠉⠻⢻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢴⠋⠁⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣸⠁⠀⣠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢾⠿⢧⡾⣄⡀⠀⡾⠀⠀⠀⠀⠀⠀⠀⠀⠳⢤⢧⠤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠸⡄⢸⡅⠁⠛⣶⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠧⠴⠚⠁⠀⠀     '''
     )
     creature13 = Creature(
         species="Mermaid/Merman", 
         origin="Global", 
         description='''
-        A Mermaid or Merman is a legendary aquatic creature found in the folklore and mythology of cultures 
-        around the world. It is typically depicted as having the upper body of a human and the lower body of a 
-        fish, with long hair and a beautiful voice. Mermaids and Mermen are often associated with the sea, and 
-        are known for their ability to lure sailors to their doom with their enchanting songs. In mythology, 
-        they are also sometimes depicted as benevolent creatures who assist sailors and protect the ocean's 
-        creatures. The Mermaid/Merman represents the intersection between the human and the natural world, and 
-        their mythical qualities have made them a popular subject in art, literature, and popular culture. 
-        They are often seen as symbols of mystery, beauty, and the unknown depths of the ocean.
+A Mermaid or Merman is a legendary aquatic creature found in the folklore and mythology of cultures 
+around the world. It is typically depicted as having the upper body of a human and the lower body of a 
+fish, with long hair and a beautiful voice. Mermaids and Mermen are often associated with the sea, and 
+are known for their ability to lure sailors to their doom with their enchanting songs. In mythology, 
+they are also sometimes depicted as benevolent creatures who assist sailors and protect the ocean's 
+creatures. The Mermaid/Merman represents the intersection between the human and the natural world, and 
+their mythical qualities have made them a popular subject in art, literature, and popular culture. 
+They are often seen as symbols of mystery, beauty, and the unknown depths of the ocean.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠤⠤⠤⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠖⠚⠩⠟⠉⠀⠀⠀⠀⠀⠀⠈⠙⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡔⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢠⠴⠻⡞⡟⣦⠀⠀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢘⣮⣶⠛⣾⠋⢳⠄⢹⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠸⣤⣪⡇⢫⡿⠋⠀⡼⠀⠉⠛⠓⠒⠒⠒⠲⠶⢦⡀⠀⠀⣰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠙⠋⠁⣠⠞⢁⣠⣀⠀⠀⠀⠀⣴⠛⢻⡶⣿⣀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣦⡀⢠⡞⠡⠴⣋ ⣹⠓⠀⠀⢀⠙⠾⠞⠁⠟⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠙⠚⠿⣆⠀⠉⠋⠁⠀⠀⠀⠈⢁⠀⠀⣸⠂⠈⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠓⠒⠃⣀⠞⠁⠀⠀⠈⢢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⠀⠉⠒⢢⠤⠤⢴⠚⠁⠀⠀⠀⠀⠀⠀⠙⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⢀⡤⠔⠋⠀⠀⠈⠑⠒⢤⡀⠀⠀⠀⠀⠀⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⢰⠏⠀⠀⠀⠀⠀⠀⠀⢀⠀⠹⡀⠀⠀⠀⡠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⡀⠀⠀⠀⠀⣶⠀⢀⠴⡒⡎⢳⢴⣏⣏⡉⢷⢳⠴⠒⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠲⠤⠤⠴⠏⠀⢸⣷⣱⣰⣮⠋⢻⣼⣿⡏⠈⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⡜⠘⡝⠙⠁⠀⠀⠀⢿⢷⠀⠘⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⠀⡇⣀⣇⡀⠀⠀⠀⠀⠘⡿⠳⣄⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠀⢰⠸⣅⠈⠉⠓⠦⣄⣀⢰⣤⠞⠉⠉⠛⠛⠒⠶⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⠀⡾⢰⠉⠙⠙⠒⠒⠚⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⢸⠇⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⡚⠁⠀⢰⡀⠘⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠹⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣿⣪⣻⠵⠒⢾⣗⠀⠈⠳⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⢰⡆⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠉⠉⠉⠛⠛⠋⠉⠉⠉⠉⠉⣹⠁⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡎⠀⠀⠀⠀⠀⢀⡴⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠀⠀⠀⠀⢀⡤⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡤⠤⠖⠋⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠁⠀⠀⠀⠀⠀⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⣀⣀⣀⣤⢶⠇⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⢸⠀⠀⠀⠀⢀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⡀⠀⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠢⣴⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡋⣾⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡿⣿⡥⣹⣬⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣧⡠⣶⡟⣷⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⡉⠹⠃⠌⢿⠟⠛⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡤⣮⣁⣜⠥⣤⣰⠀⢠⣿⣷⠀⠘⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣿⣼⢿⣼⣹⠏⠀⣼⣿⢟⣦⣀⣸⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⣯⠛⣻⡟⢀⣼⣿⣟⣆⠪⣻⢯⣾⣿⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢣⡿⠋⢀⡠⠎⠘⢿⣿⣞⢷⣌⣙⣛⣛⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣪⠴⣋⣤⣶⣯⣀⠄⠀⢈⣿⡽⢷⠾⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣾⣏⠤⠺⡛⠟⠛⠁⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⣞⠛⠛⠀⢀⣀⣠⣤⣀⣀⣀⣀⣀⣤⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⡅⠀⠀⢸⡏⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⢿⣦⣀⠀⠀⠛⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠙⠷⣤⡀⠸⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢦⡈⠟⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⢸⣿⣶⣦⠤⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡻⣿⢷⠪⡲⢍⣓⣺⢵⣻⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡇⡇⡀⢣⣊⡳⣍⡪⣝⠢⢭⣙⡻⢷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⢸⣇⢧⠱⡤⡙⣷⣬⣻⣾⢕⣦⣤⣭⡽⠟⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣾⡼⣬⢷⢌⠺⣾⣏⠛⠛⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡝⣷⣕⠻⢿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠉⠺⢽⣵⣶⣽⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀    '''
     )
     creature14 = Creature(
         species="Nymph", 
         origin="Greek", 
         description='''
-        A Nymph is a female spirit from Greek mythology, associated with nature and often depicted as a 
-        beautiful, young maiden. They are said to inhabit the forests, mountains, and rivers, and are 
-        associated with specific aspects of nature, such as the woods, springs, or clouds. Nymphs are often 
-        portrayed as free-spirited and playful, with a love for music and dance. In mythology, they are also 
-        known to be lovers of gods and mortals alike, and their beauty and allure have made them a popular 
-        subject in art, literature, and popular culture. The Nymph represents the beauty and wonder of the 
-        natural world, and their presence has inspired awe and reverence in many cultures throughout history.
+A Nymph is a female spirit from Greek mythology, associated with nature and often depicted as a 
+beautiful, young maiden. They are said to inhabit the forests, mountains, and rivers, and are 
+associated with specific aspects of nature, such as the woods, springs, or clouds. Nymphs are often 
+portrayed as free-spirited and playful, with a love for music and dance. In mythology, they are also 
+known to be lovers of gods and mortals alike, and their beauty and allure have made them a popular 
+subject in art, literature, and popular culture. The Nymph represents the beauty and wonder of the 
+natural world, and their presence has inspired awe and reverence in many cultures throughout history.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡆⠀⢀⠔⣈⢀⣢⡞⣁⠉⢀⣤⡔
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣀⣤⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣧⣤⢀⢾⡗⣿⠽⢃⢀⣘⠷⢻⠃
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⣿⣿⣿⣇⣾⣮⣻⣆⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⣳⣿⠻⠃⠀⠀⠿⠈⣡⣴⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⠉⠏⠻⣿⣿⣿⣿⡿⣿⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢧⠿⠋⢀⠀⡄⠀⠀⠀⢋⣵⣧⠜
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣯⣿⣶⡀⢾⣿⢺⣿⣿⣿⠿⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⠾⠃⠠⠏⠀⡼⠠⢀⣺⣷⣮⠋⠁⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⣿⣞⣯⡉⣀⡀⠀⠈⢿⣮⣛⣷⡚⣃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡮⢡⡴⠂⢐⠒⢀⠂⣒⡛⢓⠂⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⢹⣷⡼⡟⠀⣬⣽⣿⡻⣾⣷⢎⢆⠀⠀⠀⠀⠀⠀⠀⢀⣞⣶⠀⠒⣡⣏⡄⠱⣿⠿⣰⠂⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣻⣿⡟⠀⠀⠿⢻⣿⣿⣎⣿⢸⡀⠀⠀⠀⠀⠀⠀⢰⡾⠀⢀⡄⠹⡼⣣⡾⣝⠚⠁⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣷⣿⣿⣿⡿⠁⠀⠀⠀⠈⠉⠹⣿⣿⣿⡃⣤⠀⠀⠀⠀⣼⣏⠅⠠⢀⠠⢻⣄⢡⣟⠋⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⠂⢹⣿⡟⣿⠿⡿⠁⠀⠀⠀⠀⠤⠀⠀⠈⢳⣍⢷⣿⠀⠀⠀⠼⣻⡈⠀⠀⠀⢋⣾⠗⣼⡙⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠘⠀⣐⣿⣿⣻⡚⠃⠀⢀⠀⠤⣀⣀⣲⠀⠀⢸⢸⠛⣿⡀⠀⠈⠰⡪⠀⠀⠈⣩⠟⢁⡜⣇⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡇⢀⣿⡿⣿⣿⡆⣤⠘⠀⣬⡿⢿⣿⡆⠀⢸⢺⣠⣻⡇⣈⢯⡑⠀⡀⠰⢂⠀⠀⠒⢠⡓⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠃⠈⣽⡿⣿⣿⡿⠏⠀⠀⠉⠓⠈⠉⣅⠀⢘⣾⢿⠟⢠⣯⣥⢀⢰⠱⠀⠀⡄⠀⣀⡦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢸⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⣾⢩⡏⢀⡰⢦⡄⢈⠀⡜⠀⠰⠻⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡁⠀⠀⠈⣿⡄⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠙⠻⡇⠈⢡⣤⠀⠸⠟⠀⠀⢦⡄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠀⠀⠺⠿⠀⠀⠀⠀⠀⠀⠀⠘⣯⡀⠀⢠⠀⣶⠀⠉⠀⢀⠀⠀⠜⣠⡀⠀⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠈⢳⡀⠀⠴⠂⠀⠀⠀⠈⠁⠀⢸⠀⡛⠰⠆⠀⠬⢀⠈⠠⡞⠷⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣦⡀⠀⠀⠹⡇⠀⠀⠀⠀⠀⠀⣦⠀⠈⡼⠁⠤⠀⣘⠂⠀⡀⡼⡺⠆⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣟⣿⣶⡀⠀⠙⣇⡄⠀⠀⠀⠀⣿⠀⡷⠁⡴⠀⣰⠏⠀⢀⡸⢩⡟⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢏⡶⢌⢻⣦⠀⠘⣧⠀⡀⠀⢀⢁⣼⡅⡰⢁⣤⠍⠀⢰⡾⢡⠳⡷⠴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⢨⡅⠈⡒⠚⠳⣀⠘⠷⢤⣠⠾⠫⢟⠄⣁⢌⠋⣤⠐⣾⡧⠋⡐⠽⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣤⣛⠐⠠⠀⠢⡨⠄⠀⠒⠉⢷⣂⣡⠔⡭⠁⢤⡀⣒⣶⢁⠐⢈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣍⡌⢉⣩⣦⣆⡀⡴⠻⣧⣀⣴⣿⣿⡉⠉⢀⣴⡄⠐⣾⠅⠈⠀⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡿⣽⣏⣓⡾⣻⠟⠀⢠⡾⠿⣿⣿⣿⡗⢱⣣⠁⠀⠀⣀⠀⢠⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠉⢠⣟⡄⡄⢸⡷⢀⣀⣭⢈⡁⢻⠃⠀⢰⣿⠛⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣇⡿⣱⣿⡟⢄⠆⠁⠴⢟⡨⠞⠉⠡⡄⠁⠀⣛⡻⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣰⢫⣭⡍⣽⡿⣡⠗⢈⠄⠠⣶⠍⠀⠀⠰⠟⠂⠄⣀⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡰⠁⢨⢖⣾⢓⡚⢁⡔⡡⢊⠞⠁⠀⣠⡶⠃⠀⣠⠞⣭⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢠⣏⣰⡡⣾⠃⢶⡀⣽⠎⠀⠀⢀⣠⡾⣋⡀⢀⠟⠁⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣘⢿⣧⢷⠎⣀⢨⡵⠋⠀⠀⢀⣴⣯⠐⣽⠆⡈⠀⠀⠀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣿⡶⢝⡟⣰⣎⠀⠀⠀⢀⣴⡿⠚⠁⠀⠀⠀⠃⠀⠀⠀⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⠻⢓⠮⠣⡯⠉⠀⠀⣀⣴⠟⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢸⣧⡄⠠⠑⠠⠀⣴⣊⡿⠀⠀⡀⠀⠀⠀⠀⠀⡤⢆⠀⠀⠀⠀⢒⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣸⣿⠁⠍⢨⢁⡖⠀⠛⢀⠠⠀⡇⠈⠀⠀⣀⢠⡐⠐⣂⠀⠀⠀⠀⠠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⢠⡾⠛⠁⠐⠀⡈⠀⠀⣀⠘⠋⠀⢀⠃⠀⠀⠀⠀⣤⠁⠀⠈⠳⢤⣀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠰⠶⠷⠶⠶⠶⠶⣦⢃⠀⠸⠋⠀⣘⠀⠈⠀⠀⠀⠀⣀⣁⠰⠀⠀⠀⠀⣬⠄⠀⢠⡤⠈⢰⣦⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⡴⢘⣃⢼⠲⠂⠀⠸⠋⠋⠋⠸⢶⣦⣀⠹⣣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠙⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠤⠙⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠳⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠀⣀⢀⠀⢀⠄⠦⣠⣆⡢⢒⡀⣳⡢
+⠀⠀⠀⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣷⣶⣶⣿⣿⣿⣶⣭⣽⠤⣴⣆⣀⡀⡀⣠⠠⣄⠠⣢⠾⡧⡉⣅⣭⠓⡓⢡⡑⣮⠹⠎⠕⣗⠇
+⠀⠀⠀⠙⠛⠻⢶⣄⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣛⣷⣺⣆⡸⠵⢎⣴⠆⣥⠧⣼⣝⢃⢖⠤⢴⠌⡖⡧⢾⣋⢋⡜⠉⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⢷⣦⣄⣀⣈⡛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢯⡕⠀⣹⢶⠪⡡⢖⢉⣴⣆⣌⡙⠚⢈⢛⡁⠁⠆⠃⠡⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⣿⣿⣿⣿⣿⣻⣿⣿⣿⣽⡻⢾⣷⡾⣙⡺⠡⡊⡎⣡⡬⣨⢅⠱⠙⠒⠵⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡺⢵⡻⣺⠁⠀⠀⠈⠀⠀⠀⠀⠈⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⡟⠈⠉⢻⡻⢿⣾⣄⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⡇⠀⠀⠀⠁⠀⠈⠛⢷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠙⠿⠻⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣧⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣄⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⣤⣤⣤⣤⣾⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⠟⠛⠛⠛⠉⠁⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠏⠀    '''
     )
     creature15 = Creature(
         species="Valkyrie", 
         origin="Norse", 
         description='''
-        A Valkyrie is a female figure from Norse mythology, often depicted as a warrior woman who serves the 
-        gods and chooses who lives and dies in battle. They are said to be beautiful and powerful, with the 
-        ability to fly on winged horses and carry fallen warriors to the afterlife. In mythology, Valkyries 
-        are associated with death, fate, and war, and are often depicted as fierce and determined fighters. 
-        The Valkyrie represents the power and agency of women in Norse mythology, and their role as choosers 
-        of the slain has made them a symbol of honor and courage in many cultures. Their mythical qualities 
-        have also made them a popular subject in art, literature, and popular culture, inspiring awe and 
-        admiration for their strength and bravery.
+A Valkyrie is a female figure from Norse mythology, often depicted as a warrior woman who serves the 
+gods and chooses who lives and dies in battle. They are said to be beautiful and powerful, with the 
+ability to fly on winged horses and carry fallen warriors to the afterlife. In mythology, Valkyries 
+are associated with death, fate, and war, and are often depicted as fierce and determined fighters. 
+The Valkyrie represents the power and agency of women in Norse mythology, and their role as choosers 
+of the slain has made them a symbol of honor and courage in many cultures. Their mythical qualities 
+have also made them a popular subject in art, literature, and popular culture, inspiring awe and 
+admiration for their strength and bravery.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-⠀⠀⠀⠀⠀⠀⢰⡒⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⡔⣲⠆⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢞⣛⡓⡓⢿⣭⣙⣲⡒⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠔⣲⣖⣩⣭⠷⢓⣚⣛⠆⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠸⡭⠿⠭⠬⣗⣚⣋⡀⠸⠇⠀⠀⠀⠀⠀⠀⡔⡄⠀⠀⠀⠀⠀⠀⢇⡀⢀⣙⣓⡾⠬⠭⠿⣽⠂⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢩⣟⣿⣭⣱⣲⠶⠂⠈⠀⠀⠀⠀⢀⣀⣰⣃⣸⢄⣀⠀⠀⠀⠀⢸⠆⠲⢶⣶⣫⣽⣟⣫⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣖⣒⣛⣖⣻⠅⠰⣇⠀⡠⡾⠯⢢⡍⡅⡎⣥⠡⢹⣦⡀⢀⣏⡀⢼⣓⣾⣓⣒⡞⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠳⡮⣽⣬⣒⡤⡈⢹⡟⠏⠀⣯⣏⣧⣏⣽⡏⠀⢺⣿⡛⣀⢜⣏⣼⡯⡷⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢾⣷⣿⡾⣸⡛⢆⣽⠖⡾⣿⡟⢕⠺⣅⠺⣼⡕⣾⣺⠾⡞⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠿⠯⣟⠛⢚⡛⣛⠫⢬⣷⢞⡬⠛⡛⢛⡚⣛⣿⠽⠍⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠮⣤⢥⣧⠼⠇⣑⡋⠽⢭⣯⡬⡥⠿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠤⠤⠤⠤⠔⠁⢀⣇⣭⣭⣽⡂⠀⠐⢚⢭⡭⣃⢇⠈⠹⠦⠤⠤⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢓⣛⣛⣓⣒⡖⠖⣚⣱⠁⠉⠙⠉⠁⠃⠇⠉⠉⠙⠁⢸⣽⡒⢖⣖⣒⣚⣛⣓⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⣴⢭⣛⣒⡦⢤⡬⠴⠒⠉⣮⡧⠀⠀⠀⠀⠀⠀⡀⠀⠀⢠⣮⡎⠙⠲⠮⣥⠤⣖⣚⣫⠕⣄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⠋⠀⣠⡤⠊⠉⠚⠩⢽⣿⣼⢧⠀⠀⢀⣀⣌⣤⣀⡀⠀⢰⣿⣽⣿⡯⠙⠊⠉⠲⢠⡀⠈⢻⡆⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣳⠢⠙⠛⠋⢉⣉⠴⢋⠸⣦⠀⠀⠒⣤⡴⠂⠀⣠⡾⡈⡻⢌⣉⠉⠛⠛⢡⢲⣗⡀⠈⠁⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⣔⣫⣭⠍⣉⢛⠛⠻⠶⠮⠑⠁⣸⠙⠢⣄⣀⣀⣠⠞⢻⠇⡑⠈⠶⠾⠛⠛⢛⣉⢭⣭⣓⣄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡞⠁⣠⠒⠒⣢⣅⢘⠡⠔⠐⢚⡵⣿⠀⠄⠀⠀⠀⠀⠀⢸⡻⣜⠖⠒⠢⢙⣑⣭⡒⠒⠂⣀⠀⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡇⡞⡠⢔⡭⠓⠋⠉⠉⢉⣩⢭⡪⡿⠀⠀⠀⠀⠀⠀⠆⠘⣝⢎⠭⣉⡉⠉⠉⠓⠫⢕⠢⡈⢆⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠤⣿⣝⢰⠁⠀⣄⡶⠳⢙⡐⢼⡲⣿⡣⣀⠀⢀⣀⣀⠀⠀⣠⣾⡷⣺⠴⣘⠱⢓⢦⢢⠀⢹⠎⣾⡤⠄⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣴⡫⢉⠉⣳⡼⡘⢬⢄⢸⠁⣀⠿⢯⠾⣏⢵⣗⣿⣿⣷⣟⣺⢿⡿⢗⡀⢸⠀⡰⠜⡐⡠⣿⢹⠨⢵⡄⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢻⢊⡍⣁⠴⡃⣘⣾⠮⠊⢀⠉⣦⣉⢶⣂⠉⠺⣫⡻⠋⠁⣲⠊⣡⡌⢁⡈⠳⢽⣦⣄⠑⢄⡉⢭⢻⡃⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠘⣹⣫⢶⠺⠈⡅⣄⠀⠀⠠⠖⠁⢰⡂⢺⣥⠀⠀⠀⢠⣽⠂⢲⠀⠁⠮⠀⠀⢀⣆⠹⠱⢳⢮⣼⡙⠇⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠰⠋⠈⠋⢤⡷⡋⠋⠼⢀⣄⠀⠀⠀⠩⠀⣄⢿⡂⣺⠗⣀⢀⡁⠀⢀⢀⣠⢜⠟⡋⣣⣃⠜⠟⠀⠃⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠷⢧⠣⡘⡉⠐⠆⠄⡮⠀⢡⡐⣿⡗⠀⡁⠱⢆⠄⠖⡋⡍⡠⢻⠟⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠹⠛⠷⣠⡊⠀⠢⢯⡀⣿⡇⢩⠧⠂⠐⣪⣤⠧⠹⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠊⠓⠒⠷⠶⠷⠷⠷⠗⠒⠊⠙⠁
-        '''
+⠀⠀⠀⢰⡒⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⡔⣲⠆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢞⣛⡓⡓⢿⣭⣙⣲⡒⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠔⣲⣖⣩⣭⠷⢓⣚⣛⠆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠸⡭⠿⠭⠬⣗⣚⣋⡀⠸⠇⠀⠀⠀⠀⠀⠀⡔⡄⠀⠀⠀⠀⠀⠀⢇⡀⢀⣙⣓⡾⠬⠭⠿⣽⠂⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢩⣟⣿⣭⣱⣲⠶⠂⠈⠀⠀⠀⠀⢀⣀⣰⣃⣸⢄⣀⠀⠀⠀⠀⢸⠆⠲⢶⣶⣫⣽⣟⣫⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⣖⣒⣛⣖⣻⠅⠰⣇⠀⡠⡾⠯⢢⡍⡅⡎⣥⠡⢹⣦⡀⢀⣏⡀⢼⣓⣾⣓⣒⡞⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠳⡮⣽⣬⣒⡤⡈⢹⡟⠏⠀⣯⣏⣧⣏⣽⡏⠀⢺⣿⡛⣀⢜⣏⣼⡯⡷⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢾⣷⣿⡾⣸⡛⢆⣽⠖⡾⣿⡟⢕⠺⣅⠺⣼⡕⣾⣺⠾⡞⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠿⠯⣟⠛⢚⡛⣛⠫⢬⣷⢞⡬⠛⡛⢛⡚⣛⣿⠽⠍⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠮⣤⢥⣧⠼⠇⣑⡋⠽⢭⣯⡬⡥⠿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⡠⠤⠤⠤⠤⠔⠁⢀⣇⣭⣭⣽⡂⠀⠐⢚⢭⡭⣃⢇⠈⠹⠦⠤⠤⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢠⢓⣛⣛⣓⣒⡖⠖⣚⣱⠁⠉⠙⠉⠁⠃⠇⠉⠉⠙⠁⢸⣽⡒⢖⣖⣒⣚⣛⣓⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣴⢭⣛⣒⡦⢤⡬⠴⠒⠉⣮⡧⠀⠀⠀⠀⠀⠀⡀⠀⠀⢠⣮⡎⠙⠲⠮⣥⠤⣖⣚⣫⠕⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠋⠀⣠⡤⠊⠉⠚⠩⢽⣿⣼⢧⠀⠀⢀⣀⣌⣤⣀⡀⠀⢰⣿⣽⣿⡯⠙⠊⠉⠲⢠⡀⠈⢻⡆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣰⣳⠢⠙⠛⠋⢉⣉⠴⢋⠸⣦⠀⠀⠒⣤⡴⠂⠀⣠⡾⡈⡻⢌⣉⠉⠛⠛⢡⢲⣗⡀⠈⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣔⣫⣭⠍⣉⢛⠛⠻⠶⠮⠑⠁⣸⠙⠢⣄⣀⣀⣠⠞⢻⠇⡑⠈⠶⠾⠛⠛⢛⣉⢭⣭⣓⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡞⠁⣠⠒⠒⣢⣅⢘⠡⠔⠐⢚⡵⣿⠀⠄⠀⠀⠀⠀⠀⢸⡻⣜⠖⠒⠢⢙⣑⣭⡒⠒⠂⣀⠀⡇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡇⡞⡠⢔⡭⠓⠋⠉⠉⢉⣩⢭⡪⡿⠀⠀⠀⠀⠀⠀⠆⠘⣝⢎⠭⣉⡉⠉⠉⠓⠫⢕⠢⡈⢆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠤⣿⣝⢰⠁⠀⣄⡶⠳⢙⡐⢼⡲⣿⡣⣀⠀⢀⣀⣀⠀⠀⣠⣾⡷⣺⠴⣘⠱⢓⢦⢢⠀⢹⠎⣾⡤⠄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⡫⢉⠉⣳⡼⡘⢬⢄⢸⠁⣀⠿⢯⠾⣏⢵⣗⣿⣿⣷⣟⣺⢿⡿⢗⡀⢸⠀⡰⠜⡐⡠⣿⢹⠨⢵⡄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢻⢊⡍⣁⠴⡃⣘⣾⠮⠊⢀⠉⣦⣉⢶⣂⠉⠺⣫⡻⠋⠁⣲⠊⣡⡌⢁⡈⠳⢽⣦⣄⠑⢄⡉⢭⢻⡃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⣹⣫⢶⠺⠈⡅⣄⠀⠀⠠⠖⠁⢰⡂⢺⣥⠀⠀⠀⢠⣽⠂⢲⠀⠁⠮⠀⠀⢀⣆⠹⠱⢳⢮⣼⡙⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠰⠋⠈⠋⢤⡷⡋⠋⠼⢀⣄⠀⠀⠀⠩⠀⣄⢿⡂⣺⠗⣀⢀⡁⠀⢀⢀⣠⢜⠟⡋⣣⣃⠜⠟⠀⠃⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠁⠷⢧⠣⡘⡉⠐⠆⠄⡮⠀⢡⡐⣿⡗⠀⡁⠱⢆⠄⠖⡋⡍⡠⢻⠟⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠹⠛⠷⣠⡊⠀⠢⢯⡀⣿⡇⢩⠧⠂⠐⣪⣤⠧⠹⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠊⠓⠒⠷⠶⠷⠷⠷⠗⠒⠊⠙⠁     '''
     )
     creature16 = Creature(
         species="Basilisk", 
         origin="European Folklore", 
         description='''
-        A Basilisk is a legendary creature from European folklore, often described as a reptilian monster with 
-        the head of a Rooster, and the tail of a snake. Sometimes it is depicted with Wings. It has the ability 
-        to kill with its gaze or breath. In mythology, the Basilisk is associated with death and destruction, 
-        and is said to be born from an egg laid by a rooster and hatched by a serpent. The creature's breath and 
-        gaze are said to be so deadly that even its reflection or shadow can kill, and it is often portrayed as an 
-        unstoppable force. The Basilisk represents the fear of the unknown and the power of death, and its mythical 
-        qualities have made it a popular subject in art, literature, and popular culture. Its appearance has also 
-        inspired many other creatures in folklore and popular culture, such as the cockatrice and the dragon.
+A Basilisk is a legendary creature from European folklore, often described as a reptilian monster with 
+the head of a Rooster, and the tail of a snake. Sometimes it is depicted with Wings. It has the ability 
+to kill with its gaze or breath. In mythology, the Basilisk is associated with death and destruction, 
+and is said to be born from an egg laid by a rooster and hatched by a serpent. The creature's breath and 
+gaze are said to be so deadly that even its reflection or shadow can kill, and it is often portrayed as an 
+unstoppable force. The Basilisk represents the fear of the unknown and the power of death, and its mythical 
+qualities have made it a popular subject in art, literature, and popular culture. Its appearance has also 
+inspired many other creatures in folklore and popular culture, such as the cockatrice and the dragon.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -706,50 +678,53 @@ with Session(engine) as session:
         species="Leprechaun", 
         origin="Celtic, Irish", 
         description='''
-        A Leprechaun is a legendary creature from Celtic and Irish folklore, often depicted as a small, 
-        mischievous fairy with a fondness for mischief and gold. They are said to inhabit the forests and 
-        hills of Ireland, and are often portrayed as shoemakers who can create magical shoes. In mythology, 
-        Leprechauns are known for their ability to grant wishes and their association with good luck, and are 
-        often sought after by those seeking wealth or fortune. They are also known for their quick wit and 
-        cleverness, and are often depicted as outsmarting those who try to capture them. The Leprechaun 
-        represents the magic and mystery of Irish folklore, and their mythical qualities have made them a 
-        popular subject in art, literature, and popular culture.
+A Leprechaun is a legendary creature from Celtic and Irish folklore, often depicted as a small, 
+mischievous fairy with a fondness for mischief and gold. They are said to inhabit the forests and 
+hills of Ireland, and are often portrayed as shoemakers who can create magical shoes. In mythology, 
+Leprechauns are known for their ability to grant wishes and their association with good luck, and are 
+often sought after by those seeking wealth or fortune. They are also known for their quick wit and 
+cleverness, and are often depicted as outsmarting those who try to capture them. The Leprechaun 
+represents the magic and mystery of Irish folklore, and their mythical qualities have made them a 
+popular subject in art, literature, and popular culture.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-                                       .-----.   ()()
-                                      /       \ .'()
-                                      |__...__|/
-                                      |_....._|
-                                    .-'  ___  '-.
-                                    \_.-`. .`-._/
-              __ .--. _              (|\ (_) /|)
-           .-;.-"-.-;`_;-,            ( \_=_/ )
-         .(_( `)-;___),-;_),          _(_   _)_
-        (.( `\.-._)-.(   ). )       /` ||'-'|| `\ 
-      ,(_`'--;.__\  _).;--'`_)  _  /_/ (_>o<_) \_\ 
-     // )`--..__ ``` _( o )'(';,)\_//| || : || ||\ 
-     \;'        `````  `|\   '.|\--' |`"""""""`|//
-     /                   ':.___//     \___,___/\_(
-    |                      '---'|      |__|__|
-    ;                           ;      ;""|"";
-     \                         /       [] | []
-      '.                     .'      .'  / \  '.
-        '-,.__         __.,-'        `--'   `--'
-         (___/`````````\___) 
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣦⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠰⣿⠋⠉⠉⠀⠀⠈⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⢀⣤⣤⣤⣀⣻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠚⡗⠿⠿⡯⠽⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣏⣁⣭⣭⣭⣥⣶⣼⣿⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣤⡾⠛⠋⣉⡩⠤⠖⠒⣲⢶⣶⣤⣄⣹⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠹⣧⣶⡋⣿⢰⠏⡉⠀⢰⠒⠛⢷⣹⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢿⣟⡗⣹⠀⣀⠠⠄⠀⢲⠂⣼⣽⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⣯⠻⣄⠑⢦⣭⡴⢃⣴⢯⣻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⠟⠉⢿⣈⠉⠓⠒⠚⠋⢰⡞⢿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣰⡿⠃⣠⡆⢀⣼⠿⣷⣴⡷⣿⣭⡀⣦⡙⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢰⡟⠁⡰⢻⠀⠛⠦⣠⡇⠀⢣⣰⠋⠀⢸⣝⣮⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢻⣆⠘⢷⣼⠀⠀⣶⢻⠀⠀⠈⢿⠇⠀⠀⣿⠃⠀⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠻⣧⡠⢻⡄⠀⠈⣿⢤⣶⣶⢾⣧⠀⠀⣧⠤⢴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣼⣧⣀⡇⠀⠀⣿⣿⣭⣭⣿⣽⡆⠀⣏⣀⣾⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠛⣻⣟⣀⠀⣸⠻⠿⣥⣀⡼⠋⢫⡄⠀⢻⣯⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢉⣿⠋⠉⠁⠀⠀⣠⣁⣀⠀⠀⢻⣦⣤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⢸⣿⠉⢹⣇⠀⠀⠀⠀⠸⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢿⣦⣄⠀⠀⠀⣾⡇⠀⠘⣿⡄⠀⠀⣠⣴⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⣻⡿⡷⣶⣿⠃⠀⠀⢹⣷⣚⠻⣿⡅⠀⠀⢠⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⣤⣄⣀⣀⣀⣿⠏⣛⡿⠀⠀⠀⠀⠀⠹⣧⢆⡻⣿⡀⣠⣿⢻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⣧⠉⢹⣿⣻⢿⣶⣾⡇⠀⠀⠀⠀⠀⠀⠹⣧⣒⣽⣿⠛⠁⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠙⠷⣮⣍⣉⣠⣤⢸⡇⠀⠀⠀⠀⠀⠀⠀⢸⣏⢛⣿⣶⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠁⠀⠀⠀⠀ '''
     )
     creature18 = Creature(
         species="Werewolf", 
         origin="European Folklore", 
         description='''
-        A Werewolf is a legendary creature from European folklore, often depicted as a human with the ability 
-        to transform into a wolf or a hybrid of human and wolf. In mythology, Werewolves are associated with 
-        the full moon and are said to be cursed or transformed through magic or a bite from another Werewolf. 
-        They are often portrayed as fierce and dangerous creatures, with a hunger for human flesh. The Werewolf 
-        represents the fear of the unknown and the primal nature of humanity, and its mythical qualities have 
-        made it a popular subject in art, literature, and popular culture. Its appearance has also inspired 
-        many other creatures in folklore and popular culture, such as the shapeshifter and the vampire.
+A Werewolf is a legendary creature from European folklore, often depicted as a human with the ability 
+to transform into a wolf or a hybrid of human and wolf. In mythology, Werewolves are associated with 
+the full moon and are said to be cursed or transformed through magic or a bite from another Werewolf. 
+They are often portrayed as fierce and dangerous creatures, with a hunger for human flesh. The Werewolf 
+represents the fear of the unknown and the primal nature of humanity, and its mythical qualities have 
+made it a popular subject in art, literature, and popular culture. Its appearance has also inspired 
+many other creatures in folklore and popular culture, such as the shapeshifter and the vampire.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -792,206 +767,221 @@ with Session(engine) as session:
         species="Minotaur", 
         origin="Greek", 
         description='''
-        A Minotaur is a legendary creature from Greek mythology, often depicted as a monster with the head of 
-        a bull and the body of a man. In mythology, the Minotaur is said to dwell in a labyrinth on the island 
-        of Crete, and is known for its ferocity and power. The creature's origins are said to be linked to the 
-        legend of King Minos, who ordered the construction of the labyrinth to imprison the creature. The 
-        Minotaur represents the danger and unpredictability of the natural world, and its mythical qualities 
-        have made it a popular subject in art, literature, and popular culture. Its appearance has also 
-        inspired many other creatures in mythology and popular culture, such as the centaur and the chimera.
+A Minotaur is a legendary creature from Greek mythology, often depicted as a monster with the head of 
+a bull and the body of a man. In mythology, the Minotaur is said to dwell in a labyrinth on the island 
+of Crete, and is known for its ferocity and power. The creature's origins are said to be linked to the 
+legend of King Minos, who ordered the construction of the labyrinth to imprison the creature. The 
+Minotaur represents the danger and unpredictability of the natural world, and its mythical qualities 
+have made it a popular subject in art, literature, and popular culture. Its appearance has also 
+inspired many other creatures in mythology and popular culture, such as the centaur and the chimera.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-           -""\.
-        .-"  .`)     (
-       j   .'_+     :[                )      .^--..
-      i    -"       |l                ].    /      i
-     ," .:j         `8o  _,,+.,.--,   d|   `:::;    b
-     i  :'|          "88p;.  (-."_"-.oP        \.   :
-     ; .  (            >,%%%   f),):8"          \:'  i
-    i  :: j          ,;%%%:; ; ; i:%%%.,        i.   `.
-    i  `: ( ____  ,-::::::' ::j  [:```          [8:   )
-    <  ..``'::::8888oooooo.  :(jj(,;,,,         [8::  <
-    `. ``:.      oo.8888888888:;%%%8o.::.+888+o.:`:'  |
-     `.   `        `o`88888888b`%%%%%88< Y888P""'-    ;
-       "`---`.       Y`888888888;;.,"888b."""..::::'-'
-              "-....  b`8888888:::::.`8888._::-"
-                 `:::. `:::::O:::::::.`%%'|
-                  `.      "``::::::''    .'
-                    `.                   <
-                      +:         `:   -';
-                       `:         : .::/
-                        ;+_  :::. :..;;;
-                        ;;;;,;;;;;;;;,;;
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⠀⠀⠀⠀⠀⣾⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠇⠀⠀⠀⠀⠀⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠀⠀⠀⢸⣟⣷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣠⣴⢿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⢻⣎⠛⠿⢶⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⣤⣴⡟⠋⣴⣯⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣤⣀⡈⠉⠉⠛⠻⣶⠀⢀⣀⣠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠙⣿⡻⢦⣄⠈⠙⢛⣷⠶⠶⠶⠟⠻⠷⠶⠶⣶⡶⠾⠿⣿⠇⣀⣴⡾⠿⠿⣛⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⠷⠦⠿⠿⣶⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠘⠷⣤⣤⡴⠾⢯⣤⣤⠴⠾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣶⠀⠀⠀⢠⣴⣶⣶⠇⠀⠀⠀⠀⢰⡆⠀⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⢸⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⢦⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣾⠃⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠈⣧⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣿⡆⠀⣠⣴⣾⠛⠁⠀⠀⠀⠀⠀⢀⣀⣀⣤⠞⠋⠀⡤⢻⡆⠀⠘⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⣿⣿⢷⣀⣤⣿⣿⣀⠀⠀⠀⣠⣶⠟⠛⠉⠁⠀⠀⢀⡼⠃⠈⠻⣦⣄⡈⠻⢶⣤⣤⣀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⠋⠹⣿⣓⣿⣿⣿⠋⠁⢀⡴⠟⠁⣿⣤⢄⡤⠴⠒⠛⠉⠀⠀⠀⠀⠀⠉⠉⠀⣀⣴⡟⠻⠿⠛⠋⠉⠉⠛⢦⣄⠀⠀⠀⠀⠀
+⠀⠀⣸⠇⠀⠀⠀⠉⣹⣏⡹⣷⣶⠿⠑⠛⠛⠛⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⠀⠀⠀
+⠀⠀⣿⠀⠀⠀⢠⡆⠉⣿⡋⠙⠉⠉⠁⠀⣤⣀⣠⠄⠀⠀⠀⠀⠀⠒⠒⠒⣒⣶⠟⠲⠶⠶⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡀⠀⠀
+⠀⢀⣿⠀⠀⢠⡿⠀⠀⠈⢿⡀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⣀⣴⠞⠋⠉⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡇⠀⠀
+⠀⣼⠟⠀⢀⡿⠁⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠶⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠀⠀
+⣰⡏⠀⠀⣼⠃⠀⠀⠀⠀⠈⠳⣦⡀⠀⢰⡟⠀⢠⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠈⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⠀⠀
+⠟⣄⣀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⣾⣴⣶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠁⠀⣿⣿⢷⣄⠀⠀⠀⠀⠀⠀⠘⢻⡆⠀
+⠀⠀⠈⠁⠙⠢⢦⣄⣀⠀⠀⠀⠀⠀⣸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠀⠀⠀⢹⣿⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⢻⡆
+⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠒⠺⠟⠿⠠⢤⣤⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡟⣀⣀⣀⣀⣀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠘⠳⣤⣀⠀⠀⢀⣤⡴⠖⠋     '''
     )
     creature20 = Creature(
         species="Harpy", 
         origin="Greek", 
         description='''
-        A Harpy is a mythical creature from Greek mythology, often depicted as a winged creature with the head 
-        of a woman and the body of a bird. In mythology, Harpies are known for their speed and agility, and 
-        are said to be able to fly at great speeds and carry off their prey. They are often portrayed as fierce 
-        and terrifying, with a love for destruction and chaos. Harpies are associated with the god of the 
-        underworld, Hades, and are sometimes depicted as servants or companions of the Furies. The Harpy 
-        represents the danger and unpredictability of the natural world, and its mythical qualities have made 
-        it a popular subject in art, literature, and popular culture.
+A Harpy is a mythical creature from Greek mythology, often depicted as a winged creature with the head 
+of a woman and the body of a bird. In mythology, Harpies are known for their speed and agility, and 
+are said to be able to fly at great speeds and carry off their prey. They are often portrayed as fierce 
+and terrifying, with a love for destruction and chaos. Harpies are associated with the god of the 
+underworld, Hades, and are sometimes depicted as servants or companions of the Furies. The Harpy 
+represents the danger and unpredictability of the natural world, and its mythical qualities have made 
+it a popular subject in art, literature, and popular culture.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-         ,                                      ,
-        |\                                      /|
-     ,   \`._ ,                           ,  _.'/   ,
-     |\  {'. '-`\,      ,-._**_.-,      ,/`-' .'}  /|
-      \`'-'-.  '.`\      \*____*/      /`.'  .-'-'`/
-    ,'-'-._  '.  ) )     /`    `\     ( (  .'  _.-'-',
-    |\`- _ '.   , /     /  /""\  \     \ ,  .'  _ -'/|
-     \`-.   .  ; (      \_|^  ^|_/      ) ;   .  .-'/
-      `'--, . ;  {`-.      \__/      .-'}  ; . ,--'`
-      '--`_. ;  { ^  \    _|  |_    /  ^ }  ; ._`--'
-      `,_.--  ;  { ^  `-'`      `'-`  ^ }  ;  --._,`
-        ,_.-    ; {^    /        \    ^} ;    -._, 
-         ,_.-`), /\{^,/|\_'_/\_'_//\,^}/\ ,(`-._,
-           _.'.-` /.'   \        /   `.\ `-.'._
-          `  _.' `       \      /       ` '._   `
-                        .-'.  .'-.
-                      .'    `` ^  '.
-                     /  ^ ^   ^  ^  \.
-                     | ^    ^   ^   |
-                    /^   ^/    \  ^  \.
-                    \,_^_/    ^ \_,^./
-                     /=/  \^   /  \=\.
-                 __ /=/_   | ^|   _\=\ __
-               <(=,'=(==,) |  | (,==)=',=)>
-                 /_/|_\    /  \    /_|\_\.
-                 `V (=|  .'    '.  |=) V`
-                     V  / _/  \_ \  V
-                       `"` \  / `"`
-                            \(
-        '''
+⠀⠀⠀⡠⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⡂⡉⠲⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢤⢤⣌⠦⣠⡀⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⣐⣒⡆⠀
+⠀⠀⠘⠱⣶⣌⠛⠿⣦⠈⠡⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠤⣪⣭⡾⠝⢋⠉⠀⠀
+⠀⡐⠉⠉⠈⠉⠓⠄⠀⠑⠀⠈⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠄⠊⢔⣬⠾⠛⠛⣈⡩⠛⠃⠀
+⠀⠘⢟⣫⡽⢓⠂⠀⠀⠀⠀⠀⠈⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠃⠠⠘⠋⢀⠄⠒⠉⠁⠀⠀⠀⠀
+⠀⠸⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠁⠀⠀⠀⠪⠤⢤⡤⠄⠀⠀⠀⠀⠀
+⠀⠀⠀⠠⠅⢃⠖⠀⠀⠀⠀⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠁⠀⠀⠀⠀⠀⠈⠐⢬⡙⠢⡀⠀⠀⠀
+⠀⠀⠔⠁⠠⣀⠀⠀⠀⠀⠀⡁⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠅⠀⠀⠀⠀⠀⠀⠀⠀⠑⢅⣑⢌⢢⠀⠀
+⠀⠀⣃⡔⡘⠀⣀⡠⠁⠀⠀⠝⠀⠇⠀⠀⠀⠀⠀⠀⢀⡀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢎⠓⢵⣃⠀
+⠀⠀⠘⢐⠀⠊⣰⣠⠎⡄⡐⠰⣇⠳⡄⠀⠀⠀⠀⣴⣿⣛⡟⠛⣄⠀⠀⠀⠀⠀⠀⠀⡊⠀⠀⡪⠀⠀⢀⠀⠠⢰⠀⠀⠀⠐⡀⠀⠀⠀
+⠀⠀⠀⢈⡞⡈⠂⣸⢓⠌⣠⣂⣲⣄⠙⣄⠀⠀⣰⣿⣿⡑⢚⡰⣿⠀⠀⠀⠀⠀⢀⡘⠀⣀⢐⠁⠀⠀⢀⠀⠒⠀⠀⠄⢀⠀⠃⠀⠀⠀
+⠀⠀⠀⠀⠰⢢⠋⠐⠂⠀⠲⣯⢎⣊⣲⣖⣢⡘⣻⣻⢏⣧⣚⣷⡿⠀⠀⢀⠠⠐⠁⣠⠽⣡⠜⠀⢮⠿⠚⠄⠀⠀⢴⠈⡄⣇⢸⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢺⠀⠘⢊⠀⠀⣏⡗⢟⣺⡟⠀⣽⢠⢈⡔⢷⣿⣶⣤⣒⡡⣤⡞⣜⣐⡆⠂⠀⢁⠒⠀⠄⠘⡂⠀⢸⠀⠗⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠁⠰⠲⢄⢜⠄⠑⣾⡟⠀⠀⢀⠂⠈⠀⠸⣿⣟⡻⠛⠊⠚⠏⡐⢤⡙⠤⡹⠸⡀⠱⢨⣢⠝⢀⠅⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠉⠑⠐⠵⠀⠀⠀⣀⣀⡀⠀⣿⣿⣙⣗⣰⠘⠂⠖⢂⡂⢀⠐⠂⠨⡤⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢡⡀⠉⠀⠀⠀⠠⢛⢷⠿⣙⠈⡫⣪⡨⡀⢄⡠⣔⡔⠇⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⣼⣤⣤⠰⢅⡀⠙⠇⠀⠀⠀⠀⠈⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢷⢤⢀⣤⢞⠝⡐⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠁⠀⠈⢫⡉⢹⠁⠀⠈⠐⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠊⠀⠀⠀⡠⢂⡤⠯⠆⠀⠀⠀⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡊⠀⠀⠀⠈⢄⢼⣿⣢⡈⠠⡀⠀⠀⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠀⠀⠀⢴⡠⢾⢾⠽⠋⠁⠉⠉⢦⡀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠄⢠⣾⣼⡾⠙⠁⠀⠀⠀⠀⠀⠀⠉⠂⢄⠤⠔⣠⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢀⠀⠔⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⢬⣿⡷⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⣿⠇⢬⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠺⣷⣶⣀⠠⣹⣧⣢⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢾⣾⣿⣄⠈⠿⣴⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠉⠲⠣⢓⣁⠁⠀⠀⠀⠀⠀   '''
     )
     creature21 = Creature(
         species="Gorgon", 
         origin="Greek", 
         description='''
-        A Gorgon is a mythical creature from Greek mythology, often depicted as a being with snakes for hair 
-        and the ability to turn people to stone with their gaze. The most famous Gorgon is Medusa, who was 
-        said to have been cursed with this power by the goddess Athena. Gorgons are associated with death and 
-        terror, and are often portrayed as fierce and monstrous. In mythology, they are said to dwell in remote 
-        places such as caves and islands, and are often associated with the underworld. The Gorgon represents 
-        the fear and danger of the unknown, and its mythical qualities have made it a popular subject in art, 
-        literature, and popular culture.
+A Gorgon is a mythical creature from Greek mythology, often depicted as a being with snakes for hair 
+and the ability to turn people to stone with their gaze. The most famous Gorgon is Medusa, who was 
+said to have been cursed with this power by the goddess Athena. Gorgons are associated with death and 
+terror, and are often portrayed as fierce and monstrous. In mythology, they are said to dwell in remote 
+places such as caves and islands, and are often associated with the underworld. The Gorgon represents 
+the fear and danger of the unknown, and its mythical qualities have made it a popular subject in art, 
+literature, and popular culture.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-                   ,--.
-          ,--.  .--,`) )  .--,
-       .--,`) \( (` /,--./ (`
-      ( ( ,--.  ) )\ /`) ).--,-.
-       ;.__`) )/ /) ) ( (( (`_) )
-      ( (  / /( (.' "-.) )) )__.'-,
-     _,--.( ( /`         `,/ ,--,) )
-    ( (``) \,` ==.    .==  \( (`,-;
-     ;-,( (_) ~6~ \  / ~6~ (_) )_) )
-    ( (_ \_ (      )(      )__/___.'
-    '.__,-,\ \     ''     /\ ,-.
-       ( (_/ /\    __    /\ \_) )
-        '._.'  \  \__/  /  '._.'
-            .--`\      /`--.
-                 '----' 
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⣠⡤⢤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣄⡀⠀⠀⠀⠀⠀⣰⠟⠋⠉⠛⣦⠀⢠⠞⠁⠀⠀⠈⢻⡄⠀⠀⢀⣠⡴⠶⠶⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣼⠟⠉⠀⠈⠻⠶⣶⣄⠀⣸⡏⢀⡀⠀⠀⣘⡇⣿⢠⢀⡀⡾⠀⠀⣿⠀⢀⡾⠃⠀⠀⣶⡀⠹⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣼⠇⠀⣤⠶⣶⣠⠰⠎⣿⠀⢿⡇⠀⢷⡈⠁⠀⡇⢻⡀⠀⣹⡇⠀⠀⢻⠀⣾⠛⠃⠒⢢⣿⡇⠀⢻⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⠀⠸⣿⣄⣙⠷⣦⣤⣿⠀⢸⡇⠀⢸⡿⢦⣠⡇⠀⢳⡾⠉⣿⠀⢰⡏⠀⣿⠀⣠⡴⢟⣿⠇⠀⣾⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠹⣷⣄⠀⠉⠙⠻⢶⣮⣙⠗⠸⣿⠀⠸⣇⠀⠹⠃⠀⠿⠀⢠⡇⠀⣾⠇⢠⡿⠛⣉⣴⠟⠁⠀⣼⠏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣶⣄⡀⠀⠈⠙⢿⣦⣿⣇⠀⠹⣦⠀⠀⠀⠀⢠⡾⠁⢰⣿⣤⠾⠟⠛⠉⢁⣀⣴⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡴⢶⠿⠶⣦⣄⣀⡉⠙⠻⢶⣄⠀⠈⠻⣿⡀⠀⠘⢻⣄⢀⣴⠟⠀⣠⠟⠋⠀⢀⣠⡴⠾⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣿⠀⠈⣀⠀⠀⣩⡿⠛⠁⠀⠀⢹⣇⠀⠀⠘⣷⠀⠀⠀⢹⣿⠁⠀⣼⠃⠀⢀⣴⢟⡁⠀⠀⠀⠀⠻⠶⣤⣤⣤⣤⣀⠀⠀⠀⠀
+⠀⠀⣠⠿⢢⣄⣠⣴⠾⠋⠀⠀⣀⣀⣀⡈⢿⣄⣀⣴⡿⢷⣤⣴⠞⠛⠷⠾⢿⣄⣀⣼⡿⠛⠙⠛⠷⣦⡀⠀⠀⣿⠀⠀⠉⣙⠷⣄⠀⠀
+⠀⣼⠋⢠⡟⠉⠉⢀⣠⣴⠾⠟⠛⠋⠙⠛⢿⣿⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⣿⠀⠀⠀⠀⠀⠘⢿⣄⠀⠹⣧⡠⠄⠉⠀⢻⣄⠀
+⢸⡇⠀⠺⠷⠶⠞⠛⣉⣤⣴⡶⠶⢶⣶⣶⣾⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠷⠶⠟⣻⣶⣄⡈⠻⣦⣀⠙⠻⠶⢶⡆⠀⢹⣇
+⠈⢷⣤⣤⣤⣤⡴⠟⠋⠀⠀⣠⡾⠛⠛⠻⣦⡀⠀⢠⣤⣤⡀⠀⠀⠀⢀⣤⣴⡶⠂⠀⠀⢰⡟⠉⠉⠛⠿⣦⡈⠛⢷⣤⣤⡼⠇⠀⢠⣿
+⠀⠀⠀⠉⠉⠁⠀⠀⠀⢀⣾⠏⠀⠀⠀⣠⣾⠇⠰⢶⣦⣬⣅⠀⠀⠀⠀⣀⣤⣤⡤⠀⠀⢸⣧⠀⠀⠀⠀⠈⢿⣦⡀⠀⠀⠀⠀⢀⣼⠇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⠀⣴⠿⣿⣄⠀⠀⠸⣯⣿⠃⠀⠀⢀⡀⠹⣿⡿⠀⠀⠀⢀⣹⣷⣦⣀⠀⠀⠈⣿⡟⠛⠿⠿⠛⠛⠁⠀
+⠀⠀⠀⢀⣀⣤⣄⡀⠀⢸⣇⠀⢸⣿⠀⠈⠿⠄⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠈⠉⠀⢸⣿⣧⡀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣴⠟⢉⡉⡭⠻⣷⡈⢿⡄⢸⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠏⢹⡇⢠⡿⠁⠀⣀⣀⣀⡀⠀⠀
+⠀⠀⢿⡀⢨⣄⠀⠀⣸⡗⠘⣿⡄⣿⡿⣦⡀⡀⠀⠀⠀⠀⠀⠘⠛⠷⠆⠀⠀⠀⠀⠀⢀⣴⣦⣾⠏⢠⡿⠃⣿⠁⣰⡿⡏⡉⠉⠻⣦⠀
+⠀⠀⣸⡇⢈⡟⠛⠛⠻⣷⠀⣿⡇⣿⡇⠙⠷⣿⡄⠀⠀⢠⣴⠶⢶⣴⠶⠶⠶⠀⠀⢀⣾⣏⡉⠀⠀⣿⠃⠀⣿⠀⣿⠀⢀⣡⣤⠀⢹⡆
+⠀⠀⢿⡀⠘⢷⣄⣀⠀⠀⣠⡿⢠⣿⠀⠀⣠⡿⢿⣆⠀⠀⠀⠠⢴⣷⠆⠀⠀⠀⣠⣿⡁⠙⢿⣆⠀⣿⠀⠀⢿⣧⠿⠛⠋⠁⣽⠀⢸⡇
+⠀⠀⠈⢿⣄⠀⠉⠙⠛⠛⠋⣠⡿⠃⠀⣰⡟⠀⣸⠟⢷⣄⠀⠀⠀⠀⠀⠀⣠⡾⠛⠹⣷⡀⠀⢿⡆⠻⣧⣀⠈⠻⢶⣤⣴⡾⠋⢠⡾⠁
+⠀⠀⠀⠀⠙⠻⢶⣶⣤⡶⠾⠛⠁⠀⠀⣿⠃⢰⡟⠀⠀⠙⢷⣄⠀⢀⣠⡾⠋⠀⠀⠀⢹⣧⠀⢸⡟⠀⠈⠻⢷⣦⣤⣤⣤⣴⡾⠛⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡄⢸⡇⠀⠀⠀⠀⠙⠛⠛⠉⠀⠀⠀⠀⠀⠀⣿⠀⣸⡇⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣇⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⢸⣿⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣾⠛⠉⢛⡿⣦⡀⢸⣿⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⢠⣿⠁⣠⣴⡶⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠉⠈⢁⣨⡿⣾⡿⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡏⢸⡏⢰⣿⠥⠄⠀⠈⠙⣿⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠐⣿⣟⠋⣰⡿⠁⣸⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠁⢿⡇⢸⣇⣠⣬⣷⣶⠂⢸⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⣧⠀⠈⠛⠛⠋⠀⣴⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⡄⠸⣷⣟⠉⢉⣩⣾⠟⣠⣿⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣷⣄⣀⣀⣤⡾⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣷⣄⣈⠛⠛⠛⢋⣡⣴⡟⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠿⠿⠿⠟⠛⠁⠀⠀    '''
     )
     creature22 = Creature(
         species="Cyclops", 
         origin="Greek", 
         description='''
-        A Cyclops is a mythical creature from Greek mythology, often depicted as a being with a single eye in 
-        the center of its forehead. In mythology, Cyclopes are known for their strength and size, and are said 
-        to be skilled metalworkers and builders. They are often portrayed as living in remote places such as 
-        caves and mountains, and are sometimes associated with the god of the forge, Hephaestus. The most 
-        famous Cyclops is Polyphemus, who was blinded by the hero Odysseus in Homer's epic poem, the Odyssey. 
-        The Cyclops represents the power and mystery of the natural world, and its mythical qualities have 
-        made it a popular subject in art, literature, and popular culture.
+A Cyclops is a mythical creature from Greek mythology, often depicted as a being with a single eye in 
+the center of its forehead. In mythology, Cyclopes are known for their strength and size, and are said 
+to be skilled metalworkers and builders. They are often portrayed as living in remote places such as 
+caves and mountains, and are sometimes associated with the god of the forge, Hephaestus. The most 
+famous Cyclops is Polyphemus, who was blinded by the hero Odysseus in Homer's epic poem, the Odyssey. 
+The Cyclops represents the power and mystery of the natural world, and its mythical qualities have 
+made it a popular subject in art, literature, and popular culture.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-               _......._
-           .-'.'.'.'.'.'.`-.
-         .'.'.'.'.'.'.'.'.'.`.
-        /.'.'               '.\.
-        |.'    _.--...--._     |
-        \    `._.-.....-._.'   /
-        |     _..- .-. -.._   |
-     .-.'    `.   ((@))  .'   '.-.
-    ( ^ \      `--.   .-'     / ^ )
-     \  /         .   .       \  /
-     /          .'     '.  .-    \.
-    ( _.\    \ (_`-._.-'_)    /._\)
-     `-' \   ' .--.          / `-'
-         |  / /|_| `-._.'\   |
-         |   |       |_| |   /-.._
-     _..-\   `.--.______.'  |
-          \       .....     |
-           `.  .'      `.  /
-             \           .'
-              `-..___..-`
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡤⠶⠖⠒⠛⠛⠛⠛⠒⠶⠶⢤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡶⠟⠋⠁⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⠀⠀⠈⠙⠳⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡶⠛⠁⠀⠀⣀⣤⡶⠾⠛⠛⠋⠉⠉⠉⠉⠉⠛⠛⠒⠦⠀⠲⣜⡻⣦⣠⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣶⡟⠁⠀⢀⣴⠞⠋⣁⣀⣤⣤⣤⣤⣤⣶⣶⣦⣤⣤⣤⣤⣤⣀⡀⠈⠻⣎⢻⣿⣶⡬⢙⣷⣶⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⡴⠺⠛⠋⣩⣿⠀⠀⠀⠋⠀⠴⠛⢋⣩⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣭⡉⠻⡆⠀⠹⠀⢿⣿⣿⣮⡉⠻⢦⣀⠀⠀⠀
+⠀⠀⢠⣾⣿⣟⠁⣰⠿⣿⣿⡀⠀⠀⠀⠀⣠⣶⡿⠛⠉⠀⢀⣾⡟⠉⠀⠀⠉⠙⢿⣿⣎⠻⣦⠀⠀⠀⠀⢸⣿⣿⣿⣭⡓⠀⣙⣧⡀⠀
+⠀⢀⣽⣿⡿⣩⣴⡾⢿⣿⣿⠇⠀⢀⠀⣴⡿⠋⠀⠀⠀⠀⣾⣿⠀⠀⣴⣷⣆⠀⠈⣿⣿⡆⣜⠀⠀⠀⠀⣼⣿⣿⣏⡉⠙⠂⢈⣳⣕⠀
+⠠⢿⣿⣋⣮⣿⠶⣼⣿⣿⡟⢀⡼⢃⣾⠟⠀⠀⠀⠀⠀⠀⢻⣿⡀⠀⠙⠛⠃⠀⢠⣿⢿⣷⠘⣆⠀⠀⢠⣿⣿⣿⣟⡂⠘⢶⣮⡻⣿⠂
+⢠⣿⣿⣿⣞⣡⣴⠶⠿⣿⠃⢸⡇⠸⢧⣤⣀⡀⠀⠀⠀⠀⠀⠻⣿⣦⣄⣀⣤⣴⡿⢋⣸⣯⣰⡏⠀⠀⠸⣿⣿⣿⣟⣛⣒⡀⢻⡟⣾⣧
+⠉⣫⠞⣋⣭⣤⣤⣄⡀⢸⡄⠀⠙⠒⠄⠙⠿⣿⡿⠶⣶⣤⣤⣤⣤⣭⣽⣿⣿⣿⣿⣿⣿⣵⣟⡁⠀⠀⠀⣿⣿⠟⠙⣿⢿⣿⣷⣽⣎⠻
+⣴⡿⠛⠉⣽⠟⢉⡽⠿⣿⣧⠀⠀⠀⠀⠤⣄⣀⡉⠛⠓⠶⠾⠿⠭⠭⠿⣿⣿⣿⣿⣿⣿⡿⠟⠀⠀⠀⢀⣿⣏⣴⣷⣟⠀⠈⢿⠙⣿⡄
+⠁⠀⠀⠸⠃⠀⢸⣹⣇⣿⠃⡾⢿⡀⠀⠀⠀⠉⠛⠛⠿⠿⢿⣿⠿⠿⠿⠛⣛⣽⣿⠿⠋⢀⣠⠾⠛⡆⢸⡿⣾⣿⠃⣿⠀⠀⠀⠀⠈⠇
+⠀⠀⠀⠀⠀⠀⠈⢿⣿⡿⠀⠀⠘⠿⣶⣤⣤⣤⣙⡒⠶⠦⠤⠤⠶⠶⠾⠟⣛⣉⣤⣤⡶⠟⠋⠀⠀⠀⢸⡇⢷⣾⢣⡟⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡾⣿⡇⠀⠀⢀⣀⠀⠀⠀⠀⠈⠙⡆⠀⠀⠀⠀⠀⡾⠟⠉⠉⠁⠀⠀⢠⣀⠀⠀⠀⡼⢀⣼⣿⣾⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⢰⡿⠋⠀⠀⢀⣠⣤⠀⠁⠀⠀⠀⠀⠀⠁⠰⣶⣦⡀⠀⠀⠀⠙⣷⡄⠀⠀⠹⠃⢰⡏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢺⡀⢿⡀⠞⠀⠀⢀⣴⣿⠏⠁⢠⡏⠀⠀⣀⣀⣀⠀⠀⠈⢻⣿⣤⡀⠀⠀⠘⣷⠀⣤⣄⣤⡿⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣇⠀⠀⣴⠟⠱⣧⣰⠿⠿⢷⣤⣀⣹⣿⣿⣇⣤⣴⠿⠛⠻⢷⣄⠀⠀⠟⠀⣿⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⣼⠃⣰⠀⠈⠁⠀⠀⠀⠹⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⢲⣝⠆⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⡀⠁⣼⣧⣤⣤⣤⣤⣤⣤⣤⣀⣀⣤⣴⣶⣶⢶⠶⣶⣾⠟⢿⠆⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⠻⠉⠙⠓⠾⠦⣿⣿⣧⣤⣷⣤⣾⣶⠷⠾⠛⠉⠀⠀⠀⠀⠀⢠⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣆⡄⠀⠀⠀⠠⣀⡀⠀⠈⠉⠁⢀⣀⡤⠀⠀⠀⠀⠀⣠⢂⣴⠟⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣦⠀⠀⠀⠈⠙⠻⠿⠿⠿⠛⠁⠀⠀⠀⠀⢀⣴⡿⠟⠁⠀⢹⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠈⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠟⠁⠀⠀⠀⠀⠀⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀⠀⠘⣿⡷⣦⣄⣀⡀⠀⢀⣀⣠⠴⠞⠋⢀⠀⠀⠀⠀⠀⠀⠀⠀⠻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠀⠀⠀⠀⠘⣿⣦⡈⠉⠉⠉⠉⠁⠀⠀⢀⣤⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠱
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠈⢻⣿⣦⣄⣀⠀⣀⣠⣴⠟⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ '''
     )
     creature23 = Creature(
         species="Gnome", 
         origin="European Folklore", 
         description='''
-        A Gnome is a legendary creature from European folklore, often depicted as a small, bearded man who 
-        lives underground and is skilled in mining and metallurgy. In mythology, Gnomes are associated with 
-        the earth and nature, and are said to possess magical powers and a deep knowledge of the natural world. 
-        They are often portrayed as mischievous and playful, with a love for music and dance. Gnomes are also 
-        known for their association with gardens and are sometimes depicted as caretakers of the natural world. 
-        The Gnome represents the magic and wonder of the natural world, and its mythical qualities have made 
-        it a popular subject in art, literature, and popular culture.
+A Gnome is a legendary creature from European folklore, often depicted as a small, bearded man who 
+lives underground and is skilled in mining and metallurgy. In mythology, Gnomes are associated with 
+the earth and nature, and are said to possess magical powers and a deep knowledge of the natural world. 
+They are often portrayed as mischievous and playful, with a love for music and dance. Gnomes are also 
+known for their association with gardens and are sometimes depicted as caretakers of the natural world. 
+The Gnome represents the magic and wonder of the natural world, and its mythical qualities have made 
+it a popular subject in art, literature, and popular culture.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
-                                / \ 
-                               /   \ 
-                              /     \ 
-                             /       \ 
-                            /         \ 
-                           /           \ 
-      \  |  / ,           /_           _\ 
-    `-.\ | /,'           /  ```````````  \ `. \ |  / ,'
-   ----     ---         /    _,---''`'--.,|  `.\| /,'
-    --,     `-.         |   |. __   . __,(| ---     ---
-    ,' /_|\_\_          |   | '  `   `. `|/   /    `.
-        \  \  `._       |() |,        `. \  /` ,| \  `.
-         \    -' `-.__  \__/ `,  .  _   )|/' \/ |  \ 
-          `.      -'  `--,/|  '`-'`'_`''-|    \ 
-            `-._           `|     {`-`}  \     \ 
-                `-._        \,     ``'  |` ,---'
-                    `-.       |         \,-'
-                       |\     `\         \.
-                       \ `      \,       \.
-                       /          \     |`
-                      |            \,  / \.
-                      /              `'  |
-                      |                  |
-                      /                  |
-                     /      _ __    ,   ,'___,
-                    /  _   ' /,-`--'/  ' /   /
-                    `-' `--..'-----'----'---'
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡈⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⠃⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠋⠀⠀⠀⠀⠰⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢴⠂⠀⠀⠀⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⣀⢠⡤⠠⣤⣄⡀⠀⢟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣀⣰⣴⠿⠖⣲⠆⠰⠞⠳⢮⡻⣾⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡟⡾⣜⡟⢖⣛⠁⠀⠀⠈⣛⡶⠂⣿⣾⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠺⣭⣿⠁⠀⠉⣴⠊⠉⢳⠉⠁⠀⣸⢷⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⡔⠦⣤⠖⠋⠛⡞⠋⠛⠆⠰⢋⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⠖⢧⡿⢳⡀⢀⣠⣾⣽⣦⣀⣤⣠⠜⠙⡦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣤⣬⣆⠀⠀⣸⡞⣹⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠙⢲⣿⠿⠿⠟⠛⠁⠀⠀⠀⠀⠀⠀⢀⣤⠖⢋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⣃⠀⠀⣀⣀⢤⣤⣤⡤⡴⠶⠆⠛⠉⠀⠀⣘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡄⠿⢇⠀⠀⢀⡼⠑⠀⣿⠀⢀⣀⡠⣴⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠰⢆⣹⡇⠀⠀⠀⢟⣵⠞⠉⠉⢁⡤⠞⠁⣺⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⠛⣷⠾⠿⠶⠾⠿⠶⠰⠞⠛⠛⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠹⣄⣀⣀⣠⡆⠲⣆⡠⣤⢄⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡏⠁⠀⠀⠈⣳⢺⡁⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⠲⠶⠶⠞⠋⠀⠙⠛⠛⠛⠉    '''
     )
     creature24 = Creature(
         species="Hundun/Chaos-Beast", 
         origin="Chinese", 
         description='''
-        Hundun, also known as the Chaos-Beast, is a legendary creature from Chinese mythology, often depicted 
-        as a shapeless, chaotic mass. In mythology, Hundun is said to represent chaos and the primordial state 
-        of the universe, and is often associated with the element of water. The creature's shapelessness and 
-        lack of definition make it a symbol of the unknown and the mysterious, and it is often depicted as a 
-        force to be feared and respected. The Hundun represents the power and potential of the universe, and 
-        its mythical qualities have made it a popular subject in art, literature, and popular culture. Its 
-        appearance has also inspired many other creatures in mythology and popular culture, such as the dragon 
-        and the phoenix.
+Hundun, also known as the Chaos-Beast, is a legendary creature from Chinese mythology, often depicted 
+as a shapeless, chaotic mass. In mythology, Hundun is said to represent chaos and the primordial state 
+of the universe, and is often associated with the element of water. The creature's shapelessness and 
+lack of definition make it a symbol of the unknown and the mysterious, and it is often depicted as a 
+force to be feared and respected. The Hundun represents the power and potential of the universe, and 
+its mythical qualities have made it a popular subject in art, literature, and popular culture. Its 
+appearance has also inspired many other creatures in mythology and popular culture, such as the dragon 
+and the phoenix.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -1023,15 +1013,15 @@ with Session(engine) as session:
         species="Qilin/Kirin", 
         origin="Chinese, Japanese", 
         description='''
-        A Qilin or Kirin is a legendary creature from Chinese and Japanese mythology, often depicted as a 
-        being with the body of a deer or horse, the scales of a dragon, and the horns of a unicorn. In 
-        mythology, Qilin/Kirin are associated with good fortune, prosperity, and wisdom, and are often 
-        depicted as benevolent creatures who bring good luck to those who encounter them. They are also 
-        associated with the elements of fire and air, and their presence is said to be a sign of the arrival 
-        of a great sage or a significant event. The Qilin/Kirin represents the ideals of benevolence and 
-        virtue, and its mythical qualities have made it a popular subject in art, literature, and popular 
-        culture. Its appearance has also inspired many other creatures in mythology and popular culture, such 
-        as the phoenix and the dragon.
+A Qilin or Kirin is a legendary creature from Chinese and Japanese mythology, often depicted as a 
+being with the body of a deer or horse, the scales of a dragon, and the horns of a unicorn. In 
+mythology, Qilin/Kirin are associated with good fortune, prosperity, and wisdom, and are often 
+depicted as benevolent creatures who bring good luck to those who encounter them. They are also 
+associated with the elements of fire and air, and their presence is said to be a sign of the arrival 
+of a great sage or a significant event. The Qilin/Kirin represents the ideals of benevolence and 
+virtue, and its mythical qualities have made it a popular subject in art, literature, and popular 
+culture. Its appearance has also inspired many other creatures in mythology and popular culture, such 
+as the phoenix and the dragon.
         ''', 
         care_instructions="TBD",
         ascii_art= '''
@@ -1144,58 +1134,28 @@ with Session(engine) as session:
     userCreature1 = UserCreature(
         user_id=2,
         creature_id=1,
-        creature_species="Dragon-Western",
         creature_name="Dwight", 
-        happiness=50, 
+        happiness=20, 
         health=50,
-        adoption_day=datetime(
-            year=2023,
-            month=3,
-            day=28
-        ),
-        last_interaction=datetime(
-            year=2023,
-            month=3,
-            day=28
-        )
+        obedience=50
         )
 
     userCreature2 = UserCreature(
         user_id=2,
         creature_id=3,
-        creature_species="Griffin/Gryphon",
         creature_name="Gregory", 
-        happiness=50, 
+        happiness=107, 
         health=50,
-        adoption_day=datetime(
-            year=2023,
-            month=3,
-            day=28
-        ),
-        last_interaction=datetime(
-            year=2023,
-            month=3,
-            day=28
-        )
+        obedience=50
         )
     
     userCreature3 = UserCreature(
         user_id=3,
         creature_id=2,
-        creature_species="Dragon-Eastern",
         creature_name="Denny", 
         happiness=50, 
         health=50,
-        adoption_day=datetime(
-            year=2023,
-            month=3,
-            day=28
-        ),
-        last_interaction=datetime(
-            year=2023,
-            month=3,
-            day=28
-        )
+        obedience=50
         )
 
 #Answer
