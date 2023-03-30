@@ -175,16 +175,19 @@ Select:  ''')
                     sys.exit(0)
                 else:
                     print("Invalid option. Please select a number from the list.")
+                    input("Press Enter to continue... ")
             else:
                 print("You currently have no Creatures. Time to Adopt!")
                 option = input(f'''
+1) Back to Main Menu
+
 Select:  ''')
-                if option == "back":
+                if option == "1" or option =="back":
                     userCreaturesVisit = False
                 elif option == "exit":
                     sys.exit(0)
-                else:
-                    print("Invalid option. Please select a number from the list.")
+                # else:
+                #     input("Press Enter to continue... ")
 
     def hang_with_creature(session, currentUser, creature):
         from .creature import Creature
@@ -199,6 +202,7 @@ Select:  ''')
             UserCreature.health_levels(session, creature, currentUser)
             UserCreature.obedience_levels(session, creature, currentUser)
             UserCreature.loyalty_levels(session, creature, currentUser)
+            input("Press Enter to continue... ")
             option = input(f'''
 You have the following options:
 1) Train {creature.creature_name}       2) Feed {creature.creature_name}        3) Praise {creature.creature_name}
@@ -244,6 +248,7 @@ Select: ''')
                 print(f'''
 {creatureDetails.description}
                 ''')
+                input("Press Enter to continue... ")
             elif option == "10":
                 UserCreature.delete_userCreature(session, creature)
             elif option == "back":
@@ -256,15 +261,19 @@ Select: ''')
         currentUser=User.currentUser
         if currentUser != None:
             userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
-            print('''
+            if len(userCreatures) == 0:
+                pass
+            else:
+                print('''
+
 Counting Down. Your creature(s) is/are missing you.
 Their Happiness, Health, Obedience, and Loyalty have all decreased!
-        ''')
-            for creature in userCreatures:
-                UserCreature.update_happiness(session, creature, creature.happiness -2)
-                UserCreature.update_health(session, creature, creature.health -2)
-                UserCreature.update_obedience(session, creature, creature.obedience -2)
-                UserCreature.update_loyalty(session, creature, creature.loyalty -2)
+                ''')
+                for creature in userCreatures:
+                    UserCreature.update_happiness(session, creature, creature.happiness -2)
+                    UserCreature.update_health(session, creature, creature.health -2)
+                    UserCreature.update_obedience(session, creature, creature.obedience -2)
+                    UserCreature.update_loyalty(session, creature, creature.loyalty -2)
         else:
             pass
 

@@ -73,6 +73,7 @@ Done... Full CRUD
     Create:
         users can be created and added to the users table
         creatures can be added into the userCreatures db
+        userAnswers are created as the user takes the quizes
     Read:
         answers are pulled from the answers table for the quiz
         creatures are pulled from the creatures table for selection
@@ -80,14 +81,17 @@ Done... Full CRUD
         creatureInteractions are pulled from the creatureInteractions table for interactions in USerCreatures
         questions are pulled from the questions table for the quiz
         users are pulled for logging in
+        userAnswers are pulled to add their results
         userCreatures are pulled by name for verification
     Update:
         happiness, health, and obedience are updated when certain conditions are met.
-        $other functions exist in each module to allow for an update of any table, but they are currently not being utilized.
+            Either based on user selections, or based on a timer that runs while the program is open.
+        ~ Other functions exist in each module to allow for an update of specific entreis in any table, 
+            but they are only accesible from the command line, and arecurrently not being utilized in game.
     Delete:
         UserCreatures get deleted when their happiness, health, or obedience is too low. 
         UserCreatures can be manually deleted by the user. 
-        UserAnswers are deleted at quiz start to start fresh.
+        UserAnswers are deleted at quiz start to start fresh to avoid contamination the data.
 
 
 

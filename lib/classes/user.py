@@ -54,8 +54,12 @@ class User(Base):
                     user_signup = False
                 else:
                     print("Password must be 4 letters or longer!")
+                    input("Press Enter to start again...")
+                    user_signup = False
             else:
                 print("Caretaker name must be 4 letters or longer!")
+                input("Press Enter to start again...")
+                user_signup = False
         return User.currentUser
  
     def returning_user(session):
@@ -69,7 +73,7 @@ class User(Base):
                 sys.exit(0)
             elif User.find_by_username(session, returningUsername):
                 filtered_user=session.query(User).filter(User.username==returningUsername).first()
-                print(f"Welcome back {filtered_user.username}")
+                print(f"You have entered: {filtered_user.username}")
                 password = input("Enter your Password: ")
                 if password == "back":
                     print("Back to the Begining!")
@@ -81,8 +85,12 @@ class User(Base):
                     user_login = False
                 else:
                     print("Password is incorrect.")
+                    input("Press Enter to start again...")
+                    user_login = False
             else:
                 print("Caretaker name is not in our system. Please sign up!")
+                input("Press Enter to start again...")
+                user_login = False
         return User.currentUser
 
 

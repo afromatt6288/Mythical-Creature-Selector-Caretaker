@@ -74,6 +74,7 @@ if __name__ == '__main__':
                           ███    ███                                         ▀                        ███    ███
 '''
     )
+        input("Press enter to continue... ")
 
         currentUser = None
         inprogram = True
@@ -82,7 +83,7 @@ if __name__ == '__main__':
             userinput = input('''
 Welcome to Mythical Creature Caretaker! We here at MCC are glad you are here. 
 Just a few notes... 
-When you can, enter the numbers or letters to the left of any options you might see. 
+When you can, enter the numbers to the left of any options you might see. 
 Also, you can type "back" at any prompt to go back to a previous menu or option, 
 or "exit" to end the program.
 
@@ -107,6 +108,7 @@ Select: ''')
                     main_menu(currentUser)
             elif userinput == "back":
                 print("Back to the Beginning!")
+                User.currentUser = None
                 game_start()
             elif userinput == "exit":
                 sys.exit(0)
@@ -129,7 +131,7 @@ What would you like to do today {currentUser.username}?
 3) Best Suited Creature (extended quiz - 25 creatures available)
 4) Visit Current Creatures
 
-Selection : ''')
+Select : ''')
             if option == "1":
                 print("New Creature (select from list)")
                 select_creature(currentUser)
@@ -144,6 +146,7 @@ Selection : ''')
                 UserCreature.view_userCreature_list(session, currentUser)
             elif option == "back":
                 print("Back to the Beginning!")
+                User.currentUser = None
                 game_start()
             elif option == "exit":
                 sys.exit(0)
@@ -157,18 +160,21 @@ Selection : ''')
         creatures = Creature.get_all_creatures(session)
         while creatureSelect:
             print(f'''
-Welcome, {currentUser.username} to the Mythical Creature Selection Screen.
-By being here it proves one of two things:
+Welcome, {currentUser.username} to the Mythical Creature Selection Screen!
+
+By being here proves one of two things:
     Either, you know exactly who you are and what you want!
     Or... You were too lazy to take a short quiz
-In either case, please select a creture of your choice from below!
-            ''')
+
+In either case, please select a creature of your choice from below!
+''')
+            input("Press Enter to continue... ")
             n=1
             for creature in creatures:
                 print(f"{n}) {creature.species}")
                 n += 1
             option = input(f'''
-Select:  ''')
+Select: ''')
             if option.isdigit() and int(option) in range(1, len(creatures)+1):
                 index = int(option) - 1
                 creature = creatures[index]
@@ -264,7 +270,8 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                     print("end of quiz")
                     inQuiz=False
                     shortQuiz = False
-
+            else:
+                print("Invalid option. Please try again!")
 
     def long_quiz(currentUser):
         longQuiz = True
@@ -284,7 +291,7 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                 main_menu(currentUser)
             elif option == "exit":
                 sys.exit(0)
-            elif option == "1" or option == "Proceed" or option =="Proceed with quiz":
+            elif option == "1":
                 inQuiz=True
                 while inQuiz:
                     n=1
@@ -322,33 +329,33 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                             long_quiz(currentUser)
                         elif option == "exit":
                             sys.exit(0)
+                    UserAnswer.tabulate_quiz(session, currentUser)
                     print("end of quiz")
                     inQuiz=False
-    
-    # now = datetime.datetime.now()
-    # later = datetime.datetime.now()
-    # diff = int((later - now).total_seconds())
-    # #countdown in sec
-    # tcount = 10 
+                    longQuiz = False
+            else:
+                print("Invalid option. Please try again!")
 
-    # while diff < tcount:
-    #     countd = tcount - diff
-    #     countd = str(countd)
-    #     UserCreature.countdown(session)
-    #     print("countdown:" + countd)
-    #     time.sleep(1)  # Wait for 1 second
-    #     now = datetime.datetime.now()
-    #     diff = int((now - later).total_seconds())  
+## None of the 3 methods below worked for an ongoing timer, because they were being called within 
+## the game_start function and run prior to the function being called... so they locked it up. 
+## But I am saving them as reference notes for future projects that don't have that limitation.
+## Ultimately, I used "Threading" to have my time run in async with the other functions. 
 
-    # countd = tcount - diff
-    # countd = str(countd)
+#     now = datetime.datetime.now()
+#     later = datetime.datetime.now()
+#     diff = int((later - now).total_seconds())
+#     #countdown in sec
+#     tcount = 10 
 
-    # while diff < tcount:
-    #     print("countdown:" + countd)
+#     while diff < tcount:
+#         countd = tcount - diff
+#         countd = str(countd)
+#         UserCreature.countdown(session)
+#         print("countdown:" + countd)
+#         time.sleep(1)  # Wait for 1 second
+#         now = datetime.datetime.now()
+#         diff = int((now - later).total_seconds())  
 
-
-## Neither method below works, because it is within the game_start function and runs prior to the function being called
- 
 #     schedule.every(5).seconds.do(lambda: UserCreature.countdown(session))
 #     while True:
 #         schedule.run_pending()
