@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # import random
 # import copy
+import threading
 import sys
 import schedule
 import time
-from datetime import datetime
+import datetime
 from sqlalchemy import *
 from sqlalchemy.orm import *
 ## Classes to import from modules
@@ -21,6 +22,18 @@ if __name__ == '__main__':
     engine = create_engine('sqlite:///myth.db')
     Session = sessionmaker(bind=engine)
     session = Session()
+
+## A standalone function that counts down every `interval` seconds and
+## runs the specified `func` function.
+    def countdown_timer(interval, func):
+        while True:
+            time.sleep(interval)
+            func(session)            
+
+## Start2 the countdown timer in a separate thread
+    timer_thread = threading.Thread(target=countdown_timer, args=(60, UserCreature.countdown))
+    timer_thread.daemon = True  # Set the thread as a daemon, so it exits when the main program exits
+    timer_thread.start()
 
 ## game_start() is being called at the very end of main.
 ## This allows it to start the game as a called function. 
@@ -202,6 +215,9 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
             elif option == "exit":
                 sys.exit(0)
             elif option == "1":
+                existing_answers_to_delete = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
+                for answer in existing_answers_to_delete:
+                    UserAnswer.delete_userAnswers(session, answer)                    
                 inQuiz=True
                 while inQuiz:
                     n=1
@@ -224,23 +240,30 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                         Answer: ''')
                         if option == "1":
                             print("Answer 1")
+                            UserAnswer(user_id = currentUser.id, answer_id = answer1.id).add_to_userAnswers_db(session)
+                            # newUserAnswer = UserAnswer.find_by_userAnswer_name(session, newUserCreatureName)        
                             n += 1
                         elif option == "2":
                             print("Answer 2")
+                            UserAnswer(user_id = currentUser.id, answer_id = answer2.id).add_to_userAnswers_db(session)
                             n += 1
                         elif option == "3":
                             print("Answer 3")
+                            UserAnswer(user_id = currentUser.id, answer_id = answer3.id).add_to_userAnswers_db(session)
                             n += 1
                         elif option == "4":
                             print("Answer 4")
+                            UserAnswer(user_id = currentUser.id, answer_id = answer4.id).add_to_userAnswers_db(session)
                             n += 1
                         elif option == "back":
                             print("Back to the start of the Short Quiz!")
                             short_quiz(currentUser)
                         elif option == "exit":
                             sys.exit(0)
+                    UserAnswer.tabulate_quiz(session, currentUser)
                     print("end of quiz")
                     inQuiz=False
+                    shortQuiz = False
 
 
     def long_quiz(currentUser):
@@ -301,7 +324,30 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                             sys.exit(0)
                     print("end of quiz")
                     inQuiz=False
-                    
+    
+    # now = datetime.datetime.now()
+    # later = datetime.datetime.now()
+    # diff = int((later - now).total_seconds())
+    # #countdown in sec
+    # tcount = 10 
+
+    # while diff < tcount:
+    #     countd = tcount - diff
+    #     countd = str(countd)
+    #     UserCreature.countdown(session)
+    #     print("countdown:" + countd)
+    #     time.sleep(1)  # Wait for 1 second
+    #     now = datetime.datetime.now()
+    #     diff = int((now - later).total_seconds())  
+
+    # countd = tcount - diff
+    # countd = str(countd)
+
+    # while diff < tcount:
+    #     print("countdown:" + countd)
+
+
+## Neither method below works, because it is within the game_start function and runs prior to the function being called
  
 #     schedule.every(5).seconds.do(lambda: UserCreature.countdown(session))
 #     while True:

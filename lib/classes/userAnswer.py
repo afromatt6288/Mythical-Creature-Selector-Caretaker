@@ -15,24 +15,47 @@ class UserAnswer(Base):
             + f"User ID: {self.user_id} / " \
             + f"Answer ID: {self.answer_id} / " 
 
+    def add_to_userAnswers_db(self, session):
+        session.add(self)
+        session.commit()
+
+    def find_all_userAnswer_by_user_id(session, user_id):
+        return session.query(UserAnswer).filter(UserAnswer.user_id == user_id).all()
+
+    def delete_userAnswers(session, answer_to_delete):
+        session.delete(answer_to_delete)
+        session.commit()
+    
+    def tabulate_quiz(session, currentUser):
+        creature_id_list = []
+        userAnswers = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
+        from .answer import Answer
+        for useranswer in userAnswers:
+            answersIds = []
+            answersIds.append(useranswer.answer_id)
+            for answerId in answersIds:
+                answers = []
+                answers.append(answerId)
+                for answer in answers:
+                    query = Answer.find_by_answer_id(session, answerId)
+                    creature_id_list.append(query.creature_id1)
+                    creature_id_list.append(query.creature_id2)
+                    creature_id_list.append(query.creature_id3)
+        print(creature_id_list)
+
+
+        
 
 ## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def add_to_userAnswers_db(session, userAnswer):
-        session.add(userAnswer)
-        session.commit()
-
     def get_all(session):
         return session.query(UserAnswer).all()
 
-    def find_by_id(session, id):
+    def find_by_userAnswer_id(session, id):
         return session.query(UserAnswer).filter(UserAnswer.id == id).all()
-
-    def find_by_question_id(session, user_id):
-        return session.query(UserAnswer).filter(UserAnswer.user_id == user_id).all()
 
     def update_content(session, userAnswer, content):
         userAnswer.content = content
