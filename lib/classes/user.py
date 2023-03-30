@@ -91,16 +91,18 @@ class User(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def get_all(session):
+    def get_all_users(session):
         return session.query(User).all()
 
     def find_by_id(session, id):
         return session.query(User).filter(User.id == id).first()
 
-    def find_by_name_and_breed(session, name, breed):
-        return session.query(User).filter(User.name == name and User.breed == breed).first()
-
-    def update_breed(session, user, breed):
-        user.breed = breed
+    def update_username(session, user, username):
+        user.username = username
+        session.add(user)
+        session.commit()
+    
+    def update_password(session, user, password):
+        user.password = password
         session.add(user)
         session.commit()

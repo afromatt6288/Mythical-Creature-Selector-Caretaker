@@ -58,6 +58,11 @@ class UserCreature(Base):
         creature.loyalty = newScore
         session.add(creature)
         session.commit()
+    
+    def update_last_interaction(session, creature):
+        creature.last_interaction = datetime.now()
+        session.add(creature)
+        session.commit()        
 
     def delete_userCreature(session, creature):
         session.delete(creature)
@@ -77,8 +82,8 @@ class UserCreature(Base):
             print(f"Happiness: {creature.creature_name} feels Unhappy, and desperately needs love!")
         elif creature.happiness <25:
             print(f'''
-            Happiness: Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
-            {creature.creature_name} has ended their life... And it is all your fault!''')
+Happiness: Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
+{creature.creature_name} has ended their life... And it is all your fault!''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
 
@@ -96,9 +101,9 @@ class UserCreature(Base):
             print(f"Health: {creature.creature_name} feels Sick, and desperately needs Medical Attention!")
         elif creature.health <25:
             print(f'''
-            Health: Terrible News! {creature.creature_name} was very Sick and became terminal. 
-            Because you weren't there, {creature.creature_name} died in pain and very alone.
-            Oregon Trail Easter Egg: {creature.creature_name} has died of dysentary''')
+Health: Terrible News! {creature.creature_name} was very Sick and became terminal. 
+Because you weren't there, {creature.creature_name} died in pain and very alone.
+Oregon Trail Easter Egg: {creature.creature_name} has died of dysentary''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
 
@@ -116,8 +121,8 @@ class UserCreature(Base):
             print(f"Obedience: {creature.creature_name} could care less what you ask, and just does what they want...")
         elif creature.obedience <25:
             print(f'''
-            Obedience: Terrible News! Due to lack of training, {creature.creature_name} ignored your commands and ran out into traffic.
-            {creature.creature_name} was crushed by a semi... if only you had trained them better...''')
+Obedience: Terrible News! Due to lack of training, {creature.creature_name} ignored your commands and ran out into traffic.
+{creature.creature_name} was crushed by a semi... if only you had trained them better...''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
     
@@ -128,15 +133,15 @@ class UserCreature(Base):
         elif creature.obedience >= 90:
             print(f"Loyalty: {creature.creature_name} is loyal and true, and would not betray you!") 
         elif creature.obedience >=75:
-            print(f"Loyalty: {creature.creature_name} feels you are a good master, and wants to stick my your side!") 
+            print(f"Loyalty: {creature.creature_name} feels you are a good master, and wants to stick by your side!") 
         elif creature.obedience >=50:
-            print(f"Loyalty: {creature.creature_name} feels feels you are not all that, and wouldn't be opposed to a better master.") 
+            print(f"Loyalty: {creature.creature_name} feels you are not all that, and wouldn't be opposed to a better master.") 
         elif creature.obedience >=25:
             print(f"Loyalty: {creature.creature_name} feels Animosity towards you, and is actively planning to betray you!")
         elif creature.obedience <25:
             print(f'''
-            Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longer, and finally puth their plan of betrayal into action.
-            {creature.creature_name} left you for another master. But not before leaving a huge crap on your bed... Gross!''')
+Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longer, and finally puth their plan of betrayal into action.
+{creature.creature_name} left you for another master. But not before leaving a huge crap on your bed... Gross!''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
 
@@ -199,22 +204,39 @@ You have the following options:
 10) Release {creature.creature_name} 
 
 Select: ''')
+            from .creatureInteraction import CreatureInteraction
+            # if option == "1":
+            #     CreatureInteraction.train(session, creature)
+            # elif option == "2":
+            #     CreatureInteraction.feed(session, creature)
+            # elif option == "3":
+            #     CreatureInteraction.praise(session, creature)
+            # elif option == "4":
+            #     CreatureInteraction.pet(session, creature)
+            # elif option == "5":
+            #     CreatureInteraction.play(session, creature)
+            # elif option == "6":
+            #     CreatureInteraction.groom(session, creature)
+            # elif option == "7":
+            #     CreatureInteraction.vet(session, creature)
+            # elif option == "8":
+            #     CreatureInteraction.discipline(session, creature)
             if option == "1":
-                print("Training")
+                CreatureInteraction.interact(session, creature, "1")
             elif option == "2":
-                print("Feeding")
+                CreatureInteraction.interact(session, creature, "2")
             elif option == "3":
-                print("Praising")
+                CreatureInteraction.interact(session, creature, "3")
             elif option == "4":
-                print("Peting")
+                CreatureInteraction.interact(session, creature, "4")
             elif option == "5":
-                print("Playing")
+                CreatureInteraction.interact(session, creature, "5")
             elif option == "6":
-                print("Grooming")
+                CreatureInteraction.interact(session, creature, "6")
             elif option == "7":
-                print("Went to the Vet")
+                CreatureInteraction.interact(session, creature, "7")
             elif option == "8":
-                print("Disciplining")
+                CreatureInteraction.interact(session, creature, "8")
             elif option == "9":
                 print(f'''
 {creatureDetails.description}
@@ -229,7 +251,7 @@ Select: ''')
 
 ## Extra Commands that could prove useful in a future update
 
-    def get_all(session):
+    def get_all_userCreatures(session):
         return session.query(UserCreature).all()
 
     def find_by_userCreature_id(session, id):

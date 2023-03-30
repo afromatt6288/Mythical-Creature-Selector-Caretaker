@@ -34,13 +34,13 @@ class Answer(Base):
         session.add(answer)
         session.commit()
 
-    def get_all(session):
+    def get_all_answers(session):
         return session.query(Answer).all()
 
     def find_by_question_id(session, question_id):
         return session.query(Answer).filter(Answer.question_id == question_id).all()
 
-    def update_content(session, answer, content):
+    def update_answer_content(session, answer, content):
         answer.content = content
         session.add(answer)
         session.commit()

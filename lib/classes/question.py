@@ -27,15 +27,10 @@ class Question(Base):
         session.add(question)
         session.commit()
 
-    def get_all(session):
+    def get_all_questions(session):
         return session.query(Question).all()
 
-    def update_content(session, answer, content):
+    def update_question_content(session, answer, content):
         answer.content = content
         session.add(answer)
-        session.commit()
-
-    def update_question(session, question, ):
-        question.breed = breed
-        session.add(question)
         session.commit()

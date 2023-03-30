@@ -38,13 +38,10 @@ class Creature(Base):
         session.add(creature)
         session.commit()
 
-    def find_by_name(session, name):
-        return session.query(Creature).filter(Creature.name == name).first()
+    def find_by_creature_species(session, species):
+        return session.query(Creature).filter(Creature.species == species).first()
 
-    def find_by_name_and_breed(session, name, breed):
-        return session.query(Creature).filter(Creature.name == name and Creature.breed == breed).first()
-
-    def update_breed(session, creature, breed):
-        creature.breed = breed
+    def update_species(session, creature, species):
+        creature.species = species
         session.add(creature)
         session.commit()

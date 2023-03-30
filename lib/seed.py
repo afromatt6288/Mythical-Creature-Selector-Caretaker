@@ -1047,14 +1047,14 @@ as the phoenix and the dragon.
 ## Creature Interaction
     # creatureInteraction = CreatureInteraction(name="TBD", effect_on_happiness="TBD", effect_on_health="TBD")
 
-    creatureInteraction1 = CreatureInteraction(name="Train", effect_on_happiness="5", effect_on_health="0", effect_on_obedience="+10")
-    creatureInteraction2 = CreatureInteraction(name="Feed", effect_on_happiness="+5", effect_on_health="+10", effect_on_obedience="0")
-    creatureInteraction3 = CreatureInteraction(name="Praise", effect_on_happiness="+10", effect_on_health="0", effect_on_obedience="0")
-    creatureInteraction4 = CreatureInteraction(name="Pet", effect_on_happiness="+10", effect_on_health="0", effect_on_obedience="0")
-    creatureInteraction5 = CreatureInteraction(name="Play", effect_on_happiness="+10", effect_on_health="+5", effect_on_obedience="0")
-    creatureInteraction6 = CreatureInteraction(name="Groom", effect_on_happiness="+5", effect_on_health="+5", effect_on_obedience="0")
-    creatureInteraction7 = CreatureInteraction(name="Vet Visit", effect_on_happiness="-5", effect_on_health="+25", effect_on_obedience="-5")
-    creatureInteraction8 = CreatureInteraction(name="Discipline", effect_on_happiness="-5", effect_on_health="-5", effect_on_obedience="+25")
+    creatureInteraction1 = CreatureInteraction(name="Train", effect_on_happiness=-5, effect_on_health=0, effect_on_obedience=+10, effect_on_loyalty=+5)
+    creatureInteraction2 = CreatureInteraction(name="Feed", effect_on_happiness=0, effect_on_health=+10, effect_on_obedience=-5, effect_on_loyalty=+5)
+    creatureInteraction3 = CreatureInteraction(name="Praise", effect_on_happiness=+10, effect_on_health=0, effect_on_obedience=-5, effect_on_loyalty=+5)
+    creatureInteraction4 = CreatureInteraction(name="Pet", effect_on_happiness=+10, effect_on_health=-5, effect_on_obedience=0, effect_on_loyalty=+5)
+    creatureInteraction5 = CreatureInteraction(name="Play", effect_on_happiness=+5, effect_on_health=+5, effect_on_obedience=-5, effect_on_loyalty=+5)
+    creatureInteraction6 = CreatureInteraction(name="Groom", effect_on_happiness=-5, effect_on_health=+10, effect_on_obedience=0, effect_on_loyalty=+5)
+    creatureInteraction7 = CreatureInteraction(name="Vet Visit", effect_on_happiness=-10, effect_on_health=+20, effect_on_obedience=-5, effect_on_loyalty=-5)
+    creatureInteraction8 = CreatureInteraction(name="Discipline", effect_on_happiness=-10, effect_on_health=0, effect_on_obedience=+30, effect_on_loyalty=-10)
 
 
 ## Question

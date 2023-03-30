@@ -9,16 +9,172 @@ class CreatureInteraction(Base):
 
     id = Column(Integer(), primary_key=True)
     name = Column(String())
-    effect_on_happiness = Column(String())
-    effect_on_health = Column(String())
-    effect_on_obedience = Column(String())
+    effect_on_happiness = Column(Integer())
+    effect_on_health = Column(Integer())
+    effect_on_obedience = Column(Integer())
+    effect_on_loyalty = Column(Integer())
     
     def __repr__(self):
         return f"Interaction ID: {self.id} / " \
             + f"Interaction Name: {self.name} / " \
             + f"Interaction Happiness: {self.effect_on_happiness} / " \
             + f"Interaction Health: {self.effect_on_health} / " \
-            + f"Interaction Obedience: {self.effect_on_obedience}"
+            + f"Interaction Obedience: {self.effect_on_obedience} / " \
+            + f"Interaction Loyalty: {self.effect_on_loyalty}"
+
+    def find_by_id(session, id):
+        return session.query(CreatureInteraction).filter(CreatureInteraction.id == id).first()
+
+    def interact(session, userCreature, interact_id):
+        from .creature import Creature
+        creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+        interaction = CreatureInteraction.find_by_id(session, interact_id)
+        print(interaction)
+        if interact_id == "1":
+            print(f'''
+Did some hard, but rewarding, {creatureDetails.species} 
+Training with {userCreature.creature_name}!
+            ''')
+        elif interact_id == "2":
+            print(f'''
+{creatureDetails.species} feeding time is always a hit with 
+{userCreature.creature_name}!
+        ''')
+        elif interact_id == "3":
+            print(f'''
+Praised {userCreature.creature_name} for being a good 
+{creatureDetails.species}!
+        ''')
+        elif interact_id == "4":
+            print(f'''
+Petted {userCreature.creature_name}, as a good 
+{creatureDetails.species} deserves!
+        ''')
+        elif interact_id == "5":
+            print(f'''
+Playing with a {creatureDetails.species} can be dicey. 
+Luckily {userCreature.creature_name} is gentle!
+        ''')
+        elif interact_id == "6":
+            print(f'''
+{creatureDetails.species} grooming is not something that 
+{userCreature.creature_name} enjoys!
+        ''')
+        elif interact_id == "7":
+            print(f'''
+Went to a Vet specializing in {creatureDetails.species}. 
+{userCreature.creature_name} was not ammused, but does feel better!
+        ''')
+        elif interact_id == "8":
+            print(f'''
+{userCreature.creature_name} was misbehaving... 
+but Disciplining a {creatureDetails.species} is not for the faint of heart!
+        ''')
+        from .userCreature import UserCreature
+        UserCreature.update_happiness(session, userCreature, userCreature.happiness + interaction.effect_on_happiness)
+        UserCreature.update_health(session, userCreature, userCreature.health + interaction.effect_on_health)
+        UserCreature.update_obedience(session, userCreature, userCreature.obedience + interaction.effect_on_obedience)
+        UserCreature.update_loyalty(session, userCreature, userCreature.loyalty + interaction.effect_on_loyalty)
+        UserCreature.update_last_interaction(session, userCreature)
+
+## The above modification of the multiple functions below took me from 94 lines down to 50
+
+#     def interact(session, userCreature, interaction):
+#         from .userCreature import UserCreature
+#         UserCreature.update_happiness(session, userCreature, userCreature.happiness + interaction.effect_on_happiness)
+#         UserCreature.update_health(session, userCreature, userCreature.health + interaction.effect_on_health)
+#         UserCreature.update_obedience(session, userCreature, userCreature.obedience + interaction.effect_on_obedience)
+#         UserCreature.update_loyalty(session, userCreature, userCreature.loyalty + interaction.effect_on_loyalty)
+#         UserCreature.update_last_interaction(session, userCreature)
+
+#     def train(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# Did some hard, but rewarding, {creatureDetails.species} 
+# Training with {userCreature.creature_name}!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 1)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def feed(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# {creatureDetails.species} feeding time is always a hit with 
+# {userCreature.creature_name}!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 2)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def praise(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# Praised {userCreature.creature_name} for being a good 
+# {creatureDetails.species}!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 3)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def pet(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# Petted {userCreature.creature_name}, as a good 
+# {creatureDetails.species} deserves!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 4)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def play(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# Playing with a {creatureDetails.species} can be dicey. 
+# Luckily {userCreature.creature_name} is gentle!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 5)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def groom(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# {creatureDetails.species} grooming is not something that 
+# {userCreature.creature_name} enjoys!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 6)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def vet(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# Went to a Vet specializing in {creatureDetails.species}. 
+# {userCreature.creature_name} was not ammused, but does feel better!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 7)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+
+#     def discipline(session, userCreature):
+#         from .creature import Creature
+#         creatureDetails = Creature.find_by_creature_id(session, userCreature.creature_id)
+#         print(f'''
+# {userCreature.creature_name} was misbehaving... 
+# but Disciplining a {creatureDetails.species} is not for the faint of heart!
+#         ''')
+#         interaction = CreatureInteraction.find_by_id(session, 8)
+#         print(interaction)
+#         CreatureInteraction.interact(session, userCreature, interaction)
+                
 
 
 ## Extra Commands that could prove useful in a future update
@@ -26,23 +182,17 @@ class CreatureInteraction(Base):
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def add_to_creatureInteractions_db(session, creatureInteraction):
-        session.add(creatureInteraction)
+    def add_to_creatureInteractions_db(session, newCreatureInteraction):
+        session.add(newCreatureInteraction)
         session.commit()
 
-    def get_all(session):
+    def get_all_creatureInteractions(session):
         return session.query(CreatureInteraction).all()
 
     def find_by_name(session, name):
         return session.query(CreatureInteraction).filter(CreatureInteraction.name == name).first()
 
-    def find_by_id(session, id):
-        return session.query(CreatureInteraction).filter(CreatureInteraction.id == id).first()
-
-    def find_by_name_and_breed(session, name, breed):
-        return session.query(CreatureInteraction).filter(CreatureInteraction.name == name and CreatureInteraction.breed == breed).first()
-
-    def update_breed(session, creatureInteraction, breed):
-        creatureInteraction.breed = breed
+    def update_creatureInteraction_name(session, creatureInteraction, newName):
+        creatureInteraction.newName = newName
         session.add(creatureInteraction)
         session.commit()
