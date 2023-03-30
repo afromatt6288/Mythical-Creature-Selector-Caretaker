@@ -28,7 +28,7 @@ with Session(engine) as session:
     # creatureInteraction = CreatureInteraction(name="TBD", effect_on_happiness="TBD", effect_on_health="TBD")
     # question = Question(content="TBD")
     # user = User(username="TBD", password="TBD")
-    # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", adoption_day="TBD", last_interaction="TBD")
+    # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", bedience="TBD", loyalty="TBD", adoption_day="TBD", last_interaction="TBD")
     # answer = Answer(content="TBD", question_id=1, creature_id1=1, creature_id2=2, creature_id3=3)
 
 
@@ -1118,40 +1118,209 @@ as the phoenix and the dragon.
 
     user1 = User(username="Admin", password="Admin")
     user2 = User(username="Matthew", password="Matthew")
-    user3 = User(username="Jonah", password="Jonah")
+    user3 = User(username="David", password="David")
     user4 = User(username="Abby", password="Abby")
-    user5 = User(username="David", password="David")
+    user5 = User(username="Jonah", password="Jonah")
 
 
 
 ##UserCreature
-    # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", adoption_day="TBD", last_interaction="TBD")
+    # userCreature = UserCreature(user_id="TBD", creature_id="TBD", creature_species="TBD", creature_name="TBD", happiness="TBD", health="TBD", bedience="TBD", loyalty="TBD", adoption_day="TBD", last_interaction="TBD")
 
     userCreature1 = UserCreature(
         user_id=2,
         creature_id=1,
-        creature_name="Dwight", 
-        happiness=20, 
+        creature_name="Dwight (Dragon-Western)", 
+        happiness=50, 
         health=50,
-        obedience=50
+        obedience=50,
+        loyalty = 50
         )
 
     userCreature2 = UserCreature(
         user_id=2,
         creature_id=3,
-        creature_name="Gregory", 
-        happiness=107, 
+        creature_name="Gregory (Griffin/Gryphon)", 
+        happiness=110, 
         health=50,
-        obedience=50
+        obedience=50,
+        loyalty = 50
         )
     
     userCreature3 = UserCreature(
-        user_id=3,
+        user_id=2,
         creature_id=2,
-        creature_name="Denny", 
+        creature_name="Denny (Dragon-Eastern)", 
+        happiness=20, 
+        health=50,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature4 = UserCreature(
+        user_id=2,
+        creature_id=4,
+        creature_name="Paul (Phoenix)", 
+        happiness=50, 
+        health=110,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature5 = UserCreature(
+        user_id=2,
+        creature_id=6,
+        creature_name="Unice (Unicorn)", 
+        happiness=50, 
+        health=20,
+        obedience=50,
+        loyalty = 50
+        )
+    
+    userCreature6 = UserCreature(
+        user_id=2,
+        creature_id=5,
+        creature_name="Peter (Pegasus)", 
         happiness=50, 
         health=50,
-        obedience=50
+        obedience=110,
+        loyalty = 50
+        )
+
+    userCreature7 = UserCreature(
+        user_id=2,
+        creature_id=7,
+        creature_name="Sammy (Sphinx)", 
+        happiness=50, 
+        health=50,
+        obedience=20,
+        loyalty = 50
+        )
+
+    userCreature8 = UserCreature(
+        user_id=2,
+        creature_id=9,
+        creature_name="Kelly (Kraken)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 110
+        )
+    
+    userCreature9 = UserCreature(
+        user_id=2,
+        creature_id=8,
+        creature_name="Cecil (Cerberus)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 20
+        )
+
+    userCreature10 = UserCreature(
+        user_id=4,
+        creature_id=24,
+        creature_name="Marvin (Hundun/Chaos-Beast)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature11 = UserCreature(
+        user_id=3,
+        creature_id=1,
+        creature_name="David (Dragon-Western)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature12 = UserCreature(
+        user_id=3,
+        creature_id=3,
+        creature_name="Greysen (Griffin/Gryphon)", 
+        happiness=110, 
+        health=50,
+        obedience=50,
+        loyalty = 50
+        )
+    
+    userCreature13 = UserCreature(
+        user_id=3,
+        creature_id=2,
+        creature_name="Dustin (Dragon-Eastern)", 
+        happiness=20, 
+        health=50,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature14 = UserCreature(
+        user_id=3,
+        creature_id=4,
+        creature_name="Preston (Phoenix)", 
+        happiness=50, 
+        health=110,
+        obedience=50,
+        loyalty = 50
+        )
+
+    userCreature15 = UserCreature(
+        user_id=3,
+        creature_id=6,
+        creature_name="Ulysses (Unicorn)", 
+        happiness=50, 
+        health=20,
+        obedience=50,
+        loyalty = 50
+        )
+    
+    userCreature16 = UserCreature(
+        user_id=3,
+        creature_id=5,
+        creature_name="Parker (Pegasus)", 
+        happiness=50, 
+        health=50,
+        obedience=110,
+        loyalty = 50
+        )
+
+    userCreature17 = UserCreature(
+        user_id=3,
+        creature_id=7,
+        creature_name="Saul (Sphinx)", 
+        happiness=50, 
+        health=50,
+        obedience=20,
+        loyalty = 50
+        )
+
+    userCreature18 = UserCreature(
+        user_id=3,
+        creature_id=9,
+        creature_name="Karen (Kraken)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 110
+        )
+    
+    userCreature19 = UserCreature(
+        user_id=3,
+        creature_id=8,
+        creature_name="Ceasar (Cerberus)", 
+        happiness=50, 
+        health=50,
+        obedience=50,
+        loyalty = 20
+        )
+
+    userCreature20 = UserCreature(
+        user_id=1,
+        creature_id=25,
+        creature_name="Quincy (Qilin/Kirin)", 
         )
 
 #Answer
@@ -1372,7 +1541,10 @@ as the phoenix and the dragon.
         question31, question32, question33, question34, question35, question36, question37, question38, question39, question40, 
         question41, question42, question43, question44, question45, question46, question47, question48, question49, question50, 
         user1, user2, user3, user4, user5, 
-        userCreature1, userCreature2, userCreature3, 
+        userCreature1, userCreature2, userCreature3, userCreature4, userCreature5,
+        userCreature6, userCreature7, userCreature8, userCreature9, userCreature10,
+        userCreature11, userCreature12, userCreature13, userCreature14, userCreature15,
+        userCreature16, userCreature17, userCreature18, userCreature19, userCreature20,
         answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10, 
         answer11, answer12, answer13, answer14, answer15, answer16, answer17, answer18, answer19, answer20, 
         answer21, answer22, answer23, answer24, answer25, answer26, answer27, answer28, answer29, answer30, 

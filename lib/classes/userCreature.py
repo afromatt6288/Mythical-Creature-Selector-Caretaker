@@ -16,6 +16,7 @@ class UserCreature(Base):
     happiness = Column(Integer(), default=50)  # set default value to 50
     health = Column(Integer(), default=50)  # set default value to 50
     obedience = Column(Integer(), default=50)  # set default value to 50
+    loyalty = Column(Integer(), default=50)  # set default value to 50
     adoption_day = Column(DateTime(), default=datetime.now())
     last_interaction = Column(DateTime(), default=datetime.now())
 
@@ -27,6 +28,7 @@ class UserCreature(Base):
             + f"Happiness: {self.happiness} / " \
             + f"Health: {self.health} / " \
             + f"Obedience: {self.obedience} / " \
+            + f"Loyalty: {self.loyalty} / " \
             + f"Adoption Day: {self.adoption_day} / " \
             + f"Last Interaction: {self.last_interaction}"
 
@@ -52,6 +54,11 @@ class UserCreature(Base):
         session.add(creature)
         session.commit()
 
+    def update_loyalty(session, creature, newScore):
+        creature.loyalty = newScore
+        session.add(creature)
+        session.commit()
+
     def delete_userCreature(session, creature):
         session.delete(creature)
         session.commit()
@@ -59,18 +66,18 @@ class UserCreature(Base):
     def happiness_levels(session, creature, currentUser):
         if creature.happiness >= 100:
             UserCreature.update_happiness(session, creature, 99)
-            print(f"{creature.creature_name} feels Ecstatic, and is on top of the world!")
+            print(f"Happiness: {creature.creature_name} feels Ecstatic, and is on top of the world!")
         elif creature.happiness >= 90:
-            print(f"{creature.creature_name} feels Joyful, and is really glad to see you!") 
+            print(f"Happiness: {creature.creature_name} feels Joyful, and is really glad to see you!") 
         elif creature.happiness >=75:
-            print(f"{creature.creature_name} feels Good, and hopes you are too!") 
+            print(f"Happiness: {creature.creature_name} feels Good, and hopes you are too!") 
         elif creature.happiness >=50:
-            print(f"{creature.creature_name} feels Meh, and could be better!") 
+            print(f"Happiness: {creature.creature_name} feels Meh, and could be better!") 
         elif creature.happiness >=25:
-            print(f"{creature.creature_name} feels Unhappy, and desperately needs love!")
+            print(f"Happiness: {creature.creature_name} feels Unhappy, and desperately needs love!")
         elif creature.happiness <25:
             print(f'''
-            Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
+            Happiness: Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
             {creature.creature_name} has ended their life... And it is all your fault!''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
@@ -78,38 +85,58 @@ class UserCreature(Base):
     def health_levels(session, creature, currentUser):
         if creature.health >= 100:
             UserCreature.update_health(session, creature, 99)
-            print(f"{creature.creature_name} feels Ecstatic, and is on top of the world!")
+            print(f"Health: {creature.creature_name} feels Healthy and is extra Energetic!")
         elif creature.health >= 90:
-            print(f"{creature.creature_name} feels Joyful, and is really glad to see you!") 
+            print(f"Health: {creature.creature_name} feels Darn Good!") 
         elif creature.health >=75:
-            print(f"{creature.creature_name} feels Good, and hopes you are too!") 
+            print(f"Health: {creature.creature_name} feels Mostly Okay, but is a bit fatigued.") 
         elif creature.health >=50:
-            print(f"{creature.creature_name} feels Meh, and could be better!") 
+            print(f"Health: {creature.creature_name} feels a bit under the weather, and could be better!") 
         elif creature.health >=25:
-            print(f"{creature.creature_name} feels Unhappy, and desperately needs love!")
+            print(f"Health: {creature.creature_name} feels Sick, and desperately needs Medical Attention!")
         elif creature.health <25:
             print(f'''
-            Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
-            {creature.creature_name} has ended their life... And it is all your fault!''')
+            Health: Terrible News! {creature.creature_name} was very Sick and became terminal. 
+            Because you weren't there, {creature.creature_name} died in pain and very alone.
+            Oregon Trail Easter Egg: {creature.creature_name} has died of dysentary''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
 
     def obedience_levels(session, creature, currentUser):
         if creature.obedience >= 100:
             UserCreature.update_obedience(session, creature, 99)
-            print(f"{creature.creature_name} feels Ecstatic, and is on top of the world!")
+            print(f"Obedience: {creature.creature_name} is focused on you and ready to follow your command!")
         elif creature.obedience >= 90:
-            print(f"{creature.creature_name} feels Joyful, and is really glad to see you!") 
+            print(f"Obedience: {creature.creature_name} is ready and willing to do as you say!") 
         elif creature.obedience >=75:
-            print(f"{creature.creature_name} feels Good, and hopes you are too!") 
+            print(f"Obedience: {creature.creature_name} is pretty responsive to your requests.") 
         elif creature.obedience >=50:
-            print(f"{creature.creature_name} feels Meh, and could be better!") 
+            print(f"Obedience: {creature.creature_name} might do what you say... when they feel like it.") 
         elif creature.obedience >=25:
-            print(f"{creature.creature_name} feels Unhappy, and desperately needs love!")
+            print(f"Obedience: {creature.creature_name} could care less what you ask, and just does what they want...")
         elif creature.obedience <25:
             print(f'''
-            Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
-            {creature.creature_name} has ended their life... And it is all your fault!''')
+            Obedience: Terrible News! Due to lack of training, {creature.creature_name} ignored your commands and ran out into traffic.
+            {creature.creature_name} was crushed by a semi... if only you had trained them better...''')
+            UserCreature.delete_userCreature(session, creature)
+            UserCreature.view_userCreature_list(session, currentUser)
+    
+    def loyalty_levels(session, creature, currentUser):
+        if creature.obedience >= 100:
+            UserCreature.update_loyalty(session, creature, 99)
+            print(f"Loyalty: {creature.creature_name} trusts you implicitly, and only wants to be near you!")
+        elif creature.obedience >= 90:
+            print(f"Loyalty: {creature.creature_name} is loyal and true, and would not betray you!") 
+        elif creature.obedience >=75:
+            print(f"Loyalty: {creature.creature_name} feels you are a good master, and wants to stick my your side!") 
+        elif creature.obedience >=50:
+            print(f"Loyalty: {creature.creature_name} feels feels you are not all that, and wouldn't be opposed to a better master.") 
+        elif creature.obedience >=25:
+            print(f"Loyalty: {creature.creature_name} feels Animosity towards you, and is actively planning to betray you!")
+        elif creature.obedience <25:
+            print(f'''
+            Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longer, and finally puth their plan of betrayal into action.
+            {creature.creature_name} left you for another master. But not before leaving a huge crap on your bed... Gross!''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
 
@@ -121,23 +148,35 @@ class UserCreature(Base):
 Welcome to {currentUser.username}'s Creature Farm!
 Which creature would you like to visit with today?
             ''')
-            n=1
-            for creature in userCreatures:
-                print(f"{n}) {creature.creature_name}")
-                n += 1
-            option = input(f'''
+            if len(userCreatures) > 0:
+                n=1
+                for creature in userCreatures:
+                    print(f"{n}) {creature.creature_name}")
+                    n += 1
+                option = input(f'''
 Select:  ''')
-            if option.isdigit() and int(option) in range(1, len(userCreatures)+1):
-                index = int(option) - 1
-                creature = userCreatures[index]
-                print(f"You selected {creature.creature_name}")
-                UserCreature.hang_with_creature(session,currentUser, creature)
-            elif option == "back":
-                userCreaturesVisit = False
-            elif option == "exit":
-                sys.exit(0)
+                if option.isdigit() and int(option) in range(1, len(userCreatures)+1):
+                    index = int(option) - 1
+                    creature = userCreatures[index]
+                    print(f"You selected {creature.creature_name}")
+                    UserCreature.hang_with_creature(session,currentUser, creature)
+                elif option == "back":
+                    userCreaturesVisit = False
+                elif option == "exit":
+                    sys.exit(0)
+                else:
+                    print("Invalid option. Please select a number from the list.")
             else:
-                print("Invalid option. Please select a number from the list.")
+                print("You currently have no Creatures. Time to Adopt!")
+                option = input(f'''
+Select:  ''')
+                if option == "back":
+                    userCreaturesVisit = False
+                elif option == "exit":
+                    sys.exit(0)
+                else:
+                    print("Invalid option. Please select a number from the list.")
+
 
     def hang_with_creature(session, currentUser, creature):
         from .creature import Creature
@@ -151,6 +190,7 @@ Select:  ''')
             UserCreature.happiness_levels(session, creature, currentUser)
             UserCreature.health_levels(session, creature, currentUser)
             UserCreature.obedience_levels(session, creature, currentUser)
+            UserCreature.loyalty_levels(session, creature, currentUser)
             option = input(f'''
 You have the following options:
 1) Train {creature.creature_name}       2) Feed {creature.creature_name}        3) Praise {creature.creature_name}
