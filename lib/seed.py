@@ -671,8 +671,7 @@ inspired many other creatures in folklore and popular culture, such as the cocka
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠊⠁⢀⠎⠀⠀⠀⠀⠀⠀⠀⢜⡉⠀⢰⠁⠀⠀⡎⠉⢀⠀⢀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠰⣏⣕⡲⠖⡫⠀⢀⡎⠀⠀⠀⠀⠀⠀⠀⠀⡇⡼⢤⡘⠢⠤⡴⣉⣉⡹⢀⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⣅⢶⠞⣤⠖⠒⢮⢩⣳⠀⠀⠀⠀⠀⠀⠈⣇⢸⠈⡏⠙⢄⣀⡠⣡⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠨⣷⡊⠀⠀⠀⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⠼⣦⡴⠅⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠨⣷⡊⠀⠀⠀⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⠼⣦⡴⠅⠊⠀⠀⠀     '''
     )
     creature17 = Creature(
         species="Leprechaun", 
@@ -760,8 +759,7 @@ many other creatures in folklore and popular culture, such as the shapeshifter a
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣄⣀⠀⢀⣸⡇⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⢀⣼⠏⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⢋⣬⣭⣛⠛⠉⠀⠀⢀⣴⠋⠀⠀⠀⠀⣰⡿⣿⣖⠛⠋⠀⢠⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣴⣟⣁⣀⣈⣀⣤⣤⣤⠟⠁⠀⠀⠀⠀⣼⣋⣀⣀⣉⣠⣤⣤⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀  '''
     )
     creature19 = Creature(
         species="Minotaur", 
@@ -1006,8 +1004,7 @@ and the phoenix.
 ⠀⠀⠀⡇⠀⠀⠀⢰⡏⠀⠀⠸⡀⠀⢄⠉⢉⣩⠯⡉⢸⠀⠀⠀⠀⢀⠞⣏⠉⠩⣝⢫⡽⠧⣀⠀⠀⠀⠀⠘⢤⠔⢦⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⡇⠀⠀⠀⠀⠓⠒⣦⠀⠙⠦⢾⡃⢈⡧⠤⠃⡞⠀⠀⠀⠀⠻⠤⠚⢻⠉⠉⠉⠀⠀⠘⣆⠀⠀⣀⡀⠠⡀⠺⡀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⢧⡀⠀⠠⡄⠀⢺⡉⢙⡆⠀⠀⠉⠉⠀⠀⠀⠘⢦⡀⠀⢀⡀⠀⣀⠈⡆⠀⠀⠀⠀⠀⠘⢦⣄⣀⣼⣀⣟⣀⠇⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠉⠓⠒⠳⠤⠴⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠦⠤⠳⠤⠼⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠀⠀⠀⠉⠓⠒⠳⠤⠴⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠦⠤⠳⠤⠼⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀'''
     )
     creature25 = Creature(
         species="Qilin/Kirin", 
@@ -1043,8 +1040,7 @@ as the phoenix and the dragon.
 ⠀⠀⠀⠀⠀⠀⡐⠡⣾⢿⠅⠱⣀⢹⣿⣏⠀⠀⠀⣀⠊⢰⣿⡇⠀⠀⠀⠀⠀⠇⠘⣿⣧⣄⡠⡀⠀⠀⠀⠉⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⡠⠊⣀⣼⣿⠀⠀⠀⠈⠙⠻⠿⠆⠀⣜⣥⣴⣿⣿⠇⠀⠀⠀⠀⠀⠆⣼⣿⡿⠿⠿⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⣠⣾⣶⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠰⣾⠿⠟⠹⢿⣿⢅⠀⠀⠀⠀⠀⢱⣿⡿⠉⠉⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠈⠛⠛⠉⠈⠈⠋⠛⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀⠀⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        '''
+⠀⠈⠛⠛⠉⠈⠈⠋⠛⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀⠀⠉⠈⠀⠀⠀ '''
     )
 
 
@@ -1167,7 +1163,7 @@ as the phoenix and the dragon.
     answer5 = Answer(content="Flight", question_id=2, creature_id1=2, creature_id2=4, creature_id3=5)
     answer6 = Answer(content="Strength", question_id=2, creature_id1=1, creature_id2=3, creature_id3=8)
     answer7 = Answer(content="Wisdom", question_id=2, creature_id1=7, creature_id2=6, creature_id3=10)
-    answer8 = Answer(content="Adaptability", question_id=2, creature_id1=9, creature_id2=4, creature_id3=1)
+    answer8 = Answer(content="Adaptability", question_id=2, creature_id1=9, creature_id2=6, creature_id3=1)
     answer9 = Answer(content="Loyalty", question_id=3, creature_id1=1, creature_id2=8, creature_id3=6)
     answer10 = Answer(content="Creativity", question_id=3, creature_id1=4, creature_id2=3, creature_id3=10)
     answer11 = Answer(content="Intelligence", question_id=3, creature_id1=7, creature_id2=2, creature_id3=9)
@@ -1176,30 +1172,30 @@ as the phoenix and the dragon.
     answer14 = Answer(content="Strategically", question_id=4, creature_id1=7, creature_id2=2, creature_id3=10)
     answer15 = Answer(content="Patiently", question_id=4, creature_id1=6, creature_id2=4, creature_id3=9)
     answer16 = Answer(content="Adapt and change", question_id=4, creature_id1=1, creature_id2=9, creature_id3=4)
-    answer17 = Answer(content="Dawn", question_id=5, creature_id1=4, creature_id2=5, creature_id3=2)
+    answer17 = Answer(content="Dawn", question_id=5, creature_id1=6, creature_id2=5, creature_id3=2)
     answer18 = Answer(content="Daytime", question_id=5, creature_id1=6, creature_id2=3, creature_id3=7)
     answer19 = Answer(content="Dusk", question_id=5, creature_id1=10, creature_id2=8, creature_id3=1)
-    answer20 = Answer(content="Nighttime", question_id=5, creature_id1=9, creature_id2=2, creature_id3=8)
+    answer20 = Answer(content="Nighttime", question_id=5, creature_id1=9, creature_id2=10, creature_id3=8)
     answer21 = Answer(content="Stand your ground", question_id=6, creature_id1=1, creature_id2=8, creature_id3=3)
-    answer22 = Answer(content="Diplomacy", question_id=6, creature_id1=6, creature_id2=7, creature_id3=5)
+    answer22 = Answer(content="Diplomacy", question_id=6, creature_id1=6, creature_id2=7, creature_id3=10)
     answer23 = Answer(content="Adapt and find a solution", question_id=6, creature_id1=4, creature_id2=9, creature_id3=2)
     answer24 = Answer(content="Use cunning", question_id=6, creature_id1=10, creature_id2=9, creature_id3=7)
-    answer25 = Answer(content="Flying", question_id=7, creature_id1=5, creature_id2=2, creature_id3=4)
+    answer25 = Answer(content="Flying", question_id=7, creature_id1=5, creature_id2=4, creature_id3=3)
     answer26 = Answer(content="Running", question_id=7, creature_id1=6, creature_id2=8, creature_id3=3)
-    answer27 = Answer(content="Swimming", question_id=7, creature_id1=9, creature_id2=10, creature_id3=1)
+    answer27 = Answer(content="Swimming", question_id=7, creature_id1=9, creature_id2=10, creature_id3=2)
     answer28 = Answer(content="Teleportation", question_id=7, creature_id1=7, creature_id2=4, creature_id3=2)
     answer29 = Answer(content="Leader", question_id=8, creature_id1=1, creature_id2=3, creature_id3=7)
     answer30 = Answer(content="Strategist", question_id=8, creature_id1=2, creature_id2=10, creature_id3=9)
     answer31 = Answer(content="Healer", question_id=8, creature_id1=6, creature_id2=4, creature_id3=5)
     answer32 = Answer(content="Protector", question_id=8, creature_id1=8, creature_id2=9, creature_id3=1)
-    answer33 = Answer(content="Adventure", question_id=9, creature_id1=1, creature_id2=5, creature_id3=3)
-    answer34 = Answer(content="Meditate", question_id=9, creature_id1=6, creature_id2=4, creature_id3=2)
+    answer33 = Answer(content="Adventure", question_id=9, creature_id1=4, creature_id2=5, creature_id3=3)
+    answer34 = Answer(content="Meditate", question_id=9, creature_id1=6, creature_id2=7, creature_id3=2)
     answer35 = Answer(content="Solve puzzles", question_id=9, creature_id1=7, creature_id2=9, creature_id3=10)
     answer36 = Answer(content="Protect loved ones", question_id=9, creature_id1=8, creature_id2=1, creature_id3=5)
-    answer37 = Answer(content="Fire", question_id=10, creature_id1=1, creature_id2=4, creature_id3=10)
-    answer38 = Answer(content="Water", question_id=10, creature_id1=9, creature_id2=2, creature_id3=8)
-    answer39 = Answer(content="Earth", question_id=10, creature_id1=3, creature_id2=6, creature_id3=7)
-    answer40 = Answer(content="Air", question_id=10, creature_id1=5, creature_id2=4, creature_id3=2)
+    answer37 = Answer(content="Fire", question_id=10, creature_id1=1, creature_id2=4, creature_id3=8)
+    answer38 = Answer(content="Water", question_id=10, creature_id1=9, creature_id2=2, creature_id3=6)
+    answer39 = Answer(content="Earth", question_id=10, creature_id1=3, creature_id2=10, creature_id3=7)
+    answer40 = Answer(content="Air", question_id=10, creature_id1=5, creature_id2=4, creature_id3=3)
     answer41 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
     answer42 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
     answer43 = Answer(content="TBD", question_id=11, creature_id1=1, creature_id2=2, creature_id3=3)
