@@ -13,10 +13,10 @@ class UserCreature(Base):
     user_id = Column(Integer(), ForeignKey('users.id'))
     creature_id = Column(Integer(), ForeignKey('creatures.id'))
     creature_name = Column(String())
-    happiness = Column(Integer(), default=50)  # set default value to 50
-    health = Column(Integer(), default=50)  # set default value to 50
-    obedience = Column(Integer(), default=50)  # set default value to 50
-    loyalty = Column(Integer(), default=50)  # set default value to 50
+    happiness = Column(Integer(), default=60)  # set default value to 60
+    health = Column(Integer(), default=60)  # set default value to 60
+    obedience = Column(Integer(), default=60)  # set default value to 60
+    loyalty = Column(Integer(), default=60)  # set default value to 60
     adoption_day = Column(DateTime(), default=datetime.now())
     last_interaction = Column(DateTime(), default=datetime.now())
 
@@ -78,9 +78,9 @@ class UserCreature(Base):
             print(f"Happiness: {creature.creature_name} feels Good, and hopes you are too!") 
         elif creature.happiness >=50:
             print(f"Happiness: {creature.creature_name} feels Meh, and could be better!") 
-        elif creature.happiness >=25:
+        elif creature.happiness >=10:
             print(f"Happiness: {creature.creature_name} feels Unhappy, and desperately needs love!")
-        elif creature.happiness <25:
+        elif creature.happiness <10:
             print(f'''
 Happiness: Terrible News! {creature.creature_name} was feeling Miserable, Unloved, Unwanted, and Alone... 
 {creature.creature_name} has ended their life... And it is all your fault!''')
@@ -97,9 +97,9 @@ Happiness: Terrible News! {creature.creature_name} was feeling Miserable, Unlove
             print(f"Health: {creature.creature_name} feels Mostly Okay, but is a bit fatigued.") 
         elif creature.health >=50:
             print(f"Health: {creature.creature_name} feels a bit under the weather, and could be better!") 
-        elif creature.health >=25:
+        elif creature.health >=10:
             print(f"Health: {creature.creature_name} feels Sick, and desperately needs Medical Attention!")
-        elif creature.health <25:
+        elif creature.health <10:
             print(f'''
 Health: Terrible News! {creature.creature_name} was very Sick and became terminal. 
 Because you weren't there, {creature.creature_name} died in pain and very alone.
@@ -117,9 +117,9 @@ Oregon Trail Easter Egg: {creature.creature_name} has died of dysentary''')
             print(f"Obedience: {creature.creature_name} is pretty responsive to your requests.") 
         elif creature.obedience >=50:
             print(f"Obedience: {creature.creature_name} might do what you say... when they feel like it.") 
-        elif creature.obedience >=25:
+        elif creature.obedience >=10:
             print(f"Obedience: {creature.creature_name} could care less what you ask, and just does what they want...")
-        elif creature.obedience <25:
+        elif creature.obedience <10:
             print(f'''
 Obedience: Terrible News! Due to lack of training, {creature.creature_name} ignored your commands and ran out into traffic.
 {creature.creature_name} was crushed by a semi... if only you had trained them better...''')
@@ -136,9 +136,9 @@ Obedience: Terrible News! Due to lack of training, {creature.creature_name} igno
             print(f"Loyalty: {creature.creature_name} feels you are a good master, and wants to stick by your side!") 
         elif creature.obedience >=50:
             print(f"Loyalty: {creature.creature_name} feels you are not all that, and wouldn't be opposed to a better master.") 
-        elif creature.obedience >=25:
+        elif creature.obedience >=10:
             print(f"Loyalty: {creature.creature_name} feels Animosity towards you, and is actively planning to betray you!")
-        elif creature.obedience <25:
+        elif creature.obedience <10:
             print(f'''
 Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longer, and finally puth their plan of betrayal into action.
 {creature.creature_name} left you for another master. But not before leaving a huge crap on your bed... Gross!''')
@@ -181,7 +181,6 @@ Select:  ''')
                     sys.exit(0)
                 else:
                     print("Invalid option. Please select a number from the list.")
-
 
     def hang_with_creature(session, currentUser, creature):
         from .creature import Creature
@@ -247,6 +246,23 @@ Select: ''')
                 hanging=False
             elif option == "exit":
                 sys.exit(0)
+    
+    def countdown(session):
+        from .user import User
+        currentUser=User.currentUser
+        if currentUser != None:
+            userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
+            print('''
+Counting Down. Your creature(s) is/are missing you.
+Their Happiness, Health, Obedience, and Loyalty have all decreased!
+        ''')
+            for creature in userCreatures:
+                UserCreature.update_happiness(session, creature, creature.happiness -2)
+                UserCreature.update_health(session, creature, creature.health -2)
+                UserCreature.update_obedience(session, creature, creature.obedience -2)
+                UserCreature.update_loyalty(session, creature, creature.loyalty -2)
+        else:
+            pass
 
 
 ## Extra Commands that could prove useful in a future update

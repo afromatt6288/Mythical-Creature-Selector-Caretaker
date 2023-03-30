@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-import random
-import time
-import copy
+# import random
+# import copy
 import sys
+import schedule
+import time
+from datetime import datetime
 from sqlalchemy import *
 from sqlalchemy.orm import *
+## Classes to import from modules
 from classes.answer import Answer
 from classes.creature import Creature
 # from classes.creatureInteraction import CreatureInteraction
@@ -23,6 +26,7 @@ if __name__ == '__main__':
 ## This allows it to start the game as a called function. 
 ## It also wraps the other functions and can call them 
 ## even if they are declared "after" they are called.
+
 
     def game_start():
 
@@ -130,6 +134,8 @@ Selection : ''')
                 game_start()
             elif option == "exit":
                 sys.exit(0)
+            elif option == "countdown":
+                UserCreature.countdown(session)
             else:
                 print("Invalid Entry. Please try again!")
     
@@ -296,14 +302,18 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
                     print("end of quiz")
                     inQuiz=False
                     
+ 
+#     schedule.every(5).seconds.do(lambda: UserCreature.countdown(session))
+#     while True:
+#         schedule.run_pending()
+#         time.sleep(1)
 
-
-                
-
-
-
-
-
+# ## The other way to have made the time run... 
+#     while True:
+#         now = datetime.now()
+#         time_until_next_run = (30 - now.minute % 30) * 60 - now.second
+#         time.sleep(time_until_next_run)
+#         UserCreature.countdown(session)
 
 
 game_start()
