@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime
+import sys
 from sqlalchemy import Column, Integer, String, create_engine, func, desc, ForeignKey, PrimaryKeyConstraint, DateTime
 from sqlalchemy.orm import Session, relationship, validates, backref
 from .base import Base
@@ -26,48 +27,59 @@ class UserAnswer(Base):
         session.delete(answer_to_delete)
         session.commit()
     
-    def tabulate_quiz(session, currentUser):
-        creature_id_list = []
-        userAnswers = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
-        from .answer import Answer
-        for useranswer in userAnswers:
-            answersIds = []
-            answersIds.append(useranswer.answer_id)
-            for answerId in answersIds:
-                answers = []
-                answers.append(answerId)
-                for answer in answers:
-                    query = Answer.find_by_answer_id(session, answerId)
-                    creature_id_list.append(query.creature_id1)
-                    creature_id_list.append(query.creature_id2)
-                    creature_id_list.append(query.creature_id3)
-        print(creature_id_list)
-
-
-        
+    def tabulate_quiz(session, currentUser, x):
+        tabulating=True
+        if x == 10:
+            occurences = 12
+        elif x == 50:
+            occurences = 24
+        while tabulating:
+            creature_id_list = []
+            creature_id_dict = {}
+            userAnswers = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
+            from .answer import Answer
+            for useranswer in userAnswers:
+                query = Answer.find_by_answer_id(session, useranswer.answer_id)
+                creature_id_list.append(query.creature_id1)
+                creature_id_list.append(query.creature_id2)
+                creature_id_list.append(query.creature_id3)
+            print(creature_id_list)
+            for creatureId in creature_id_list:
+                if creatureId in creature_id_dict:
+                    creature_id_dict[creatureId] += 1
+                else:
+                    creature_id_dict[creatureId] = 1
+            print(creature_id_dict) 
+            sorted_creature_id_dict = sorted(creature_id_dict.items(), key=lambda x: x[1], reverse=True)
+            from .userCreature import UserCreature
+            UserCreature.select_creature(currentUser, sorted_creature_id_dict)
+            # for key, value in sorted_creature_id_dict:
+            #     creature = Creature.find_by_creature_id(session, key)
+            #     print(f"{creature.species} appears {value} times")
+            # option = input("Press Enter to continue... ")
+            # if option == "exit":
+            #     sys.exit(0)
+            # elif option == "back" or option == "":
+            tabulating=False
+            
 
 ## Extra Commands that could prove useful in a future update
 
     def create_table(base, engine):
         base.metadata.create_all(engine)
 
-    def get_all(session):
+    def get_all_userAnswers(session):
         return session.query(UserAnswer).all()
 
     def find_by_userAnswer_id(session, id):
         return session.query(UserAnswer).filter(UserAnswer.id == id).all()
 
-    def update_content(session, userAnswer, content):
-        userAnswer.content = content
-        session.add(userAnswer)
-        session.commit()
-
-    def update_question_id(session, userAnswer, user_id):
+    def update_user_id(session, userAnswer, user_id):
         userAnswer.user_id = user_id
         session.add(userAnswer)
         session.commit()
 
-    def update_creature_id(session, userAnswer, answer_id):
+    def update_answer_id(session, userAnswer, answer_id):
         userAnswer.answer_id = answer_id
         session.add(userAnswer)
         session.commit()

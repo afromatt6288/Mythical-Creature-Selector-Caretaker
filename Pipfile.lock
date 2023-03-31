@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "15d858bf337bfb7ab395895c5a691ec0f92455483eec737a93e32f400e75e919"
+            "sha256": "5f4cc22ac8471862ab329994579843765b6ecfe39282e9979f15efef88676e2b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -82,6 +82,14 @@
             ],
             "markers": "platform_machine == 'aarch64' or (platform_machine == 'ppc64le' or (platform_machine == 'x86_64' or (platform_machine == 'amd64' or (platform_machine == 'AMD64' or (platform_machine == 'win32' or platform_machine == 'WIN32')))))",
             "version": "==2.0.2"
+        },
+        "lib": {
+            "hashes": [
+                "sha256:d0a9e03b27d2b94c403f43c1af39366500032d587dcd45ffdf707131cbdf58c6",
+                "sha256:da861f02e9ee8748a8f168584de94f0ed85aad65e70f62760f1962ae515c94e1"
+            ],
+            "index": "pypi",
+            "version": "==4.0.0"
         },
         "sqlalchemy": {
             "hashes": [

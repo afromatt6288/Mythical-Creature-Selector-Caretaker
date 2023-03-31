@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
-# import random
-# import copy
 import threading
 import sys
-import schedule
 import time
-import datetime
 from sqlalchemy import *
 from sqlalchemy.orm import *
 ## Classes to import from modules
@@ -30,7 +26,7 @@ if __name__ == '__main__':
             time.sleep(interval)
             func(session)            
 
-## Start2 the countdown timer in a separate thread
+## Start the countdown timer in a separate thread from the rest of the program. So they can run at the same time.
     timer_thread = threading.Thread(target=countdown_timer, args=(60, UserCreature.countdown))
     timer_thread.daemon = True  # Set the thread as a daemon, so it exits when the main program exits
     timer_thread.start()
@@ -81,11 +77,11 @@ if __name__ == '__main__':
         while inprogram:
             # Checks for new or returning user
             userinput = input('''
-Welcome to Mythical Creature Caretaker! We here at MCC are glad you are here. 
+Welcome to Mythical Creature Caretaker! We here at the M.C.C. are glad you are here. 
 Just a few notes... 
-When you can, enter the numbers to the left of any options you might see. 
+Enter the numbers to the left of any options you might see to proceed. 
 Also, you can type "back" at any prompt to go back to a previous menu or option, 
-or "exit" to end the program.
+or "exit" to end the program... sometimes you might have to type it twice... 
 
             Please enjoy!
             
@@ -126,20 +122,20 @@ Main Menu
 
 What would you like to do today {currentUser.username}?
 
-1) New Creature (select from list)
-2) Better Suited Creature (short quiz - 10 creatures available)
-3) Best Suited Creature (extended quiz - 25 creatures available)
+1) Acquire Mythical Creature (select from list)
+2) Aquire BETTER Suited Mythical Creature (short quiz - 10 creatures available)
+3) Aquire BEST Suited Mythical Creature (extended quiz - 25 creatures available)
 4) Visit Current Creatures
 
 Select : ''')
             if option == "1":
-                print("New Creature (select from list)")
-                select_creature(currentUser)
+                print("Acquire Mythical Creature (select from list)")
+                UserCreature.select_creature(currentUser)
             elif option == "2":
-                print("Better Suited Creature (short quiz - 10 creatures available)")
+                print("Aquire BETTER Suited Mythical Creature (short quiz - 10 creatures available)")
                 short_quiz(currentUser)
             elif option == "3":
-                print("Best Suited Creature (extended quiz - 25 creatures available)")
+                print("Aquire BEST Suited Mythical Creature (extended quiz - 25 creatures available)")
                 long_quiz(currentUser)
             elif option == "4":
                 print("Visit Current Creatures")
@@ -155,52 +151,54 @@ Select : ''')
             else:
                 print("Invalid Entry. Please try again!")
     
-    def select_creature(currentUser):
-        creatureSelect = True
-        creatures = Creature.get_all_creatures(session)
-        while creatureSelect:
-            print(f'''
-Welcome, {currentUser.username} to the Mythical Creature Selection Screen!
-
-By being here proves one of two things:
-    Either, you know exactly who you are and what you want!
-    Or... You were too lazy to take a short quiz
-
-In either case, please select a creature of your choice from below!
-''')
-            input("Press Enter to continue... ")
+    def quiz_helper(currentUser, x):
+        existing_answers_to_delete = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
+        for answer in existing_answers_to_delete:
+            UserAnswer.delete_userAnswers(session, answer)                    
+        inQuiz=True
+        while inQuiz:
             n=1
-            for creature in creatures:
-                print(f"{n}) {creature.species}")
-                n += 1
-            option = input(f'''
-Select: ''')
-            if option.isdigit() and int(option) in range(1, len(creatures)+1):
-                index = int(option) - 1
-                creature = creatures[index]
-                print(f"You selected a {creature.species}")
-                newUserCreatureName = input('''
-Please name your new companion: ''')
-                if newUserCreatureName == "back":
-                    print("Back to Main Menu!")
-                    creatureSelect = False
-                elif newUserCreatureName == "exit":
+            while n <= x:
+                question = Question.find_by_question_id(session, n)
+                answer1 = Answer.find_by_answer_id(session, 1+(n-1)*4)
+                answer2 = Answer.find_by_answer_id(session, 2+(n-1)*4)
+                answer3 = Answer.find_by_answer_id(session, 3+(n-1)*4)
+                answer4 = Answer.find_by_answer_id(session, 4+(n-1)*4)
+                option = input(f'''
+                Question {n} of {x}:
+
+                {n}: {question.content}
+
+                1) {answer1.content}
+                2) {answer2.content}
+                3) {answer3.content}
+                4) {answer4.content}
+
+                Answer: ''')
+                if option == "1":
+                    print(f"1) {answer1.content}")
+                    UserAnswer(user_id = currentUser.id, answer_id = answer1.id).add_to_userAnswers_db(session)    
+                    n += 1
+                elif option == "2":
+                    print(f"2) {answer2.content}")
+                    UserAnswer(user_id = currentUser.id, answer_id = answer2.id).add_to_userAnswers_db(session)
+                    n += 1
+                elif option == "3":
+                    print(f"3) {answer3.content}")
+                    UserAnswer(user_id = currentUser.id, answer_id = answer3.id).add_to_userAnswers_db(session)
+                    n += 1
+                elif option == "4":
+                    print(f"4) {answer4.content}")
+                    UserAnswer(user_id = currentUser.id, answer_id = answer4.id).add_to_userAnswers_db(session)
+                    n += 1
+                elif option == "back":
+                    print("Back to the Main Menu!")
+                    main_menu(currentUser)
+                elif option == "exit":
                     sys.exit(0)
-                elif UserCreature.find_by_userCreature_name(session, newUserCreatureName):
-                    print("Username already exists. Please Try Again")
-                elif type(newUserCreatureName) is str and 4 <= len(newUserCreatureName):
-                    UserCreature(user_id = currentUser.id, creature_id = creature.id, creature_name = newUserCreatureName).add_to_userCreatures_db(session)
-                    newUserCreature = UserCreature.find_by_userCreature_name(session, newUserCreatureName)        
-                    UserCreature.hang_with_creature(session, currentUser, newUserCreature)
-                else:
-                    print("Creature name must be 4 letters or longer!")
-            elif option == "back":
-                print("Back to Main Menu!")
-                creatureSelect = False
-            elif option == "exit":
-                sys.exit(0)
-            else:
-                print("Invalid option. Please try again!")
+            UserAnswer.tabulate_quiz(session, currentUser, x)
+            print("end of quiz")
+            inQuiz=False
     
     def short_quiz(currentUser):
         shortQuiz = True
@@ -221,55 +219,8 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
             elif option == "exit":
                 sys.exit(0)
             elif option == "1":
-                existing_answers_to_delete = UserAnswer.find_all_userAnswer_by_user_id(session, currentUser.id)
-                for answer in existing_answers_to_delete:
-                    UserAnswer.delete_userAnswers(session, answer)                    
-                inQuiz=True
-                while inQuiz:
-                    n=1
-                    while n <= 10:
-                        question = Question.find_by_question_id(session, n)
-                        answer1 = Answer.find_by_answer_id(session, 1+(n-1)*4)
-                        answer2 = Answer.find_by_answer_id(session, 2+(n-1)*4)
-                        answer3 = Answer.find_by_answer_id(session, 3+(n-1)*4)
-                        answer4 = Answer.find_by_answer_id(session, 4+(n-1)*4)
-                        option = input(f'''
-                        Question {n} of 10:
-
-                        {n}: {question.content}
-
-                        1) {answer1.content}
-                        2) {answer2.content}
-                        3) {answer3.content}
-                        4) {answer4.content}
-
-                        Answer: ''')
-                        if option == "1":
-                            print("Answer 1")
-                            UserAnswer(user_id = currentUser.id, answer_id = answer1.id).add_to_userAnswers_db(session)
-                            # newUserAnswer = UserAnswer.find_by_userAnswer_name(session, newUserCreatureName)        
-                            n += 1
-                        elif option == "2":
-                            print("Answer 2")
-                            UserAnswer(user_id = currentUser.id, answer_id = answer2.id).add_to_userAnswers_db(session)
-                            n += 1
-                        elif option == "3":
-                            print("Answer 3")
-                            UserAnswer(user_id = currentUser.id, answer_id = answer3.id).add_to_userAnswers_db(session)
-                            n += 1
-                        elif option == "4":
-                            print("Answer 4")
-                            UserAnswer(user_id = currentUser.id, answer_id = answer4.id).add_to_userAnswers_db(session)
-                            n += 1
-                        elif option == "back":
-                            print("Back to the start of the Short Quiz!")
-                            short_quiz(currentUser)
-                        elif option == "exit":
-                            sys.exit(0)
-                    UserAnswer.tabulate_quiz(session, currentUser)
-                    print("end of quiz")
-                    inQuiz=False
-                    shortQuiz = False
+                quiz_helper(currentUser, 10)
+                shortQuiz = False
             else:
                 print("Invalid option. Please try again!")
 
@@ -292,81 +243,9 @@ Also, you can type exit at any time in the quiz to return to this menu... but yo
             elif option == "exit":
                 sys.exit(0)
             elif option == "1":
-                inQuiz=True
-                while inQuiz:
-                    n=1
-                    while n <= 50:
-                        question = Question.find_by_question_id(session, n)
-                        answer1 = Answer.find_by_answer_id(session, 1+(n-1)*4)
-                        answer2 = Answer.find_by_answer_id(session, 2+(n-1)*4)
-                        answer3 = Answer.find_by_answer_id(session, 3+(n-1)*4)
-                        answer4 = Answer.find_by_answer_id(session, 4+(n-1)*4)
-                        option = input(f'''
-                        Question {n} of 50:
-
-                        {n}: {question.content}
-
-                        1) {answer1.content}
-                        2) {answer2.content}
-                        3) {answer3.content}
-                        4) {answer4.content}
-
-                        Answer: ''')
-                        if option == "1":
-                            print("Answer 1")
-                            n += 1
-                        elif option == "2":
-                            print("Answer 2")
-                            n += 1
-                        elif option == "3":
-                            print("Answer 3")
-                            n += 1
-                        elif option == "4":
-                            print("Answer 4")
-                            n += 1
-                        elif option == "back":
-                            print("Back to the start of the Long Quiz!")
-                            long_quiz(currentUser)
-                        elif option == "exit":
-                            sys.exit(0)
-                    UserAnswer.tabulate_quiz(session, currentUser)
-                    print("end of quiz")
-                    inQuiz=False
-                    longQuiz = False
+                quiz_helper(currentUser, 50)
+                longQuiz = False
             else:
                 print("Invalid option. Please try again!")
-
-## None of the 3 methods below worked for an ongoing timer, because they were being called within 
-## the game_start function and run prior to the function being called... so they locked it up. 
-## But I am saving them as reference notes for future projects that don't have that limitation.
-## Ultimately, I used "Threading" to have my time run in async with the other functions. 
-
-#     now = datetime.datetime.now()
-#     later = datetime.datetime.now()
-#     diff = int((later - now).total_seconds())
-#     #countdown in sec
-#     tcount = 10 
-
-#     while diff < tcount:
-#         countd = tcount - diff
-#         countd = str(countd)
-#         UserCreature.countdown(session)
-#         print("countdown:" + countd)
-#         time.sleep(1)  # Wait for 1 second
-#         now = datetime.datetime.now()
-#         diff = int((now - later).total_seconds())  
-
-#     schedule.every(5).seconds.do(lambda: UserCreature.countdown(session))
-#     while True:
-#         schedule.run_pending()
-#         time.sleep(1)
-
-# ## The other way to have made the time run... 
-#     while True:
-#         now = datetime.now()
-#         time_until_next_run = (30 - now.minute % 30) * 60 - now.second
-#         time.sleep(time_until_next_run)
-#         UserCreature.countdown(session)
-
 
 game_start()

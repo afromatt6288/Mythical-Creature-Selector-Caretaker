@@ -60,7 +60,8 @@ Done... Include 3 related tables
     answers, creatures, creatureInteractions, questions, users, userAnswers, userCreatures.
 
 Done... Have a Many-to-Many Relationship
-    The userCreatures table acts as a join table to let Users have many Creatures, and Creatures to have many users. 
+    #1. The userCreatures table lets Users have many Creatures, and Creatures to have many users. 
+    #2. The userAnswers table lets Users have many Answers, and Answers have many Users.
 
 Include a ReadMe file that has 
     An Overview about what your project is about

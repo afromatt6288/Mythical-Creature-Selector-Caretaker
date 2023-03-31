@@ -71,6 +71,7 @@ class UserCreature(Base):
     def delete_userCreature(session, creature):
         session.delete(creature)
         session.commit()
+        
 
     def happiness_levels(session, creature, currentUser):
         if creature.happiness >= 100:
@@ -163,7 +164,7 @@ Which creature would you like to visit with today?
                     print(f"{n}) {creature.creature_name}")
                     n += 1
                 option = input(f'''
-Select:  ''')
+Select: ''')
                 if option.isdigit() and int(option) in range(1, len(userCreatures)+1):
                     index = int(option) - 1
                     creature = userCreatures[index]
@@ -179,15 +180,13 @@ Select:  ''')
             else:
                 print("You currently have no Creatures. Time to Adopt!")
                 option = input(f'''
-1) Back to Main Menu
+0) Back to Main Menu
 
-Select:  ''')
-                if option == "1" or option =="back":
+Select: ''')
+                if option == "0" or option =="back":
                     userCreaturesVisit = False
                 elif option == "exit":
                     sys.exit(0)
-                # else:
-                #     input("Press Enter to continue... ")
 
     def hang_with_creature(session, currentUser, creature):
         from .creature import Creature
@@ -212,22 +211,6 @@ You have the following options:
 
 Select: ''')
             from .creatureInteraction import CreatureInteraction
-            # if option == "1":
-            #     CreatureInteraction.train(session, creature)
-            # elif option == "2":
-            #     CreatureInteraction.feed(session, creature)
-            # elif option == "3":
-            #     CreatureInteraction.praise(session, creature)
-            # elif option == "4":
-            #     CreatureInteraction.pet(session, creature)
-            # elif option == "5":
-            #     CreatureInteraction.play(session, creature)
-            # elif option == "6":
-            #     CreatureInteraction.groom(session, creature)
-            # elif option == "7":
-            #     CreatureInteraction.vet(session, creature)
-            # elif option == "8":
-            #     CreatureInteraction.discipline(session, creature)
             if option == "1":
                 CreatureInteraction.interact(session, creature, "1")
             elif option == "2":
@@ -251,6 +234,7 @@ Select: ''')
                 input("Press Enter to continue... ")
             elif option == "10":
                 UserCreature.delete_userCreature(session, creature)
+                UserCreature.view_userCreature_list(session, currentUser)
             elif option == "back":
                 hanging=False
             elif option == "exit":
@@ -276,6 +260,75 @@ Their Happiness, Health, Obedience, and Loyalty have all decreased!
                     UserCreature.update_loyalty(session, creature, creature.loyalty -2)
         else:
             pass
+
+    def select_creature(currentUser, sorted_creature_id_dict = {}):
+        from .creature import Creature
+        creatureSelect = True
+        if len(sorted_creature_id_dict) == 0:
+            creatures = Creature.get_all_creatures(session)
+            print(f'''
+Welcome, {currentUser.username} to the Mythical Creature Selection Screen!
+
+By being here proves one of two things:
+Either, you know exactly who you are and what you want!
+Or... You were too lazy to take a short quiz
+
+In either case, please select a creature of your choice from below!
+        ''')
+            input("Press Enter to continue... ")
+        else:        
+            creatures = []
+            for key, value in sorted_creature_id_dict:
+                creature = Creature.find_by_creature_id(session, key)
+                creatures.append(creature)
+                print(f"{creature.species} appears {value} times")
+            # print(creatures)
+            option = input("Press Enter to continue... ")
+            if option == "exit":
+                sys.exit(0)
+            elif option == "back":
+                creatureSelect = False        
+            elif option == "":
+                pass
+        while creatureSelect:
+            n=1
+            for creature in creatures:
+                print(f"{n}) {creature.species}")
+                n += 1
+            option = input(f'''
+    Select: ''')
+            if option.isdigit() and int(option) in range(1, len(creatures)+1):
+                index = int(option) - 1
+                creature = creatures[index]
+                print(f"You selected a {creature.species}")
+                newUserCreatureName = input('''
+    Please name your new companion: ''')
+                if newUserCreatureName == "back":
+                    print("Back to Main Menu!")
+                    creatureSelect = False
+                elif newUserCreatureName == "exit":
+                    sys.exit(0)
+                elif UserCreature.find_by_userCreature_name(session, newUserCreatureName):
+                    print("Username already exists. Please Try Again")
+                    input("Press Enter to proceed...")
+                elif type(newUserCreatureName) is str and 4 <= len(newUserCreatureName):
+                    UserCreature(user_id = currentUser.id, creature_id = creature.id, creature_name = newUserCreatureName).add_to_userCreatures_db(session)
+                    creatureSelect = False
+                else:
+                    print("Creature name must be 4 letters or longer!")
+                    input("Press Enter to proceed...")
+            elif option == "back":
+                print("Back to Main Menu!")
+                creatureSelect = False
+            elif option == "exit":
+                sys.exit(0)
+            else:
+                print("Invalid option. Please try again!")
+                input("Press Enter to proceed...")
+
+
+
+
 
 
 ## Extra Commands that could prove useful in a future update
