@@ -172,6 +172,7 @@ Which creature would you like to visit with today?
             ''')
             if len(userCreatures) > 0:
                 n=1
+                print("0) Back to Main Menu")
                 for creature in userCreatures:
                     print(f"{n}) {creature.creature_name}")
                     n += 1
@@ -182,7 +183,7 @@ Select: ''')
                     creature = userCreatures[index]
                     print(f"You selected {creature.creature_name}")
                     UserCreature.hang_with_creature(session,currentUser, creature)
-                elif option == "back":
+                elif option == "0" or option == "back":
                     userCreaturesVisit = False
                 elif option == "exit":
                     sys.exit(0)
@@ -218,10 +219,11 @@ Select: ''')
             input("Press Enter to continue... ")
             option = input(f'''
 You have the following options:
-1) Train {creature.creature_name}       2) Feed {creature.creature_name}        3) Praise {creature.creature_name}
-4) Pet {creature.creature_name}         5) Play with {creature.creature_name}   6) Groom {creature.creature_name}
-7) Vet for {creature.creature_name}     8) Discipline {creature.creature_name}  9) See {creature.creature_name}'s details
-10) Release {creature.creature_name} 
+0) Back to Main Menu                        1) Train {creature.creature_name}           2) Feed {creature.creature_name}        
+3) Praise {creature.creature_name}          4) Pet {creature.creature_name}             5) Play with {creature.creature_name}   
+6) Groom {creature.creature_name}           7) Vet for {creature.creature_name}         8) Discipline {creature.creature_name}  
+9) Release {creature.creature_name}         10) See {creature.creature_name}'s details 
+
 
 Select: ''')
             if option == "1":
@@ -241,14 +243,14 @@ Select: ''')
             elif option == "8":
                 CreatureInteraction.interact(session, creature, "8")
             elif option == "9":
+                UserCreature.delete_userCreature(session, creature)
+                UserCreature.view_userCreature_list(session, currentUser)
+            elif option == "10":
                 print(f'''
 {creatureDetails.description}
                 ''')
                 input("Press Enter to continue... ")
-            elif option == "10":
-                UserCreature.delete_userCreature(session, creature)
-                UserCreature.view_userCreature_list(session, currentUser)
-            elif option == "back":
+            elif option == "0" or option == "back":
                 hanging=False
             elif option == "exit":
                 sys.exit(0)
@@ -277,7 +279,7 @@ Or... You were too lazy to take a short quiz
 In either case, please select a creature of your choice from below!
             ''')
                 userinput = input("Press enter to continue... ")
-                if userinput == "back":
+                if userinput == "back" or userinput == "0":
                     print("Back to the Beginning!")
                     creatureSelect = False
                 elif userinput == "exit":
@@ -288,6 +290,7 @@ In either case, please select a creature of your choice from below!
                     print("Invalid Entry. Please try again!")
                 # input("Press Enter to continue... ")
                 n=1
+                print("0) Back to Main Menu")
                 for creature in creatures:
                     print(f"{n}) {creature.species}")
                     n += 1
@@ -301,6 +304,7 @@ In either case, please select a creature of your choice from below!
 
 Creature Compatibility:
                 ''')
+                print("0) Back to Main Menu")
                 for key, value in sorted_creature_id_dict:
                     creature = Creature.find_by_creature_id(session, key)
                     creatures.append(creature)
@@ -328,7 +332,7 @@ Please name your new companion: ''')
                 else:
                     print("Creature name must be 4 letters or longer!")
                     input("Press Enter to proceed...")
-            elif option == "back":
+            elif option == "back" or option == "0":
                 print("Back to Main Menu!")
                 creatureSelect = False
             elif option == "exit":

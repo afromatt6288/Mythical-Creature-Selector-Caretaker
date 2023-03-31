@@ -40,11 +40,31 @@ if __name__ == '__main__':
 ###################################################################################################################
 
 ## A standalone function that allows music to play in the background
+    ## This Version allows for playing multiple songs in a loop. 
     def play_sound():
         pygame.mixer.init()
-        pygame.mixer.music.load("/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3")
-        pygame.mixer.music.play(-1)  # The -1 argument indicates to loop the music indefinitely
+        song_list = [
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3",
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-enchanted-kingdom.mp3",
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-fairy-tale-fantasy.mp3",
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-fairy-tale.mp3",
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-hiding-place-in-the-forest.mp3",
+            "/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-magic-in-the-air.mp3"
+        ]
+        while True:
+            for song in song_list:
+                pygame.mixer.music.load(song)
+                pygame.mixer.music.play()
+                while pygame.mixer.music.get_busy():
+                    pygame.time.Clock().tick(5)  # To avoid high CPU usage, you can add a small delay
+    
+    ## This Version allows for playing a single song on loop
+    # def play_sound():
+    #     pygame.mixer.init()
+    #     pygame.mixer.music.load("/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3")
+    #     pygame.mixer.music.play(-1)  # The -1 argument indicates to loop the music indefinitely
 
+    ## This version works for most people, but my computer gave it issues, so I had to switch to the abobve methods.
     # def play_sound():
     #     playsound("/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3")
 
