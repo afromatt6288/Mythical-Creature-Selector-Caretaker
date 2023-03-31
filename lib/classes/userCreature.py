@@ -161,6 +161,12 @@ Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longe
         userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
         while userCreaturesVisit:
             print(f'''
+⠀⠀⢀⣠⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣴⣿⡿⠛⢿⣿⣷⠀⠀⣠⣤⠀⣀⣤⣄⡀⠀⠀⣀⣤⣄⡀⠀⢸⣿⣇⡀⣀⣀⠀⣀⡀⠀⢀⣠⣄⠀⣀⣤⣄⡀⠀⠀⠀⠀⣿⡿⠻⠛⠁⢀⣠⣤⣀⠀⠀⢀⣠⣄⠀⣀⣤⣀⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⡀⠀⠀⣤⣤⠀⣾⣿⠛⢸⣿⢫⣽⣿⡆⣼⣿⠛⢻⣿⡄⢸⣿⡟⠃⣿⣿⠀⣿⡇⠀⣿⣿⠻⣾⣿⢩⣿⣿⠀⠀⠀⠀⣿⣷⡆⠀⢠⣿⡟⠛⣿⣧⠀⣾⣿⠛⢸⣿⡟⣿⣿⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠹⣿⣷⣶⣾⣿⠟⠀⣿⣿⠀⠸⣿⣦⣦⡀⠀⢻⣿⣶⣾⣿⡇⠸⣿⣿⡆⢿⣿⣶⣿⠇⠀⣿⣿⠀⢿⣿⣦⣦⠀⠀⠀⠀⠀⣿⡏⠁⠀⠈⢿⣷⡆⣿⣿⠀⣿⣿⠀⢸⣿⡇⣿⣿⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⠉⠛⠋⠁⠀⠀⠈⠉⠀⠀⠈⠉⠉⠁⠀⠀⠉⠉⠉⠉⠁⠀⠈⠉⠀⠀⠙⠛⠁⠀⠀⠉⠉⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠈⠉⠁⠉⠁⠀⠉⠉⠀⠈⠉⠀⠉⠁⠈⠉⠁⠀
+
 Welcome to {currentUser.username}'s Creature Farm!
 Which creature would you like to visit with today?
             ''')
@@ -218,7 +224,6 @@ You have the following options:
 10) Release {creature.creature_name} 
 
 Select: ''')
-            # from .creatureInteraction import CreatureInteraction
             if option == "1":
                 CreatureInteraction.interact(session, creature, "1")
             elif option == "2":
@@ -258,6 +263,11 @@ Select: ''')
                 occurences = 1
                 creatures = Creature.get_all_creatures(session)
                 print(f'''
+⠀⣴⢦⣴⣦⠀⣀⢀⡀⣴⡄⣴⣆⡀⢐⡆⠀⢀⡀⠀⠀⣀⠀⢠⣦⠀⠀⣠⡶⣶⣄⠀⢀⠀⢀⡀⠀⠀⣀⠀⢠⣦⠀⣀⢀⡀⠀⡀⠀⣀⠀⠀⠀⢠⣶⠀⠀⣀⠀⢰⡆⠀⣀⠀⠀⢀⡀⠀⣦⡀⣲⠀⢀⡀⠀⠀⢀⠀⠀⠀
+⠀⣿⢸⣿⣿⡇⣿⢸⡇⣿⡟⣿⡟⣷⢸⡇⣼⡟⣛⡂⣾⠻⣷⢸⣿⠀⠀⣿⠁⢀⣭⢰⡿⢰⣿⣿⡆⣾⠛⣷⢸⣿⢻⣿⢸⡇⣸⡟⣾⣿⣿⠀⠀⠸⣷⢠⣿⢿⡧⢸⡇⣾⣽⣷⣴⡟⢛⡂⣿⠃⣿⣧⣿⠛⣧⢰⡟⣿⠀⠀
+⠀⠿⠸⠟⠿⠇⠻⣿⡇⠙⠟⠿⠇⠿⠸⠇⠘⠿⠟⠁⠻⠇⠟⠸⠿⠀⠀⠙⠿⠿⠃⠸⠇⠈⠻⠗⠀⠙⠿⠿⠈⠻⠃⠻⠿⠁⠿⠃⠙⠿⠆⠀⠀⠿⠟⠈⠻⠷⠀⠸⠇⠙⠿⠆⠘⠿⠟⠁⠙⠇⠿⠋⠻⠿⠃⠸⠇⠿⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                                
+
 Welcome, {currentUser.username} to the Mythical Creature Selection Screen!
 
 By being here proves one of two things:
@@ -266,7 +276,17 @@ Or... You were too lazy to take a short quiz
 
 In either case, please select a creature of your choice from below!
             ''')
-                input("Press Enter to continue... ")
+                userinput = input("Press enter to continue... ")
+                if userinput == "back":
+                    print("Back to the Beginning!")
+                    creatureSelect = False
+                elif userinput == "exit":
+                    sys.exit(0)
+                elif userinput == "":
+                    pass
+                else:
+                    print("Invalid Entry. Please try again!")
+                # input("Press Enter to continue... ")
                 n=1
                 for creature in creatures:
                     print(f"{n}) {creature.species}")
@@ -275,14 +295,16 @@ In either case, please select a creature of your choice from below!
                 n=1
                 creatures = []
                 print('''
-Your Results:
+⠀⠹⣷⣴⡿⠁⢀⣀⡀⠀⣀⡀⣀⡀⠀⢀⡀⠀⠀⣿⣿⢿⣷⠀⠀⣀⡀⠀⠀⢀⡀⢀⡀⢀⡀⢸⣿⢸⣿⣀⠀⠀⣀⠀⣿⡇⠀⠀⠀
+⠀⠀⢹⣿⠀⢰⣿⠛⣿⡆⣿⡇⣿⡇⢰⣿⠇⠀⠀⣿⣿⣾⡟⢠⣿⢋⣿⡇⢰⣿⠟⢸⡇⣿⡇⢸⣿⢸⣿⠟⠀⣿⡿⠀⠿⠇⠀⠀⠀
+⠀⠀⢸⣿⠀⠘⢿⣶⡿⠃⠹⣷⣿⠇⢸⣿⠀⠀⠀⣿⣿⢹⣿⡈⢿⣷⡦⠀⣿⡿⠀⠸⣷⣿⠇⢸⣿⠀⠻⣿⣾⡿⠃⠀⣿⡇⠀
 
-Creature Compatability:
+Creature Compatibility:
                 ''')
                 for key, value in sorted_creature_id_dict:
                     creature = Creature.find_by_creature_id(session, key)
                     creatures.append(creature)
-                    print(f"{n}) {creature.species} - {int((value / occurences) * 100)}%")
+                    print(f"{n}) {creature.species.ljust(22)} {int((value / occurences) * 100)}%")
                     n += 1
             option = input(f'''
 Select your new Companion: ''')

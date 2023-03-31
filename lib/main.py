@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 import threading
 import sys
+import os
+os.environ['SDL_AUDIODRIVER'] = 'pulse'
 import time
+import pygame
+from playsound import playsound
 from sqlalchemy import *
 from sqlalchemy.orm import *
 ## Classes to import from modules
 from classes.answer import Answer
-# from classes.creature import Creature
+from classes.creature import Creature
 # from classes.creatureInteraction import CreatureInteraction
 from classes.question import Question
 from classes.user import User
@@ -18,6 +22,8 @@ if __name__ == '__main__':
     engine = create_engine('sqlite:///myth.db')
     Session = sessionmaker(bind=engine)
     session = Session()
+
+################################################################################################################
 
 ## A standalone function that counts down every `interval` seconds and
 ## runs the specified `func` function.
@@ -31,6 +37,24 @@ if __name__ == '__main__':
     timer_thread.daemon = True  # Set the thread as a daemon, so it exits when the main program exits
     timer_thread.start()
 
+###################################################################################################################
+
+## A standalone function that allows music to play in the background
+    def play_sound():
+        pygame.mixer.init()
+        pygame.mixer.music.load("/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3")
+        pygame.mixer.music.play(-1)  # The -1 argument indicates to loop the music indefinitely
+
+    # def play_sound():
+    #     playsound("/home/afromatt6288/development/code/phase-3/project/mythical-creature-selector-caretaker/lib/sound-deep-in-the-dell.mp3")
+
+## Start the music in a separate thread from the rest of the program. So they can run at the same time.    
+    sound_thread = threading.Thread(target=play_sound)
+    sound_thread.daemon = True # Set the thread as a daemon, so it exits when the main program exits
+    sound_thread.start()
+
+###################################################################################################################
+
 ## game_start() is being called at the very end of main.
 ## This allows it to start the game as a called function. 
 ## It also wraps the other functions and can call them 
@@ -40,37 +64,39 @@ if __name__ == '__main__':
     def game_start():
 
         print('''
-             ▄▄▄▄███▄▄▄▄   ▄██   ▄       ███        ▄█    █▄     ▄█   ▄████████    ▄████████  ▄█       
-           ▄██▀▀▀███▀▀▀██▄ ███   ██▄ ▀█████████▄   ███    ███   ███  ███    ███   ███    ███ ███       
-           ███   ███   ███ ███▄▄▄███    ▀███▀▀██   ███    ███   ███▌ ███    █▀    ███    ███ ███       
-           ███   ███   ███ ▀▀▀▀▀▀███     ███   ▀  ▄███▄▄▄▄███▄▄ ███▌ ███          ███    ███ ███       
-           ███   ███   ███ ▄██   ███     ███     ▀▀███▀▀▀▀███▀  ███▌ ███        ▀███████████ ███       
-           ███   ███   ███ ███   ███     ███       ███    ███   ███  ███    █▄    ███    ███ ███       
-           ███   ███   ███ ███   ███     ███       ███    ███   ███  ███    ███   ███    ███ ███▌    ▄ 
-            ▀█   ███   █▀   ▀█████▀     ▄████▀     ███    █▀    █▀   ████████▀    ███    █▀  █████▄▄██ 
-                                                                                   ▀        
-       ▄████████    ▄████████    ▄████████    ▄████████     ███     ███    █▄     ▄████████    ▄████████ 
-       ███    ███   ███    ███   ███    ███   ███    ███ ▀█████████▄ ███    ███   ███    ███   ███    ███ 
-       ███    █▀    ███    ███   ███    █▀    ███    ███    ▀███▀▀██ ███    ███   ███    ███   ███    █▀  
-       ███         ▄███▄▄▄▄██▀  ▄███▄▄▄       ███    ███     ███   ▀ ███    ███  ▄███▄▄▄▄██▀  ▄███▄▄▄     
-       ███        ▀▀███▀▀▀▀▀   ▀▀███▀▀▀     ▀███████████     ███     ███    ███ ▀▀███▀▀▀▀▀   ▀▀███▀▀▀     
-       ███    █▄  ▀███████████   ███    █▄    ███    ███     ███     ███    ███ ▀███████████   ███    █▄  
-       ███    ███   ███    ███   ███    ███   ███    ███     ███     ███    ███   ███    ███   ███    ███ 
-       ████████▀    ███    ███   ██████████   ███    █▀     ▄████▀   ████████▀    ███    ███   ██████████ 
-                    ███    ███                                                    ███    ███             
-             
- ▄████████    ▄████████    ▄████████    ▄████████     ███        ▄████████    ▄█   ▄█▄    ▄████████    ▄████████ 
-███    ███   ███    ███   ███    ███   ███    ███ ▀█████████▄   ███    ███   ███ ▄███▀   ███    ███   ███    ███ 
-███    █▀    ███    ███   ███    ███   ███    █▀     ▀███▀▀██   ███    ███   ███▐██▀     ███    █▀    ███    ███ 
-███          ███    ███  ▄███▄▄▄▄██▀  ▄███▄▄▄         ███   ▀   ███    ███  ▄█████▀     ▄███▄▄▄      ▄███▄▄▄▄██▀ 
-███        ▀███████████ ▀▀███▀▀▀▀▀   ▀▀███▀▀▀         ███     ▀███████████ ▀▀█████▄    ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
-███    █▄    ███    ███ ▀███████████   ███    █▄      ███       ███    ███   ███▐██▄     ███    █▄  ▀███████████ 
-███    ███   ███    ███   ███    ███   ███    ███     ███       ███    ███   ███ ▀███▄   ███    ███   ███    ███ 
-████████▀    ███    █▀    ███    ███   ██████████    ▄████▀     ███    █▀    ███   ▀█▀   ██████████   ███    ███ 
-                          ███    ███                                         ▀                        ███    ███
-'''
-    )
-        input("Press enter to continue... ")
+⠀⠀⠀⣀⣀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣴⣿⣿⣿⣷⣴⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡇⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⣿⠛⣿⣿⣿⢻⣿⣿⣷⠀⢰⣶⣶⡆⢰⣶⣶⠀⢸⣿⣿⣧⡄⠀⣿⣿⣿⣴⣶⣦⡀⠀⢰⣶⣶⠀⠀⢀⣠⣴⣶⣦⣤⡀⠀⠀⢀⣤⣶⣶⣦⣄⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⣿⠀⣿⣿⣿⢸⣿⣿⣿⠀⢸⣿⣿⡇⢸⣿⣿⠀⢸⣿⣿⣿⡇⠀⣿⣿⣿⠿⣿⣿⣷⠀⢸⣿⣿⠀⢀⣾⣿⣿⠿⣿⣿⣿⠀⢠⣿⣿⣿⠿⣿⣿⣷⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⣿⠀⣿⣿⣿⢸⣿⣿⣿⠀⢸⣿⣿⣇⣸⣿⣿⠀⢸⣿⣿⣧⡀⠀⣿⣿⣿⠀⣿⣿⣿⠀⢸⣿⣿⠀⠸⣿⣿⣇⣀⣠⣤⣤⠄⢻⣿⣿⣇⡀⢹⣿⣿⡇⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⣿⠀⣿⣿⣿⢸⣿⣿⣿⠀⠘⣿⣿⣿⣿⣿⣿⠀⠀⠻⣿⣿⡇⠀⣿⣿⣿⠀⣿⣿⣿⠀⢸⣿⣿⠀⠀⠻⣿⣿⣿⣿⣿⠟⠀⠈⢿⣿⣿⣿⢸⣿⣿⡇⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠉⠉⠉⠀⠉⠉⠉⠈⠉⠉⠉⠀⠀⢈⣉⣩⣿⣿⣿⠀⠀⠀⠈⠉⠁⠀⠉⠉⠉⠀⠉⠉⠉⠀⠈⠉⠉⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠀⠈⠉⠉⠈⠉⠉⠁⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⣿⣿⣿⠋⠀⠀⠙⣿⣿⡿⠄⠀⣠⣾⣿⣿⠀⣠⣾⣿⣿⣿⣶⡄⠀⢀⣴⣿⣿⣿⣿⣦⠀⠀⢸⣿⣿⣿⡇⢸⣿⣿⡇⢰⣿⣿⡇⠀⢠⣾⣿⣿⡇⢠⣶⣿⣿⣿⣷⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢸⣿⣿⣧⠀⠀⠀⠀⣤⣤⣤⡄⢰⣿⣿⡟⠛⢸⣿⣿⢯⣤⣽⣿⣿⠀⣾⣿⣿⠛⠻⣿⣿⣷⠀⢸⣿⣿⠿⠇⢸⣿⣿⡇⢸⣿⣿⡇⠀⣼⣿⣿⠛⢣⣿⣿⡿⣡⣼⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢿⣿⣿⣶⣤⣤⣾⣿⣿⡟⠀⢸⣿⣿⡇⠀⢸⣿⣿⣎⣉⡉⠉⠉⠀⢿⣿⣿⣤⡄⣿⣿⣿⠀⢸⣿⣿⣦⡄⠘⣿⣿⣧⣸⣿⣿⠇⠀⣿⣿⣿⠀⠘⣿⣿⣷⣉⣉⡉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠙⠿⣿⣿⣿⣿⠿⠋⠀⠀⢸⣿⣿⡇⠀⠀⠛⠿⣿⣿⣿⠆⠀⠀⠈⠻⢿⣿⡇⣿⣿⡿⠀⠀⠙⢿⣿⡇⠀⠙⢿⣿⣿⡿⠟⠀⠀⣿⣿⣿⠀⠀⠈⠻⣿⣿⣿⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+⠀⠀⠀⢀⣤⣶⣶⣶⣶⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣶⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⣿⣿⣿⠿⠿⢿⣿⣿⣧⠀⠀⠀⢀⣠⣤⣀⡀⠀⠀⠀⠀⢀⣠⣤⡀⠀⢀⣀⣤⣄⡀⠀⠀⢸⣿⣿⣀⡀⠀⠀⢀⣠⣤⣀⡀⠀⠀⠀⣿⣿⡇⠀⣀⣀⣀⠀⠀⠀⣀⣤⣤⣀⠀⠀⠀⠀⢀⣠⣤⠀⠀⠀⠀⠀⠀
+ ⢰⣿⣿⣿⠁⠀⠀⠀⠛⠛⠛⠃⢀⣴⣿⣿⣿⣿⣿⣦⠀⠀⣴⣿⣿⣿⡇⣴⣿⣿⠿⣿⣿⣦⡀⢸⣿⣿⣿⡇⢀⣴⣿⣿⣿⣿⣿⣦⠀⠀⣿⣿⡇⣰⣿⣿⠏⠀⢠⣾⣿⡿⢿⣿⣷⡄⠀⣰⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠸⣿⣿⣿⡀⠀⠀⢀⣿⣿⣿⠇⢸⣿⣿⡏⠉⢻⣿⣿⡆⠀⣿⣿⡟⠉⢸⣿⣿⡇⠶⠾⠿⠿⠇⢸⣿⣿⡉⠁⢸⣿⣿⡏⠉⢻⣿⣿⡇⠀⣿⣿⡇⢻⣿⣿⡀⠀⣿⣿⣿⠰⠶⠿⠿⠿⠀⣿⣿⣿⠉⠀⠀⠀⠀⠀⠀
+⠀⠀⠹⣿⣿⣿⣶⣶⣿⣿⣿⠏⠀⠘⣿⣿⣿⣶⢸⣿⣿⡇⠀⣿⣿⡇⠀⠈⣿⣿⣷⣤⣦⡀⠀⠀⠘⣿⣿⣿⡆⠘⣿⣿⣿⣶⢸⣿⣿⡇⠀⣿⣿⡇⠈⢿⣿⣷⡀⢹⣿⣿⣦⣴⣄⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠙⠛⠿⠿⠟⠛⠁⠀⠀⠀⠈⠛⠻⠿⠘⠛⠛⠃⠀⠛⠛⠃⠀⠀⠀⠙⠛⠿⠛⠋⠀⠀⠀⠈⠛⠛⠃⠀⠀⠛⠛⠿⠘⠛⠛⠃⠀⠛⠛⠃⠀⠘⠛⠛⠃⠀⠉⠛⠻⠟⠛⠁⠀⠀⠛⠛⠛⠀⠀⠀⠀⠀⠀⠀
+''' )
+        userinput = input("Press enter to continue... ")
+        if userinput == "back":
+            print("Back to the Beginning!")
+            User.currentUser = None
+            game_start()
+        elif userinput == "exit":
+            sys.exit(0)
+        elif userinput == "":
+            pass
+        else:
+            print("Invalid Entry. Please try again!")
 
         currentUser = None
         inprogram = True
@@ -78,12 +104,15 @@ if __name__ == '__main__':
             # Checks for new or returning user
             userinput = input('''
 Welcome to Mythical Creature Caretaker! We here at the M.C.C. are glad you are here. 
-Just a few notes... 
-Enter the numbers to the left of any options you might see to proceed. 
-Also, you can type "back" at any prompt to go back to a previous menu or option, 
-or "exit" to end the program... sometimes you might have to type it twice... 
 
-            Please enjoy!
+Just a few notes... 
+Type the Number to the left of any options you might see to proceed. 
+Type "back" at (almost) any prompt to go back to a previous menu or option, 
+Type "exit" to end the program... sometimes you might have to type it twice... or thrice... 
+
+Please enjoy!
+
+
             
 Are you a New or Returning Caretaker? 
 
@@ -109,7 +138,7 @@ Select: ''')
             elif userinput == "exit":
                 sys.exit(0)
             elif userinput == "Mythical":
-                print("Welcome to the Secret Gallery")
+                Creature.mythical_menagerie()
             else:
                 print("Invalid Entry. Please try again!")
 
@@ -118,7 +147,10 @@ Select: ''')
         while mainMenu:
             # print(f"main 119 {currentUser}")
             option = input(f'''
-Main Menu
+⠀⣠⣄⣀⣠⣄⠀⠀⠀⠀⠀⠀⠀⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣄⢀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⣿⢻⣿⡟⣿⡇⠀⣠⣤⣄⠀⠀⣭⡅⠀⣠⣤⡀⠀⠀⠀⣼⣿⢻⣿⡟⣿⡇⠀⣠⣤⣄⠀⠀⣠⣤⣄⠀⢠⣤⢠⣤⠀⠀⠀⠀⠀
+⢸⣿⢸⣿⡇⣿⡇⢸⣿⠛⣿⡇⠀⣿⡇⢸⣿⢻⣿⠀⠀⠀⣿⣿⢸⣿⡇⣿⡇⢸⣿⢩⣿⡇⢸⣿⢻⣿⠀⢸⣿⢸⣿⠀⠀⠀⠀⠀
+⢸⣿⢸⣿⡇⣿⡇⠘⢿⣷⣿⡇⠀⣿⡇⢸⣿⢸⣿⠀⠀⠀⣿⣿⢸⣿⡇⣿⡇⠘⢿⣶⡆⠀⢸⣿⢸⣿⠀⠸⣿⣾⠟⠀⠀
 
 What would you like to do today {currentUser.username}?
 
@@ -204,7 +236,13 @@ Answer: ''')
         shortQuiz = True
         while shortQuiz:
             option = input(f'''
-                              Welcome to the Short Quiz! 
+⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣾⡿⠇⣿⣿⣀⡀⠀⠀⣀⣀⠀⠀⢀⣀⢸⣿⡀⠀⠀⢀⣾⣿⠿⣿⣦⠀⢀⡀⢀⣀⠀⣛⡃⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢿⣷⡀⣿⣿⢻⣿⢠⣾⠟⢿⣷⠀⣿⡟⢸⣿⠇⠀⠀⢸⣿⡁⣀⢸⣿⡇⣿⡇⢸⣿⠀⣿⡇⠿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀
+⠀⢰⣾⡿⠃⣿⣿⢸⣿⠈⢿⣷⣾⡟⠀⣿⡇⠘⢿⡆⠀⠀⠈⢿⣿⣿⣿⠟⠀⢻⣷⣾⡟⠀⣿⡇⢰⣿⣿⣶⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠁⠀⠀⠀⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                            
+
+Welcome to the Short Quiz! 
 These 10 questions will help you pick a creature that BETTER suits your temperment and interests. 
 Once you complete this quiz you will see a ranking of 10 creatures, and how you relate with them. 
 You can then select which creature you wish (ie, you are not stuck with the creature you have the highest compatability with.)
@@ -229,7 +267,12 @@ Select: ''')
         longQuiz = True
         while longQuiz:
             option = input(f'''
-                              Welcome to the Extended Quiz! 
+ ⠀⢀⣤⣤⠀⠀⠀⠀⢠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⠀⠀⠀⠀⠀⠀⠀⣤⡄⠀⠀⠀⣠⣤⣄⠀⠀⠀⠀⠀⢀⣤⠀⠀⠀⠀⠀
+ ⠀⣿⣟⡛⢠⣤⢠⡄⢸⣧⡄⣠⣴⣤⡀⢀⣴⣤⠀⢀⣤⢸⣿⠀⣤⣦⣄⠀⣠⣤⣿⡇⠀⠀⣾⡟⠛⢿⣷⢠⣤⢠⣤⢠⣭⢠⣤⣤⡄⠀
+ ⠀⣿⣟⣋⢈⣿⢾⡇⢸⣿⡁⣿⡑⠛⠃⣾⡏⣿⡇⣿⣏⣸⣿⢸⣿⠚⠛⢸⣿⣉⣿⡇⠀⠈⣿⣧⣤⣼⣿⢸⣿⢸⣿⢸⣿⠈⣹⣿⣁⠀
+ ⠀⠙⠻⠿⠸⠟⠸⠇⠈⠛⠃⠙⠿⠗⠀⠻⠇⠿⠇⠈⠻⠟⠁⠈⠻⠿⠂⠀⠛⠿⠛⠀⠀⠀⠈⢻⣿⠛⠁⠀⠻⠿⠃⠸⠿⠠⠿⠿⠿⠀
+                                                            
+Welcome to the Extended Quiz! 
 These 50 questions will help you pick a creature that BEST suits your temperment and interests. 
 Once you complete this quiz you will see a ranking of 25 creatures, and how you relate with them. 
 You can then select which creature you wish (ie, you are not stuck with the creature you have the highest compatability with.)

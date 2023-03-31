@@ -1,8 +1,7 @@
 # Mythical-Creature-Selector-Caretaker
 
 ## Overview
-TBD
-
+A CLI-based application built with Python and SQL(Alchemy) project that allows User to find their ideal mythical creature by taking one of two quizes. They can then adopt, care for, and interact with various mythical Creature from folklore and popular culture. If they neglect a creature for too long, it will degrade in some way. So they will need to manage their activites and timing well. 
 
 ## Setup / Running the Project (on Windows)
 Enter you terminal (however you have set up to do so.)
@@ -31,6 +30,8 @@ Congrats, you are now configured and ready to run this program!
 ## Instructions:
 ### How to Start the program
 From the root folder of this project, in the command line of your terminal...
+Type: chmod +x lib/seed.py (to unlock permisions)
+Type: lib/seed.py (to populate the database. Otherwise the game will be empty.)
 Type: chmod +x lib/main.py (to unlock permisions)
 Type: lib/main.py
 
@@ -40,8 +41,8 @@ If at any time you get stuck, you can always press <ctrl-c> to exit the program.
 ### How to access the programs Functions:
 Follow the instructions to navigate the program. 
 Other than the username and password, most other entries will be a number key.
-You can type "back" to go up a menu at any point.
-You can type "exit" to leave the program at any point.
+You can type "back" to go up a menu at any (almost) point.
+You can type "exit" to leave the program at (almost) any point.
 
 ## Assignment Goals
 As per the Project Pitch Template:
@@ -95,11 +96,9 @@ Done... Full CRUD
         UserAnswers are deleted at quiz start to start fresh to avoid contamination the data.
 
 
+## Project Pitch/Ideas and Creautre and Quiz list. 
 
-
-## Initial Project Pitch/Ideas (just in case you were curious about how it started)
-
-Mythical Creature Selector
+Mythical Creature Selector (Stand Alone):
 
 A CLI-based application built with Python and SQL project where you take a list of questions with four answers and use those answers to determine the user's animal type.
 
@@ -130,7 +129,7 @@ Users can retake the quiz to see if they get a different creature result with di
 
 ################################################################################################
 
-Mythical Creature Caretaker:
+Mythical Creature Caretaker (Stand Alone):
 
 A CLI-based application built with Python and SQL project that allows users to adopt, care for, and interact with various mythical creatures from folklore and popular culture. The application should manage creature data, user profiles, and user-creature interactions.
 
@@ -157,7 +156,7 @@ Users can create and manage their own profiles, including their adopted creature
 
 #############################################################################################
 
-Merged Mythical Creature Caretaker & Selector:
+Mythical Creature Caretaker & Selector (Merging of the above):
 
 A CLI-based application built with Python and SQL project that allows users to find their ideal mythical creature by taking a quiz and then adopt, care for, and interact with various mythical creatures from folklore and popular culture. The application should manage creature data, user profiles, user-creature interactions, and user-creature matches.
 
