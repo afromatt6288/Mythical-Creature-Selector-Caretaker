@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-from datetime import datetime
-from sqlalchemy import Column, Integer, String, create_engine, func, desc, ForeignKey, PrimaryKeyConstraint, DateTime
-from sqlalchemy.orm import Session, relationship, validates, backref
+from sqlalchemy import *
+from sqlalchemy.orm import *
 from .base import Base
 
 class Question(Base):

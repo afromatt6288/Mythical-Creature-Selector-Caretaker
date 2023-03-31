@@ -6,13 +6,13 @@ from sqlalchemy import *
 from sqlalchemy.orm import *
 ## Classes to import from modules
 from classes.answer import Answer
-from classes.creature import Creature
+# from classes.creature import Creature
 # from classes.creatureInteraction import CreatureInteraction
 from classes.question import Question
 from classes.user import User
 from classes.userAnswer import UserAnswer
 from classes.userCreature import UserCreature
-from classes.base import Base
+# from classes.base import Base
 
 if __name__ == '__main__':
     engine = create_engine('sqlite:///myth.db')
@@ -116,7 +116,7 @@ Select: ''')
     def main_menu(currentUser):
         mainMenu = True
         while mainMenu:
-            print(f"main 87 {currentUser}")
+            # print(f"main 119 {currentUser}")
             option = input(f'''
 Main Menu
 
@@ -130,7 +130,7 @@ What would you like to do today {currentUser.username}?
 Select : ''')
             if option == "1":
                 print("Acquire Mythical Creature (select from list)")
-                UserCreature.select_creature(currentUser)
+                UserCreature.select_creature(currentUser, 1, {})
             elif option == "2":
                 print("Aquire BETTER Suited Mythical Creature (short quiz - 10 creatures available)")
                 short_quiz(currentUser)
@@ -165,30 +165,30 @@ Select : ''')
                 answer3 = Answer.find_by_answer_id(session, 3+(n-1)*4)
                 answer4 = Answer.find_by_answer_id(session, 4+(n-1)*4)
                 option = input(f'''
-                Question {n} of {x}:
+Question {n} of {x}:
 
-                {n}: {question.content}
+{question.content}
 
-                1) {answer1.content}
-                2) {answer2.content}
-                3) {answer3.content}
-                4) {answer4.content}
+1) {answer1.content}
+2) {answer2.content}
+3) {answer3.content}
+4) {answer4.content}
 
-                Answer: ''')
+Answer: ''')
                 if option == "1":
-                    print(f"1) {answer1.content}")
+                    print(f"{answer1.content}")
                     UserAnswer(user_id = currentUser.id, answer_id = answer1.id).add_to_userAnswers_db(session)    
                     n += 1
                 elif option == "2":
-                    print(f"2) {answer2.content}")
+                    print(f"{answer2.content}")
                     UserAnswer(user_id = currentUser.id, answer_id = answer2.id).add_to_userAnswers_db(session)
                     n += 1
                 elif option == "3":
-                    print(f"3) {answer3.content}")
+                    print(f"{answer3.content}")
                     UserAnswer(user_id = currentUser.id, answer_id = answer3.id).add_to_userAnswers_db(session)
                     n += 1
                 elif option == "4":
-                    print(f"4) {answer4.content}")
+                    print(f"{answer4.content}")
                     UserAnswer(user_id = currentUser.id, answer_id = answer4.id).add_to_userAnswers_db(session)
                     n += 1
                 elif option == "back":
@@ -210,9 +210,10 @@ Once you complete this quiz you will see a ranking of 10 creatures, and how you 
 You can then select which creature you wish (ie, you are not stuck with the creature you have the highest compatability with.)
 Also, you can type exit at any time in the quiz to return to this menu... but your progress will not be saved. 
 
-         1) Proceed with quiz            OR             2) Back to main menu
+1) Proceed with quiz
+2) Back to main menu
 
-                                Selection :  ''')
+Select: ''')
             if option == "2" or option == "back":
                 print("Back to the Main Menu")
                 main_menu(currentUser)
@@ -234,9 +235,10 @@ Once you complete this quiz you will see a ranking of 25 creatures, and how you 
 You can then select which creature you wish (ie, you are not stuck with the creature you have the highest compatability with.)
 Also, you can type exit at any time in the quiz to return to this menu... but your progress will not be saved. 
 
-         1) Proceed with quiz            OR             2) Back to main menu
+1) Proceed with quiz
+2) Back to main menu
 
-                                Selection :  ''')
+Select: ''')
             if option == "2" or option == "back":
                 print("Back to the Main Menu")
                 main_menu(currentUser)

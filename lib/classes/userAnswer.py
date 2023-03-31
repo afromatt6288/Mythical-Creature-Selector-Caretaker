@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-from datetime import datetime
-import sys
-from sqlalchemy import Column, Integer, String, create_engine, func, desc, ForeignKey, PrimaryKeyConstraint, DateTime
-from sqlalchemy.orm import Session, relationship, validates, backref
+from sqlalchemy import *
+from sqlalchemy.orm import *
 from .base import Base
 
 class UserAnswer(Base):
@@ -30,9 +28,9 @@ class UserAnswer(Base):
     def tabulate_quiz(session, currentUser, x):
         tabulating=True
         if x == 10:
-            occurences = 12
+            occurences = 10  ## even though there are 12 occurences, there are only 10 questions. So the max anyone could get would be 10. 
         elif x == 50:
-            occurences = 24
+            occurences = 24  ## creatures appear 24 times. There are 50 questions, so their max is not limited like the short quiz. 
         while tabulating:
             creature_id_list = []
             creature_id_dict = {}
@@ -52,14 +50,7 @@ class UserAnswer(Base):
             print(creature_id_dict) 
             sorted_creature_id_dict = sorted(creature_id_dict.items(), key=lambda x: x[1], reverse=True)
             from .userCreature import UserCreature
-            UserCreature.select_creature(currentUser, sorted_creature_id_dict)
-            # for key, value in sorted_creature_id_dict:
-            #     creature = Creature.find_by_creature_id(session, key)
-            #     print(f"{creature.species} appears {value} times")
-            # option = input("Press Enter to continue... ")
-            # if option == "exit":
-            #     sys.exit(0)
-            # elif option == "back" or option == "":
+            UserCreature.select_creature(currentUser, occurences, sorted_creature_id_dict)
             tabulating=False
             
 

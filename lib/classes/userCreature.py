@@ -3,8 +3,9 @@ import sys
 from datetime import datetime
 from sqlalchemy import *
 from sqlalchemy.orm import *
-from .base import Base
+from .creature import Creature
 from .creatureInteraction import CreatureInteraction
+from .base import Base
 
 engine = create_engine('sqlite:///myth.db')
 Session = sessionmaker(bind=engine)
@@ -35,6 +36,8 @@ class UserCreature(Base):
             + f"Loyalty: {self.loyalty} / " \
             + f"Adoption Day: {self.adoption_day} / " \
             + f"Last Interaction: {self.last_interaction}"
+
+#############################################################################
 
     def add_to_userCreatures_db(self, session):
         session.add(self)
@@ -71,7 +74,8 @@ class UserCreature(Base):
     def delete_userCreature(session, creature):
         session.delete(creature)
         session.commit()
-        
+
+#########################################################################        
 
     def happiness_levels(session, creature, currentUser):
         if creature.happiness >= 100:
@@ -149,6 +153,8 @@ Loyalty: Terrible News! {creature.creature_name} couldn't hold it back any longe
 {creature.creature_name} left you for another master. But not before leaving a huge crap on your bed... Gross!''')
             UserCreature.delete_userCreature(session, creature)
             UserCreature.view_userCreature_list(session, currentUser)
+        
+####################################################################################
 
     def view_userCreature_list(session, currentUser):
         userCreaturesVisit = True
@@ -188,8 +194,10 @@ Select: ''')
                 elif option == "exit":
                     sys.exit(0)
 
+####################################################################################
+
     def hang_with_creature(session, currentUser, creature):
-        from .creature import Creature
+        # from .creature import Creature
         creatureDetails = Creature.find_by_creature_id(session, creature.creature_id)
         hanging=True
         while hanging:
@@ -210,7 +218,7 @@ You have the following options:
 10) Release {creature.creature_name} 
 
 Select: ''')
-            from .creatureInteraction import CreatureInteraction
+            # from .creatureInteraction import CreatureInteraction
             if option == "1":
                 CreatureInteraction.interact(session, creature, "1")
             elif option == "2":
@@ -239,34 +247,17 @@ Select: ''')
                 hanging=False
             elif option == "exit":
                 sys.exit(0)
+
+#####################################################################################
     
-    def countdown(session):
-        from .user import User
-        currentUser=User.currentUser
-        if currentUser != None:
-            userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
-            if len(userCreatures) == 0:
-                pass
-            else:
-                print('''
-
-Counting Down. Your creature(s) is/are missing you.
-Their Happiness, Health, Obedience, and Loyalty have all decreased!
-                ''')
-                for creature in userCreatures:
-                    UserCreature.update_happiness(session, creature, creature.happiness -2)
-                    UserCreature.update_health(session, creature, creature.health -2)
-                    UserCreature.update_obedience(session, creature, creature.obedience -2)
-                    UserCreature.update_loyalty(session, creature, creature.loyalty -2)
-        else:
-            pass
-
-    def select_creature(currentUser, sorted_creature_id_dict = {}):
+    def select_creature(currentUser, occurences, sorted_creature_id_dict = {}):
         from .creature import Creature
         creatureSelect = True
-        if len(sorted_creature_id_dict) == 0:
-            creatures = Creature.get_all_creatures(session)
-            print(f'''
+        while creatureSelect:
+            if len(sorted_creature_id_dict) == 0:
+                occurences = 1
+                creatures = Creature.get_all_creatures(session)
+                print(f'''
 Welcome, {currentUser.username} to the Mythical Creature Selection Screen!
 
 By being here proves one of two things:
@@ -274,35 +265,33 @@ Either, you know exactly who you are and what you want!
 Or... You were too lazy to take a short quiz
 
 In either case, please select a creature of your choice from below!
-        ''')
-            input("Press Enter to continue... ")
-        else:        
-            creatures = []
-            for key, value in sorted_creature_id_dict:
-                creature = Creature.find_by_creature_id(session, key)
-                creatures.append(creature)
-                print(f"{creature.species} appears {value} times")
-            # print(creatures)
-            option = input("Press Enter to continue... ")
-            if option == "exit":
-                sys.exit(0)
-            elif option == "back":
-                creatureSelect = False        
-            elif option == "":
-                pass
-        while creatureSelect:
-            n=1
-            for creature in creatures:
-                print(f"{n}) {creature.species}")
-                n += 1
+            ''')
+                input("Press Enter to continue... ")
+                n=1
+                for creature in creatures:
+                    print(f"{n}) {creature.species}")
+                    n += 1
+            else:        
+                n=1
+                creatures = []
+                print('''
+Your Results:
+
+Creature Compatability:
+                ''')
+                for key, value in sorted_creature_id_dict:
+                    creature = Creature.find_by_creature_id(session, key)
+                    creatures.append(creature)
+                    print(f"{n}) {creature.species} - {int((value / occurences) * 100)}%")
+                    n += 1
             option = input(f'''
-    Select: ''')
+Select your new Companion: ''')
             if option.isdigit() and int(option) in range(1, len(creatures)+1):
                 index = int(option) - 1
                 creature = creatures[index]
                 print(f"You selected a {creature.species}")
                 newUserCreatureName = input('''
-    Please name your new companion: ''')
+Please name your new companion: ''')
                 if newUserCreatureName == "back":
                     print("Back to Main Menu!")
                     creatureSelect = False
@@ -326,15 +315,54 @@ In either case, please select a creature of your choice from below!
                 print("Invalid option. Please try again!")
                 input("Press Enter to proceed...")
 
+#####################################################################################
 
+    def countdown(session):
+        from .user import User
+        currentUser=User.currentUser
+        if currentUser != None:
+            userCreatures = session.query(UserCreature).filter(UserCreature.user_id == currentUser.id).all()
+            if len(userCreatures) == 0:
+                pass
+            else:
+                print('''
 
+Counting Down. Your creature(s) is/are missing you.
+Their Happiness, Health, Obedience, and Loyalty have all decreased!
+                ''')
+                for creature in userCreatures:
+                    UserCreature.update_happiness(session, creature, creature.happiness -2)
+                    UserCreature.update_health(session, creature, creature.health -2)
+                    UserCreature.update_obedience(session, creature, creature.obedience -2)
+                    UserCreature.update_loyalty(session, creature, creature.loyalty -2)
+        else:
+            pass
 
-
-
-## Extra Commands that could prove useful in a future update
+########## Extra Commands that could prove useful in a future update ##############
 
     def get_all_userCreatures(session):
         return session.query(UserCreature).all()
 
     def find_by_userCreature_id(session, id):
         return session.query(UserCreature).filter(UserCreature.id == id).first()
+
+
+
+
+            # else:        
+            #     creatures = []
+            #     for key, value in sorted_creature_id_dict:
+            #         creature = Creature.find_by_creature_id(session, key)
+            #         creatures.append(creature)
+            #         print(f"{creature.species} appears {value} times")
+            #     option = input("Press Enter to continue... ")
+            #     if option == "exit":
+            #         sys.exit(0)
+            #     elif option == "back":
+            #         creatureSelect = False        
+            #     elif option == "":
+            #         pass
+            #     n=1
+            #     for creature in creatures:
+            #         print(f"{n}) {creature.species}")
+            #         n += 1
