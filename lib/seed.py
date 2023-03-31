@@ -1342,7 +1342,7 @@ as the phoenix and the dragon.
     answer10 = Answer(content="Creativity", question_id=3, creature_id1=4, creature_id2=3, creature_id3=10)
     answer11 = Answer(content="Intelligence", question_id=3, creature_id1=7, creature_id2=2, creature_id3=9)
     answer12 = Answer(content="Courage", question_id=3, creature_id1=5, creature_id2=8, creature_id3=1)
-    answer13 = Answer(content="Head-on", question_id=4, creature_id1=, creature_id2=8, creature_id3=5)
+    answer13 = Answer(content="Head-on", question_id=4, creature_id1=10, creature_id2=8, creature_id3=5)
     answer14 = Answer(content="Strategically", question_id=4, creature_id1=7, creature_id2=2, creature_id3=10)
     answer15 = Answer(content="Patiently", question_id=4, creature_id1=6, creature_id2=4, creature_id3=9)
     answer16 = Answer(content="Adapt and change", question_id=4, creature_id1=1, creature_id2=9, creature_id3=4)
